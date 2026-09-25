@@ -485,9 +485,9 @@
         </section>
 
         <!-- Calculadora de Faturamento -->
-        <section id="calculadora" class="py-24 bg-light/50" x-data="{
-            ticketMedio: 200,
-            clientesPerdidos: 10,
+        <section id="calculadora" class="py-24 bg-light/50" x-data="{ 
+            ticketMedio: 80, 
+            clientesPerdidos: 60,
             investimento: 350,
             get perdaMensal() { return this.ticketMedio * this.clientesPerdidos; },
             get prejuizoAnual() { return this.perdaMensal * 12; },
@@ -496,79 +496,85 @@
         }">
             <div class="container mx-auto px-4 max-w-5xl">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Calculadora de Faturamento Oculto</h2>
+                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Calculadora de Vendas Perdidas no Google</h2>
                     <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-8"></div>
                     <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Descubra quanto dinheiro o seu negócio está deixando na mesa por não ter uma presença digital forte e otimizada no Google.
+                        Descubra quanto dinheiro seu negócio deixa de ganhar todos os meses quando um cliente procura pelo seu serviço no Google, mas não o encontra ou vê a nota mediana.
                     </p>
                 </div>
 
                 <div class="flex flex-col lg:flex-row gap-10 items-stretch">
                     <!-- Inputs -->
-                    <div class="lg:w-1/2 bg-white p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col justify-center">
-                        <div class="mb-10">
-                            <label class="block text-dark font-bold text-lg mb-1 flex justify-between">
-                                <span>Ticket Médio da Venda</span>
-                                <span class="text-primary" x-text="formatMoney(ticketMedio)"></span>
+                    <div class="lg:w-1/2 bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col justify-center">
+                        <div class="mb-4">
+                            <label class="block text-dark font-bold text-xl md:text-2xl mb-6 leading-snug">
+                                Quantas pessoas na sua região buscam o seu serviço no Google e NÃO acham você?
                             </label>
-                            <p class="text-sm text-gray-500 mb-4">Arraste a barra para o valor desejado</p>
-                            <input type="range" x-model.number="ticketMedio" min="10" max="2000" step="10" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
-                            <div class="flex justify-between text-sm text-gray-400 mt-2">
-                                <span>R$ 10</span>
-                                <span>R$ 2.000+</span>
+                            <div class="bg-blue-50 border-l-4 border-primary p-5 rounded-r-xl mb-8 shadow-sm">
+                                <p class="text-sm md:text-base text-gray-700 leading-relaxed font-medium">
+                                    <span class="font-bold text-dark">Guia Rápido:</span> Se você não aparece no TOP 3 do Google ou tem poucas avaliações, estime pelo menos 1 a 3 clientes perdidos por dia (30 a 90 por mês).
+                                </p>
                             </div>
-                        </div>
+                            
+                            <p class="text-gray-500 font-bold mb-4 text-sm uppercase tracking-wider">Selecione o perfil do seu negócio:</p>
+                            <div class="flex flex-col gap-4">
+                                <button @click="ticketMedio = 30; clientesPerdidos = 30" 
+                                        :class="(ticketMedio === 30 && clientesPerdidos === 30) ? 'border-primary bg-primary/10 text-dark scale-[1.02] shadow-md' : 'border-gray-200 hover:border-primary/50 text-gray-600 hover:bg-gray-50'"
+                                        class="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl border-2 transition-all duration-200 text-left">
+                                    <span class="font-bold text-lg mb-2 sm:mb-0">Pequeno Negócio / Cafeteria</span>
+                                    <span class="text-sm font-bold whitespace-nowrap bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-100">R$ 30 ticket | 30 clientes/mês</span>
+                                </button>
+                                
+                                <button @click="ticketMedio = 80; clientesPerdidos = 60" 
+                                        :class="(ticketMedio === 80 && clientesPerdidos === 60) ? 'border-primary bg-primary/10 text-dark scale-[1.02] shadow-md' : 'border-gray-200 hover:border-primary/50 text-gray-600 hover:bg-gray-50'"
+                                        class="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl border-2 transition-all duration-200 text-left">
+                                    <span class="font-bold text-lg mb-2 sm:mb-0">Bar / Restaurante</span>
+                                    <span class="text-sm font-bold whitespace-nowrap bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-100">R$ 80 ticket | 60 clientes/mês</span>
+                                </button>
 
-                        <div>
-                            <label class="block text-dark font-bold text-lg mb-1 flex justify-between">
-                                <span>Clientes Perdidos por Mês</span>
-                                <span class="text-primary text-xl" x-text="clientesPerdidos + ' clientes'"></span>
-                            </label>
-                            <p class="text-sm text-gray-500 mb-4">Arraste a barra para o valor desejado</p>
-                            <input type="range" x-model.number="clientesPerdidos" min="1" max="200" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
-                            <div class="flex justify-between text-sm text-gray-400 mt-2">
-                                <span>1 cliente</span>
-                                <span>200 clientes</span>
+                                <button @click="ticketMedio = 250; clientesPerdidos = 15" 
+                                        :class="(ticketMedio === 250 && clientesPerdidos === 15) ? 'border-primary bg-primary/10 text-dark scale-[1.02] shadow-md' : 'border-gray-200 hover:border-primary/50 text-gray-600 hover:bg-gray-50'"
+                                        class="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-2xl border-2 transition-all duration-200 text-left">
+                                    <span class="font-bold text-lg mb-2 sm:mb-0">Prestador de Serviços</span>
+                                    <span class="text-sm font-bold whitespace-nowrap bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-100">R$ 250 ticket | 15 clientes/mês</span>
+                                </button>
                             </div>
-                            <p class="text-sm text-gray-500 mt-5 leading-relaxed">
-                                <em>Dica: Pense em quantas pessoas procuram pelo seu serviço na sua região todos os meses e acabam indo para o concorrente porque não te acharam ou sua nota no Google não passou confiança.</em>
-                            </p>
                         </div>
                     </div>
 
                     <!-- Results -->
-                    <div class="lg:w-1/2 bg-dark text-white p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="lg:w-1/2 bg-dark text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden mt-8 lg:mt-0">
                         <div class="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
                         
                         <div class="relative z-10">
-                            <h3 class="text-2xl font-bold text-primary mb-8">O que isso significa para o seu bolso?</h3>
+                            <h3 class="text-2xl font-bold text-primary mb-8">Resultado da sua Simulação:</h3>
                             
                             <div class="space-y-6">
-                                <div>
-                                    <p class="text-gray-300 text-sm uppercase tracking-wider mb-1">Perda Mensal Estimada</p>
-                                    <p class="text-4xl font-black text-red-400" x-text="formatMoney(perdaMensal)"></p>
-                                </div>
-                                
                                 <div class="pb-6 border-b border-gray-700">
-                                    <p class="text-gray-300 text-sm uppercase tracking-wider mb-1">Prejuízo Anual Acumulado</p>
-                                    <p class="text-3xl font-bold text-red-500/80" x-text="formatMoney(prejuizoAnual)"></p>
+                                    <p class="text-gray-300 text-sm uppercase tracking-wider mb-2 font-bold">Dinheiro deixado na mesa</p>
+                                    <div class="flex flex-col gap-1">
+                                        <p class="text-4xl md:text-5xl font-black text-red-400" x-text="formatMoney(perdaMensal) + ' /mês'"></p>
+                                        <p class="text-xl font-medium text-red-500/80" x-text="'(' + formatMoney(prejuizoAnual) + ' /ano)'"></p>
+                                    </div>
                                 </div>
 
                                 <div class="pt-2">
-                                    <p class="text-gray-300 text-sm uppercase tracking-wider mb-1">Investimento Vinsancor (a partir de)</p>
-                                    <p class="text-2xl font-bold text-white" x-text="formatMoney(investimento)"></p>
+                                    <p class="text-gray-300 text-sm uppercase tracking-wider mb-2 font-bold">Investimento na Vinsancor</p>
+                                    <p class="text-2xl font-bold text-white">a partir de R$ 350/mês</p>
                                 </div>
 
-                                <div class="bg-white/10 rounded-2xl p-5 border border-white/5">
-                                    <p class="text-gray-300 text-sm leading-relaxed">
-                                        Para pagar todo o nosso investimento, você precisa fechar com apenas <strong class="text-primary text-xl" x-text="clientesParaPagar + ' cliente' + (clientesParaPagar !== 1 ? 's' : '')"></strong> por mês. O restante é puro lucro gerado pelo SEO Local.
+                                <div class="bg-white/10 rounded-2xl p-6 border border-white/5 mt-6">
+                                    <p class="text-gray-200 text-base leading-relaxed">
+                                        Para pagar todo o nosso investimento, você precisa fechar com apenas <strong class="text-primary text-2xl mx-1" x-text="clientesParaPagar"></strong> <strong class="text-primary" x-text="clientesParaPagar !== 1 ? 'clientes' : 'cliente'"></strong> por mês. O restante é puro lucro gerado pelo SEO Local (ROI).
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="#contato" class="relative z-10 mt-8 block w-full bg-primary text-dark text-center font-bold text-lg py-4 rounded-full hover:bg-yellow-400 transition-colors shadow-lg transform hover:-translate-y-1">
-                            Estancar essa perda agora
+                        <a :href="'https://wa.me/5521995928037?text=' + encodeURIComponent('Olá! Fiz a simulação na calculadora e vi que posso estar deixando de faturar ' + formatMoney(perdaMensal) + ' por mês no Google. Quero entender como recuperar isso.')" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="relative z-10 mt-10 block w-full bg-primary text-dark text-center font-extrabold text-lg md:text-xl py-5 px-4 rounded-full hover:bg-white transition-all shadow-xl transform hover:-translate-y-1">
+                            Recuperar esses <span x-text="formatMoney(perdaMensal)"></span>/mês no meu negócio
                         </a>
                     </div>
                 </div>
