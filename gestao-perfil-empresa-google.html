@@ -85,353 +85,353 @@
                 
                 <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-dark text-primary font-bold px-6 py-2.5 rounded-full hover:bg-black transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-338:                 </a>
-339:             </div>
-340: 
-341:             <!-- Mobile Menu Button -->
-342:             <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-dark hover:text-white p-2" aria-label="Menu">
-343:                 <svg x-show="!mobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-344:                 <svg x-show="mobileMenuOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-345:             </button>
-346:         </nav>
-347: 
-348:         <!-- Mobile Menu Panel -->
-349:         <div x-show="mobileMenuOpen" x-collapse x-cloak class="lg:hidden bg-primary border-t border-yellow-400 shadow-2xl absolute w-full left-0">
-350:             <div class="container mx-auto px-4 py-6 flex flex-col space-y-2 pb-8">
-351:                 <a @click="mobileMenuOpen = false" href="index.html#hero" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Início</a>
-352:                 <a @click="mobileMenuOpen = false" href="index.html#servicos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Serviços</a>
-353:                 <a @click="mobileMenuOpen = false" href="index.html#caso-de-sucesso" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Caso de Sucesso</a>
-354:                 <a @click="mobileMenuOpen = false" href="index.html#quemsomos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Quem Somos</a>
-355:                 <a @click="mobileMenuOpen = false" href="index.html#especialidade-gastronomia" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Especialidade</a>
-356:                 <a @click="mobileMenuOpen = false" href="index.html#como-funciona" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Metodologia</a>
-357:                 <a @click="mobileMenuOpen = false" href="index.html#faq" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Dúvidas</a>
-358:                 <a @click="mobileMenuOpen = false" href="index.html#contato" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Contato</a>
-359:                 <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2 bg-dark text-primary font-bold px-6 py-4 rounded-full text-center mt-6 shadow-md">
-360:                     Falar no WhatsApp
-361:                 </a>
-362:             </div>
-363:         </div>
-364:     </header>
-365: 
-366:     <main class="pt-[72px]">
-367: 
-368:         <!-- HERO SECTION -->
-369:         <section class="relative bg-dark text-white min-h-[90vh] flex items-center pt-20 pb-20 lg:pb-32 overflow-hidden">
-370:             <div class="absolute inset-0 z-0">
-371:                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-dark to-dark opacity-90"></div>
-372:                 <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-373:             </div>
-374:             
-375:             <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl">
-376:                 <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
-377:                     <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-378:                     <span class="text-sm font-bold tracking-wider text-primary uppercase">Otimização de Perfil de Empresa</span>
-379:                 </div>
-380:                 
-381:                 <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight text-white">
-382:                     Transforme seu <span class="text-primary">Google Maps</span> no seu melhor vendedor.
-383:                 </h1>
-384:                 
-385:                 <h2 class="text-lg md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
-386:                     Google Maps + SEO Local + Gestão Estratégica. <br class="hidden md:block">
-387:                     Seja a primeira opção quando seus clientes pesquisarem pelos seus serviços na sua região.
-388:                 </h2>
-389:                 
-390:                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-8">
-391:                     <a href="https://wa.me/5521995928037?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20gestão%20do%20Perfil%20no%20Google." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary text-dark font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-hover transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
-392:                         Solicitar Análise Gratuita
-393:                     </a>
-394:                     <a href="#como-funciona" class="w-full sm:w-auto bg-white/10 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
-395:                         Entender o serviço
-396:                     </a>
-397:                 </div>
-398:             </div>
-399:         </section>
-400: 
-401:         <!-- O PROBLEMA -->
-402:         <section class="py-24 bg-white border-b border-gray-100">
-403:             <div class="container mx-auto px-4 max-w-7xl">
-404:                 <div class="flex flex-col lg:flex-row items-center gap-16">
-405:                     <div class="lg:w-1/2">
-406:                         <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Seus clientes não estão no Instagram quando querem comprar. Eles estão no Google.</h2>
-407:                         <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
-408:                         <div class="prose prose-lg text-gray-600">
-409:                             <p class="mb-4">O Instagram cria desejo, mas o <strong>Google captura a intenção real de compra</strong>. Quando alguém pesquisa "dentista perto de mim", "oficina aberta agora" ou "melhor restaurante de frutos do mar", essa pessoa já decidiu que vai gastar dinheiro.</p>
-410:                             <p class="mb-4">A única questão é: <strong>ela vai encontrar você ou o seu concorrente?</strong></p>
-411:                             <div class="bg-light p-6 rounded-2xl border border-gray-200 mt-8 shadow-sm">
-412:                                 <h4 class="font-bold text-dark text-lg mb-4 flex items-center gap-2">
-413:                                     <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-414:                                     O que faz você perder vendas todos os dias:
-415:                                 </h4>
-416:                                 <ul class="space-y-3">
-417:                                     <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Perfil desatualizado, suspenso ou sem verificação.</li>
-418:                                     <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Falta de palavras-chave estratégicas na descrição e serviços.</li>
-419:                                     <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Avaliações não respondidas ou nota baixa no Maps.</li>
-420:                                     <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Concorrentes com perfis muito mais atrativos e completos.</li>
-421:                                 </ul>
-422:                             </div>
-423:                         </div>
-424:                     </div>
-425:                     
-426:                     <div class="lg:w-1/2 w-full">
-427:                         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-428:                             <img src="/assets/img/hero-bg.webp" alt="Pessoa pesquisando no celular" class="w-full h-auto object-cover">
-429:                             <div class="absolute inset-0 bg-dark/20"></div>
-430:                             <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/40 shadow-xl">
-431:                                 <div class="flex items-center justify-between">
-432:                                     <div>
-433:                                         <div class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">A verdade sobre a busca local</div>
-434:                                         <div class="text-xl font-bold text-dark">46% de todas as pesquisas no Google buscam informações locais.</div>
-435:                                     </div>
-436:                                 </div>
-437:                             </div>
-438:                         </div>
-439:                     </div>
-440:                 </div>
-441:             </div>
-442:         </section>
-443: 
-444:         <!-- O QUE FAZEMOS -->
-445:         <section id="como-funciona" class="py-24 bg-light">
-446:             <div class="container mx-auto px-4 max-w-7xl">
-447:                 <div class="text-center max-w-3xl mx-auto mb-16">
-448:                     <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">A SOLUÇÃO</span>
-449:                     <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Como dominamos sua região no mapa</h2>
-450:                     <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-451:                     <p class="text-lg text-gray-600">
-452:                         Nossa gestão não é apenas preencher dados. Nós aplicamos técnicas de SEO Local para que o Google reconheça sua empresa como a resposta mais relevante da sua área.
-453:                     </p>
-454:                 </div>
-455:                 
-456:                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-457:                     <!-- Card 1 -->
-458:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-459:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-460:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-461:                         </div>
-462:                         <h3 class="text-xl font-bold text-dark mb-3">Pesquisa de Palavras-Chave</h3>
-463:                         <p class="text-gray-600">Descobrimos exatamente quais termos seus clientes usam para procurar seu serviço e implementamos isso no seu perfil.</p>
-464:                     </div>
-465:                     
-466:                     <!-- Card 2 -->
-467:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-468:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-469:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-470:                         </div>
-471:                         <h3 class="text-xl font-bold text-dark mb-3">Otimização Completa</h3>
-472:                         <p class="text-gray-600">Configuramos categorias, horários, áreas de atendimento, cadastro de produtos/serviços e descrições persuasivas (Copywriting).</p>
-473:                     </div>
-474:                     
-475:                     <!-- Card 3 -->
-476:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-477:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-478:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-479:                         </div>
-480:                         <h3 class="text-xl font-bold text-dark mb-3">Gestão de Avaliações</h3>
-481:                         <p class="text-gray-600">Respostas profissionais, estratégias para obter mais avaliações de 5 estrelas e fortalecimento da reputação da sua marca.</p>
-482:                     </div>
-483:                     
-484:                     <!-- Card 4 -->
-485:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-486:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-487:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-488:                         </div>
-489:                         <h3 class="text-xl font-bold text-dark mb-3">Curadoria de Fotos</h3>
-490:                         <p class="text-gray-600">Seleção e otimização de imagens, logotipos e fotos de capa para aumentar significativamente a taxa de cliques (CTR).</p>
-491:                     </div>
-492:                     
-493:                     <!-- Card 5 -->
-494:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-495:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-496:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-497:                         </div>
-498:                         <h3 class="text-xl font-bold text-dark mb-3">Postagens Constantes</h3>
-499:                         <p class="text-gray-600">Criação de posts estratégicos dentro do Google com ofertas, novidades e links para converter visitantes diretamente no mapa.</p>
-500:                     </div>
-501:                     
-502:                     <!-- Card 6 -->
-503:                     <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
-504:                         <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-505:                             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-506:                         </div>
-507:                         <h3 class="text-xl font-bold text-dark mb-3">Monitoramento e Insights</h3>
-508:                         <p class="text-gray-600">Acompanhamento contínuo dos dados de acesso (rotas solicitadas, ligações geradas) para melhorar os resultados constantemente.</p>
-509:                     </div>
-510:                 </div>
-511:             </div>
-512:         </section>
-513: 
-514:         <!-- FAQ -->
-515:         <section id="faq" class="py-24 bg-white" x-data="{ activeAccordion: null }">
-516:             <div class="container mx-auto px-4 max-w-4xl">
-517:                 <div class="text-center mb-16">
-518:                     <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Dúvidas Frequentes</h2>
-519:                     <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-520:                 </div>
-521:                 
-522:                 <div class="space-y-4">
-523:                     <!-- FAQ 1 -->
-524:                     <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-525:                         <button @click="activeAccordion = activeAccordion === 1 ? null : 1" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-526:                             <span class="font-bold text-dark pr-8">Qual a diferença entre só criar o perfil e contratar a Gestão da Vinsancor?</span>
-527:                             <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-528:                         </button>
-529:                         <div x-show="activeAccordion === 1" x-collapse>
-530:                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
-531:                                 Qualquer pessoa pode criar um perfil no Google, mas sem aplicar técnicas de SEO Local, ele se torna apenas um cartão de visitas perdido. Nossa gestão otimiza o algoritmo para que o Google entenda sua relevância, colocando você acima dos concorrentes nas pesquisas feitas por clientes próximos.
-532:                             </div>
-533:                         </div>
-534:                     </div>
-535:                     <!-- FAQ 2 -->
-536:                     <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-537:                         <button @click="activeAccordion = activeAccordion === 2 ? null : 2" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-538:                             <span class="font-bold text-dark pr-8">Quanto tempo demora para aparecer na primeira página?</span>
-539:                             <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-540:                         </button>
-541:                         <div x-show="activeAccordion === 2" x-collapse>
-542:                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
-543:                                 O SEO Local é um trabalho contínuo. Melhorias podem ser notadas nas primeiras semanas com o aumento de impressões, mas o amadurecimento e consolidação no "Local Pack" (os 3 primeiros resultados do mapa) geralmente ocorrem de forma consistente ao longo dos primeiros 3 a 6 meses de otimização ativa.
-544:                             </div>
-545:                         </div>
-546:                     </div>
-547:                     <!-- FAQ 3 -->
-548:                     <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-549:                         <button @click="activeAccordion = activeAccordion === 3 ? null : 3" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-550:                             <span class="font-bold text-dark pr-8">Minha empresa não tem endereço físico (ou atendo em casa). Posso ter um perfil?</span>
-551:                             <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-552:                         </button>
-553:                         <div x-show="activeAccordion === 3" x-collapse>
-554:                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
-555:                                 Sim! Nós configuramos seu perfil como "Empresa de prestação de serviços ao domicílio" (SAB - Service Area Business). Dessa forma, o Google oculta seu endereço exato por privacidade, mas exibe as cidades e bairros onde você presta seus serviços, permitindo que você apareça nas buscas locais.
-556:                             </div>
-557:                         </div>
-558:                     </div>
-559:                     <!-- FAQ 4 -->
-560:                     <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-561:                         <button @click="activeAccordion = activeAccordion === 4 ? null : 4" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-562:                             <span class="font-bold text-dark pr-8">Como funciona a recuperação de perfis suspensos?</span>
-563:                             <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 4}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-564:                         </button>
-565:                         <div x-show="activeAccordion === 4" x-collapse>
-566:                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
-567:                                 Fazemos uma auditoria completa para identificar quais diretrizes do Google foram violadas (nome inadequado, endereço duplicado, etc). Corrigimos as informações, preparamos a documentação comprobatória necessária e entramos em contato com o suporte do Google de forma profissional para solicitar a reativação.
-568:                             </div>
-569:                         </div>
-570:                     </div>
-571:                 </div>
-572:             </div>
-573:         </section>
-574: 
-575:         <!-- CTA FINAL -->
-576:         <section class="py-24 bg-primary text-dark relative overflow-hidden">
-577:             <!-- Decorative circle -->
-578:             <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
-579:             <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-dark/10 rounded-full blur-3xl"></div>
-580:             
-581:             <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
-582:                 <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight">Pare de perder clientes para seus vizinhos.</h2>
-583:                 <p class="text-xl md:text-2xl mb-12 font-medium opacity-90 max-w-2xl mx-auto">
-584:                     Fale com nossos especialistas, solicite uma auditoria rápida do seu perfil no Google e descubra quanto dinheiro você está deixando na mesa.
-585:                 </p>
-586:                 
-587:                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-8">
-588:                     <a href="https://wa.me/5521995928037?text=Olá!%20Gostaria%20de%20saber%20como%20melhorar%20meu%20Perfil%20no%20Google." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-dark text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-black transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
-589:                         Falar com Especialista
-590:                     </a>
-591:                 </div>
-592:                 <div class="text-sm font-bold uppercase tracking-widest opacity-70">
-593:                     Análise inicial gratuita • Atendimento Rápido
-594:                 </div>
-595:             </div>
-596:         </section>
-597: 
-598:         <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="fixed md:hidden bottom-4 left-4 right-4 bg-dark text-white text-center font-bold py-4 rounded-full shadow-2xl z-40 border border-gray-800">
-599:             Otimizar meu perfil agora
-600:         </a>
-601: 
-602:     </main>
-603: 
-604:     <!-- Footer -->
-605:     <footer class="bg-dark text-white pt-20 pb-10 border-t border-gray-800">
-606:         <div class="container mx-auto px-4 max-w-7xl">
-607:             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-608:                 
-609:                 <!-- Logo & Brand -->
-610:                 <div class="col-span-1 lg:col-span-1">
-611:                     <a href="index.html#hero" class="block mb-6">
-612:                         <img src="/assets/img/logo_transparent.png" alt="Vinsancor Presença Digital" class="h-12 w-auto object-contain filter brightness-0 invert opacity-90" loading="lazy">
-613:                     </a>
-614:                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
-615:                         Especialistas na aceleração de negócios de serviços digitais, convertendo visitas em resultados tangíveis.
-616:                     </p>
-617:                     <div class="flex gap-4">
-618:                         <a href="https://instagram.com/vinsancor" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 flex items-center justify-center rounded-full hover:bg-primary hover:text-dark transition-colors">
-619:                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.203 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-620:                         </a>
-621:                     </div>
-622:                 </div>
-623: 
-624:                 <!-- Navegação -->
-625:                 <div class="col-span-1">
-626:                     <h4 class="text-lg font-bold mb-6">Navegação Rápida</h4>
-627:                     <ul class="space-y-3">
-628:                         <li><a href="index.html#hero" class="text-gray-400 hover:text-primary transition-colors">Início</a></li>
-629:                         <li><a href="index.html#servicos" class="text-gray-400 hover:text-primary transition-colors">Serviços</a></li>
-630:                         <li><a href="index.html#caso-de-sucesso" class="text-gray-400 hover:text-primary transition-colors">Caso de Sucesso</a></li>
-631:                         <li><a href="index.html#quemsomos" class="text-gray-400 hover:text-primary transition-colors">Quem Somos</a></li>
-632:                         <li><a href="index.html#especialidade-gastronomia" class="text-gray-400 hover:text-primary transition-colors">Especialidade Gastronômica</a></li>
-633:                         <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors">Perguntas Frequentes</a></li>
-634:                     </ul>
-635:                 </div>
-636: 
-637:                 <!-- Contato -->
-638:                 <div class="col-span-1">
-639:                     <h4 class="text-lg font-bold mb-6">Atendimento Direto</h4>
-640:                     <ul class="space-y-4">
-641:                         <li class="flex items-start gap-3">
-642:                             <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-643:                             <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">+55 21 99592-8037</a>
-644:                         </li>
-645:                         <li class="flex items-start gap-3">
-646:                             <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-647:                             <span class="text-gray-400">Segunda a Sexta<br>das 08h às 18h</span>
-648:                         </li>
-649:                         <li class="flex items-start gap-3">
-650:                             <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-651:                             <span class="text-gray-400">Atendimento 100% Online<br>Brasil e Exterior (Sede SP)</span>
-652:                         </li>
-653:                     </ul>
-654:                 </div>
-655: 
-656:                 <!-- CTA Final -->
-657:                 <div class="col-span-1">
-658:                     <h4 class="text-lg font-bold mb-6">Pronto para acelerar?</h4>
-659:                     <p class="text-gray-400 text-sm mb-6">Entre em contato agora para um diagnóstico do seu negócio e posicione-se à frente dos concorrentes.</p>
-660:                     <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-primary text-dark font-bold py-3 px-6 rounded-full hover:bg-primary-hover transition-colors">
-661:                         Falar no WhatsApp
-662:                     </a>
-663:                 </div>
-664: 
-665:             </div>
-666: 
-667:             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-668:                 <p class="text-gray-500 text-sm">
-669:                     © 2026 Vinsancor Presença Digital. Todos os direitos reservados.
-670:                 </p>
-671:                 <p class="text-gray-600 text-sm">
-672:                     Desenvolvido por Vinsancor Presença Digital
-673:                 </p>
-674:             </div>
-675:         </div>
-676:     </footer>
-677: 
-678:     <!-- Botão Flutuante WhatsApp -->
-679:     <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-secondary text-white p-4 rounded-full shadow-lg hover:bg-secondary-hover hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" aria-label="Fale conosco no WhatsApp">
-680:         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-681:         <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-dark font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none text-sm hidden md:block">
-682:             Podemos ajudar?
-683:         </span>
-684:     </a>
-685: 
-686: </body>
-687: </html>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden text-dark hover:text-white p-2" aria-label="Menu">
+                <svg x-show="!mobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg x-show="mobileMenuOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Panel -->
+        <div x-show="mobileMenuOpen" x-collapse x-cloak class="lg:hidden bg-primary border-t border-yellow-400 shadow-2xl absolute w-full left-0">
+            <div class="container mx-auto px-4 py-6 flex flex-col space-y-2 pb-8">
+                <a @click="mobileMenuOpen = false" href="index.html#hero" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Início</a>
+                <a @click="mobileMenuOpen = false" href="index.html#servicos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Serviços</a>
+                <a @click="mobileMenuOpen = false" href="index.html#caso-de-sucesso" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Caso de Sucesso</a>
+                <a @click="mobileMenuOpen = false" href="index.html#quemsomos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Quem Somos</a>
+                <a @click="mobileMenuOpen = false" href="index.html#especialidade-gastronomia" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Especialidade</a>
+                <a @click="mobileMenuOpen = false" href="index.html#como-funciona" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Metodologia</a>
+                <a @click="mobileMenuOpen = false" href="index.html#faq" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Dúvidas</a>
+                <a @click="mobileMenuOpen = false" href="index.html#contato" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Contato</a>
+                <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center gap-2 bg-dark text-primary font-bold px-6 py-4 rounded-full text-center mt-6 shadow-md">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[72px]">
+
+        <!-- HERO SECTION -->
+        <section class="relative bg-dark text-white min-h-[90vh] flex items-center pt-20 pb-20 lg:pb-32 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/40 via-dark to-dark opacity-90"></div>
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl">
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span class="text-sm font-bold tracking-wider text-primary uppercase">Otimização de Perfil de Empresa</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 tracking-tight text-white">
+                    Transforme seu <span class="text-primary">Google Maps</span> no seu melhor vendedor.
+                </h1>
+                
+                <h2 class="text-lg md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+                    Google Maps + SEO Local + Gestão Estratégica. <br class="hidden md:block">
+                    Seja a primeira opção quando seus clientes pesquisarem pelos seus serviços na sua região.
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-8">
+                    <a href="https://wa.me/5521995928037?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20gestão%20do%20Perfil%20no%20Google." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary text-dark font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-hover transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
+                        Solicitar Análise Gratuita
+                    </a>
+                    <a href="#como-funciona" class="w-full sm:w-auto bg-white/10 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
+                        Entender o serviço
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- O PROBLEMA -->
+        <section class="py-24 bg-white border-b border-gray-100">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Seus clientes não estão no Instagram quando querem comprar. Eles estão no Google.</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
+                        <div class="prose prose-lg text-gray-600">
+                            <p class="mb-4">O Instagram cria desejo, mas o <strong>Google captura a intenção real de compra</strong>. Quando alguém pesquisa "dentista perto de mim", "oficina aberta agora" ou "melhor restaurante de frutos do mar", essa pessoa já decidiu que vai gastar dinheiro.</p>
+                            <p class="mb-4">A única questão é: <strong>ela vai encontrar você ou o seu concorrente?</strong></p>
+                            <div class="bg-light p-6 rounded-2xl border border-gray-200 mt-8 shadow-sm">
+                                <h4 class="font-bold text-dark text-lg mb-4 flex items-center gap-2">
+                                    <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                    O que faz você perder vendas todos os dias:
+                                </h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Perfil desatualizado, suspenso ou sem verificação.</li>
+                                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Falta de palavras-chave estratégicas na descrição e serviços.</li>
+                                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Avaliações não respondidas ou nota baixa no Maps.</li>
+                                    <li class="flex items-start gap-3"><svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Concorrentes com perfis muito mais atrativos e completos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2 w-full">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="/assets/img/hero-bg.webp" alt="Pessoa pesquisando no celular" class="w-full h-auto object-cover">
+                            <div class="absolute inset-0 bg-dark/20"></div>
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl border border-white/40 shadow-xl">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <div class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-1">A verdade sobre a busca local</div>
+                                        <div class="text-xl font-bold text-dark">46% de todas as pesquisas no Google buscam informações locais.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE FAZEMOS -->
+        <section id="como-funciona" class="py-24 bg-light">
+            <div class="container mx-auto px-4 max-w-7xl">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">A SOLUÇÃO</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Como dominamos sua região no mapa</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                    <p class="text-lg text-gray-600">
+                        Nossa gestão não é apenas preencher dados. Nós aplicamos técnicas de SEO Local para que o Google reconheça sua empresa como a resposta mais relevante da sua área.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Pesquisa de Palavras-Chave</h3>
+                        <p class="text-gray-600">Descobrimos exatamente quais termos seus clientes usam para procurar seu serviço e implementamos isso no seu perfil.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Otimização Completa</h3>
+                        <p class="text-gray-600">Configuramos categorias, horários, áreas de atendimento, cadastro de produtos/serviços e descrições persuasivas (Copywriting).</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Gestão de Avaliações</h3>
+                        <p class="text-gray-600">Respostas profissionais, estratégias para obter mais avaliações de 5 estrelas e fortalecimento da reputação da sua marca.</p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Curadoria de Fotos</h3>
+                        <p class="text-gray-600">Seleção e otimização de imagens, logotipos e fotos de capa para aumentar significativamente a taxa de cliques (CTR).</p>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Postagens Constantes</h3>
+                        <p class="text-gray-600">Criação de posts estratégicos dentro do Google com ofertas, novidades e links para converter visitantes diretamente no mapa.</p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-soft hover:shadow-hover transition-all transform hover:-translate-y-1">
+                        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Monitoramento e Insights</h3>
+                        <p class="text-gray-600">Acompanhamento contínuo dos dados de acesso (rotas solicitadas, ligações geradas) para melhorar os resultados constantemente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-24 bg-white" x-data="{ activeAccordion: null }">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-6">Dúvidas Frequentes</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 1 ? null : 1" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Qual a diferença entre só criar o perfil e contratar a Gestão da Vinsancor?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 1" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
+                                Qualquer pessoa pode criar um perfil no Google, mas sem aplicar técnicas de SEO Local, ele se torna apenas um cartão de visitas perdido. Nossa gestão otimiza o algoritmo para que o Google entenda sua relevância, colocando você acima dos concorrentes nas pesquisas feitas por clientes próximos.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 2 ? null : 2" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Quanto tempo demora para aparecer na primeira página?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 2" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
+                                O SEO Local é um trabalho contínuo. Melhorias podem ser notadas nas primeiras semanas com o aumento de impressões, mas o amadurecimento e consolidação no "Local Pack" (os 3 primeiros resultados do mapa) geralmente ocorrem de forma consistente ao longo dos primeiros 3 a 6 meses de otimização ativa.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 3 ? null : 3" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Minha empresa não tem endereço físico (ou atendo em casa). Posso ter um perfil?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 3" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
+                                Sim! Nós configuramos seu perfil como "Empresa de prestação de serviços ao domicílio" (SAB - Service Area Business). Dessa forma, o Google oculta seu endereço exato por privacidade, mas exibe as cidades e bairros onde você presta seus serviços, permitindo que você apareça nas buscas locais.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 4 ? null : 4" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Como funciona a recuperação de perfis suspensos?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 4}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 4" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
+                                Fazemos uma auditoria completa para identificar quais diretrizes do Google foram violadas (nome inadequado, endereço duplicado, etc). Corrigimos as informações, preparamos a documentação comprobatória necessária e entramos em contato com o suporte do Google de forma profissional para solicitar a reativação.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="py-24 bg-primary text-dark relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-dark/10 rounded-full blur-3xl"></div>
+            
+            <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight">Pare de perder clientes para seus vizinhos.</h2>
+                <p class="text-xl md:text-2xl mb-12 font-medium opacity-90 max-w-2xl mx-auto">
+                    Fale com nossos especialistas, solicite uma auditoria rápida do seu perfil no Google e descubra quanto dinheiro você está deixando na mesa.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-8">
+                    <a href="https://wa.me/5521995928037?text=Olá!%20Gostaria%20de%20saber%20como%20melhorar%20meu%20Perfil%20no%20Google." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-dark text-white font-bold text-lg px-10 py-5 rounded-full hover:bg-black transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
+                        Falar com Especialista
+                    </a>
+                </div>
+                <div class="text-sm font-bold uppercase tracking-widest opacity-70">
+                    Análise inicial gratuita • Atendimento Rápido
+                </div>
+            </div>
+        </section>
+
+        <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="fixed md:hidden bottom-4 left-4 right-4 bg-dark text-white text-center font-bold py-4 rounded-full shadow-2xl z-40 border border-gray-800">
+            Otimizar meu perfil agora
+        </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Logo & Brand -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html#hero" class="block mb-6">
+                        <img src="/assets/img/logo_transparent.png" alt="Vinsancor Presença Digital" class="h-12 w-auto object-contain filter brightness-0 invert opacity-90" loading="lazy">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Especialistas na aceleração de negócios de serviços digitais, convertendo visitas em resultados tangíveis.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/vinsancor" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 flex items-center justify-center rounded-full hover:bg-primary hover:text-dark transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.203 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navegação -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-bold mb-6">Navegação Rápida</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#hero" class="text-gray-400 hover:text-primary transition-colors">Início</a></li>
+                        <li><a href="index.html#servicos" class="text-gray-400 hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="index.html#caso-de-sucesso" class="text-gray-400 hover:text-primary transition-colors">Caso de Sucesso</a></li>
+                        <li><a href="index.html#quemsomos" class="text-gray-400 hover:text-primary transition-colors">Quem Somos</a></li>
+                        <li><a href="index.html#especialidade-gastronomia" class="text-gray-400 hover:text-primary transition-colors">Especialidade Gastronômica</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-bold mb-6">Atendimento Direto</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">+55 21 99592-8037</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="text-gray-400">Segunda a Sexta<br>das 08h às 18h</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-primary mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span class="text-gray-400">Atendimento 100% Online<br>Brasil e Exterior (Sede SP)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA Final -->
+                <div class="col-span-1">
+                    <h4 class="text-lg font-bold mb-6">Pronto para acelerar?</h4>
+                    <p class="text-gray-400 text-sm mb-6">Entre em contato agora para um diagnóstico do seu negócio e posicione-se à frente dos concorrentes.</p>
+                    <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-primary text-dark font-bold py-3 px-6 rounded-full hover:bg-primary-hover transition-colors">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2026 Vinsancor Presença Digital. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-600 text-sm">
+                    Desenvolvido por Vinsancor Presença Digital
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-secondary text-white p-4 rounded-full shadow-lg hover:bg-secondary-hover hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" aria-label="Fale conosco no WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-dark font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none text-sm hidden md:block">
+            Podemos ajudar?
+        </span>
+    </a>
+
+</body>
+</html>
