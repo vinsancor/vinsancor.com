@@ -294,6 +294,7 @@
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#hero" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">Início</a>
                 <a href="#servicos" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">Serviços</a>
+                <a href="geo-local-check.html" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">GEO Local</a>
                 <a href="#caso-de-sucesso" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">Caso de Sucesso</a>
                 <a href="#quemsomos" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">Quem Somos</a>
                 <a href="#especialidade-gastronomia" class="text-dark hover:text-white transition-colors font-medium text-sm uppercase tracking-wide">Especialidade</a>
@@ -318,6 +319,7 @@
             <div class="container mx-auto px-4 py-6 flex flex-col space-y-2 pb-8">
                 <a @click="mobileMenuOpen = false" href="#hero" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Início</a>
                 <a @click="mobileMenuOpen = false" href="#servicos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Serviços</a>
+                <a @click="mobileMenuOpen = false" href="geo-local-check.html" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">GEO Local</a>
                 <a @click="mobileMenuOpen = false" href="#caso-de-sucesso" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Caso de Sucesso</a>
                 <a @click="mobileMenuOpen = false" href="#quemsomos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Quem Somos</a>
                 <a @click="mobileMenuOpen = false" href="#especialidade-gastronomia" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Especialidade</a>
@@ -488,14 +490,15 @@
                     </div>
 
                     <!-- Serviço 6 -->
-                    <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-6.png" alt="Google Maps + SEO Local + GEO" class="w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
+                    <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 relative">
+                        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-white font-bold px-6 py-2 rounded-full text-sm shadow-md tracking-wider uppercase">Novo</div>
+                        <img src="/assets/img/servico-6.png" alt="Google Maps + SEO Local + GEO" class="w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Auditoria de visibilidade digital para a era da inteligência artificial</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Auditoria e estratégias para presença digital nos mecanismos de buscas e inteligência artificial como ChatGPT, Gemini, Perplexity, entre outros.</p>
                         
                         <div class="flex flex-col gap-3">
-                            <a href="#contato" class="text-center bg-dark text-white font-bold py-3 px-6 rounded-full hover:bg-black transition-colors w-full">Solicitar Proposta</a>
-                            <a href="https://wa.me/5521995928037?text=Quero%20saber%20sobre%20Auditoria%20de%20visibilidade%20digital" target="_blank" rel="noopener noreferrer" class="text-center border-2 border-dark text-dark font-bold py-3 px-6 rounded-full hover:bg-dark hover:text-white transition-colors w-full flex items-center justify-center gap-2">
+                            <a href="geo-local-check.html" class="text-center bg-primary text-dark font-bold py-3 px-6 rounded-full hover:bg-primary-hover transition-colors w-full">Saiba mais</a>
+                            <a href="https://wa.me/5521995928037?text=Quero%20saber%20sobre%20o%20GEO%20Local%20Check" target="_blank" rel="noopener noreferrer" class="text-center border-2 border-dark text-dark font-bold py-3 px-6 rounded-full hover:bg-dark hover:text-white transition-colors w-full flex items-center justify-center gap-2">
                                 Via WhatsApp
                             </a>
                         </div>
