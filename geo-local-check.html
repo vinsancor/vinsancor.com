@@ -466,18 +466,23 @@
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                    <!-- Image 1 -->
-                    <div class="bg-light rounded-3xl p-4 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <div class="rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-white h-full flex flex-col justify-center">
-                            <img src="/assets/img/marmitasaboresaudenaIA.png" alt="Exemplo do cliente Sabor e Saúde Marmitas recomendado pela Inteligência Artificial" class="w-full h-auto object-cover" loading="lazy">
+                <div class="flex flex-col items-center gap-6 max-w-4xl mx-auto">
+                    <!-- Image 1 (Pergunta) -->
+                    <div class="bg-light rounded-3xl p-4 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 w-full md:w-4/5 lg:w-3/4">
+                        <div class="rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-white text-center flex flex-col justify-center">
+                            <img src="/assets/img/marmitasaboresaudenaIA.png" alt="Pergunta do usuário na Inteligência Artificial" class="w-full h-auto mx-auto object-contain" loading="lazy">
                         </div>
                     </div>
                     
-                    <!-- Image 2 -->
-                    <div class="bg-light rounded-3xl p-4 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <div class="rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-white h-full flex flex-col justify-center">
-                            <img src="/assets/img/marmitasaboresaudenaIA2.png" alt="Detalhe do cliente Sabor e Saúde Marmitas na resposta da IA" class="w-full h-auto object-cover" loading="lazy">
+                    <!-- Seta/Conector visual -->
+                    <div class="flex justify-center text-primary/60">
+                        <svg class="w-10 h-10 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </div>
+
+                    <!-- Image 2 (Resposta da IA) -->
+                    <div class="bg-light rounded-3xl p-4 border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300 w-full">
+                        <div class="rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-white text-center flex flex-col justify-center">
+                            <img src="/assets/img/marmitasaboresaudenaIA2.png" alt="Detalhe do cliente Sabor e Saúde Marmitas recomendado na resposta da IA" class="w-full h-auto mx-auto object-contain" loading="lazy">
                         </div>
                     </div>
                 </div>
