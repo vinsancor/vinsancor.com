@@ -96,7 +96,8 @@
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-</meta></meta></head>
+</meta></meta><link href="assets/blog-related.css" rel="stylesheet"/>
+</head>
 <body>
 <div class="flex min-h-screen flex-col bg-background"><header class="sticky top-0 z-50 w-full border-b border-primary-hover bg-primary shadow-sm">
 <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 xl:px-8">
@@ -252,20 +253,39 @@ html{scroll-behavior:smooth}
 <a class="vs-btn vs-btn--primary" href="https://wa.me/5521995928037?text=Gostaria%20de%20trazer%20mais%20clientes%20para%20o%20meu%20estabelecimento.%20Como%20fa%C3%A7o%3F" rel="noopener noreferrer" target="_blank">Falar com Vinícius</a>
 </div>
 </section>
-<!-- RelatedPosts -->
-<section aria-labelledby="vs-related-title" class="vs-related">
-<h2 class="vs-related__title" id="vs-related-title">Leia também</h2>
+<!-- RelatedPosts (gerado automaticamente a partir de assets/blog-posts.js) -->
+<section class="vs-related" aria-labelledby="vs-related-title" data-related-posts="" data-current-slug="como-criar-um-cardapio-rentavel-e-atraente" data-limit="3">
+<h2 class="vs-related__title" id="vs-related-title">Continue lendo</h2>
+<p class="vs-related__subtitle">Outros artigos do Blog Vinsancor relacionados a este tema.</p>
 <div class="vs-related__grid">
-<a class="vs-related__card" href="https://vinsancor.com/blog">
-<span class="vs-related__tag">Blog Vinsancor</span>
-<span class="vs-related__name">Todos os artigos sobre marketing e presença digital</span>
-<span class="vs-related__desc">Estratégias de SEO, copywriting e presença digital para transformar buscas em clientes.</span>
-</a>
-<a class="vs-related__card" href="https://vinsancor.com/#servicos">
-<span class="vs-related__tag">Vinsancor</span>
-<span class="vs-related__name">Serviços de presença digital para o seu negócio</span>
-<span class="vs-related__desc">Conheça como a Vinsancor posiciona bares, restaurantes e empresas no ecossistema online.</span>
-</a>
+<article class="vs-rp-card">
+<img class="vs-rp-card__media" src="marketing-bares-restaurantes-capa.jpg" alt="Guia Completo de Marketing para Bares e Restaurantes" width="1200" height="675" loading="lazy" decoding="async"/>
+<div class="vs-rp-card__body">
+<span class="vs-rp-card__category">Marketing Gastronômico</span>
+<h3 class="vs-rp-card__title"><a href="guia-completo-marketing-para-bares-e-restaurantes.html">Guia Completo de Marketing para Bares e Restaurantes</a></h3>
+<p class="vs-rp-card__excerpt">Ter uma comida excelente já não é suficiente para garantir mesas cheias. Reunimos as melhores práticas de SEO local, copywriting e estratégias de marketing para transformar o seu bar ou restaurante em um ponto de encontro de alta conversão.</p>
+<div class="vs-rp-card__meta">
+<time datetime="2026-09-28">28 de setembro de 2026</time>
+<span aria-hidden="true">·</span>
+<span>8 min de leitura</span>
+</div>
+<span class="vs-rp-card__cta">Ler artigo →</span>
+</div>
+</article>
+<article class="vs-rp-card">
+<img class="vs-rp-card__media" src="avaliacoes-google-seo-local.png" alt="Como Dominar as Avaliações no Google e Transformar Estrelas em Vendas" width="1200" height="675" loading="lazy" decoding="async"/>
+<div class="vs-rp-card__body">
+<span class="vs-rp-card__category">SEO Local</span>
+<h3 class="vs-rp-card__title"><a href="como-dominar-avaliacoes-google-transformar-estrelas-em-vendas.html">Como Dominar as Avaliações no Google e Transformar Estrelas em Vendas</a></h3>
+<p class="vs-rp-card__excerpt">Estratégias de SEO local, automação e gestão de reputação para conquistar mais avaliações no Google, melhorar sua nota e transformar estrelas em vendas.</p>
+<div class="vs-rp-card__meta">
+<time datetime="2026-09-28">28 de setembro de 2026</time>
+<span aria-hidden="true">·</span>
+<span>6 min de leitura</span>
+</div>
+<span class="vs-rp-card__cta">Ler artigo →</span>
+</div>
+</article>
 </div>
 </section>
 </article>
@@ -419,5 +439,7 @@ html{scroll-behavior:smooth}
   else build();
 })();
 </script>
+<script src="assets/blog-posts.js" defer></script>
+<script src="assets/blog-render.js" defer></script>
 </body>
 </html>
