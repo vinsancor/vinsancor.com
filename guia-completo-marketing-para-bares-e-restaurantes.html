@@ -49,10 +49,7 @@
   .vs-article__grid{display:grid;grid-template-columns:minmax(0,68fr) minmax(0,32fr);gap:40px;align-items:start}
   .vs-article__content{max-width:none;margin:0}
   .vs-sidebar{margin-top:0;border-left:1px solid var(--vs-line);padding-left:40px}
-  .vs-sidebar__inner{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow-y:auto;padding-right:4px}
-  .vs-sidebar__inner::-webkit-scrollbar{width:6px}
-  .vs-sidebar__inner::-webkit-scrollbar-thumb{background:#d8dcda;border-radius:9999px}
-}
+  }
 .vs-card{border:1px solid var(--vs-line);border-radius:1rem;background:#fff;padding:1.5rem}
 .vs-card__title{font-size:1.0625rem;line-height:1.4;font-weight:800;letter-spacing:-.01em;color:var(--vs-dark);margin:0}
 .vs-card--cta{background:var(--vs-yellow);border-color:var(--vs-yellow);color:var(--vs-dark)}
@@ -69,7 +66,7 @@
 .vs-author-mini__img{width:72px;height:72px;border-radius:9999px;object-fit:cover;object-position:center top;flex:0 0 auto;border:2px solid var(--vs-yellow)}
 .vs-author-mini__name{font-weight:800;color:var(--vs-dark);font-size:1rem}
 .vs-bio{margin-top:1rem;display:flex;flex-direction:column;gap:.75rem}
-.vs-bio p{font-size:.9375rem;line-height:1.7;color:var(--vs-muted);margin:0}
+.vs-bio p{font-size:.8125rem;line-height:1.65;color:var(--vs-muted);margin:0}
 .vs-toc__list{list-style:none;margin:1rem 0 0;padding:0;counter-reset:vs-toc}
 .vs-toc__list li{counter-increment:vs-toc;border-top:1px solid var(--vs-line)}
 .vs-toc__list li:first-child{border-top:0}
@@ -77,13 +74,13 @@
 .vs-toc__list a:before{content:counter(vs-toc) ".";font-weight:800;color:var(--vs-yellow-dark)}
 .vs-toc__list a:hover,.vs-toc__list a.is-active{color:var(--vs-dark)}
 .vs-authorcard{margin-top:4rem;display:flex;flex-direction:column;gap:1.5rem;border:1px solid var(--vs-line);border-radius:1.5rem;background:#fff;padding:1.75rem}
-.vs-authorcard__img{width:100%;max-width:180px;aspect-ratio:1;border-radius:1rem;object-fit:cover;object-position:center top;flex:0 0 auto}
+.vs-authorcard__img{width:100%;max-width:120px;aspect-ratio:1;border-radius:1rem;object-fit:cover;object-position:center top;flex:0 0 auto}
 .vs-authorcard__eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--vs-yellow-dark);margin:0}
 .vs-authorcard__name{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--vs-dark);margin:.25rem 0 0}
-.vs-authorcard__text{font-size:.9375rem;line-height:1.7;color:var(--vs-muted);margin:.75rem 0 0}
+.vs-authorcard__text{font-size:.875rem;line-height:1.7;color:var(--vs-muted);margin:.75rem 0 0}
 @media(min-width:768px){
   .vs-authorcard{flex-direction:row;align-items:flex-start;gap:2rem;padding:2rem}
-  .vs-authorcard__img{width:180px}
+  .vs-authorcard__img{width:120px}
 }
 .vs-related{margin-top:4rem}
 .vs-related__title{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--vs-dark);margin:0 0 1.25rem}
@@ -200,6 +197,12 @@ html{scroll-behavior:smooth}
   <a class="vs-btn vs-btn--dark" href="https://wa.me/5521995928037?text=Gostaria%20de%20trazer%20mais%20clientes%20para%20o%20meu%20estabelecimento.%20Como%20fa%C3%A7o%3F" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
 </section>
 
+<!-- TableOfContents -->
+<nav class="vs-card vs-toc" id="vs-toc" aria-labelledby="vs-toc-title" hidden>
+  <h2 id="vs-toc-title" class="vs-card__title">Voc&ecirc; vai encontrar neste artigo:</h2>
+  <ol class="vs-toc__list"></ol>
+</nav>
+
 <!-- AuthorSidebarCard -->
 <section class="vs-card" aria-labelledby="vs-about-title">
   <h2 id="vs-about-title" class="vs-card__title">Sobre Vin&iacute;cius Corr&ecirc;a</h2>
@@ -210,15 +213,9 @@ html{scroll-behavior:smooth}
   <div class="vs-bio">
     <p>Sou Vin&iacute;cius Corr&ecirc;a, jornalista especializado em Marketing de Servi&ccedil;os e Presen&ccedil;a Digital, com foco em Psican&aacute;lise do Consumidor e estou a frente da Vinsancor. H&aacute; mais de 20 anos, atuo na linha de frente do atendimento, decodificando as verdadeiras motiva&ccedil;&otilde;es que guiam a decis&atilde;o de compra.</p>
     <p>No ramo da gastronomia, s&atilde;o 7 anos atuando como barista e bartender e tendo passado por renomados bares de coquetelaria em S&atilde;o Paulo, como Riviera, Bar dos Arcos, Astor, Blue Note, Sky Hall Terrace Bar, Mundibar, entre outros.</p>
-    <p>Com forte viv&ecirc;ncia pr&aacute;tica no setor de hospitalidade, trago para o mercado de tecnologia uma vis&atilde;o focada na experi&ecirc;ncia do cliente. Na Vinsancor, transformamos presen&ccedil;a digital em autoridade de marca, ajudando empresas a se posicionarem com destaque no ecossistema online &ndash; com atendimento 100% remoto para o Brasil e exterior.</p>
   </div>
 </section>
 
-<!-- TableOfContents -->
-<nav class="vs-card vs-toc" id="vs-toc" aria-labelledby="vs-toc-title" hidden>
-  <h2 id="vs-toc-title" class="vs-card__title">Voc&ecirc; vai encontrar neste artigo:</h2>
-  <ol class="vs-toc__list"></ol>
-</nav>
 </div></aside>
 </div>
 
@@ -229,6 +226,7 @@ html{scroll-behavior:smooth}
     <p class="vs-authorcard__eyebrow" id="vs-authorcard-title">Sobre o autor</p>
     <p class="vs-authorcard__name">Vin&iacute;cius Corr&ecirc;a</p>
     <p class="vs-authorcard__text">Sou Vin&iacute;cius Corr&ecirc;a, jornalista especializado em Marketing de Servi&ccedil;os e Presen&ccedil;a Digital, com foco em Psican&aacute;lise do Consumidor e estou a frente da Vinsancor. H&aacute; mais de 20 anos, atuo na linha de frente do atendimento, decodificando as verdadeiras motiva&ccedil;&otilde;es que guiam a decis&atilde;o de compra.</p>
+    <p class="vs-authorcard__text">No ramo da gastronomia, s&atilde;o 7 anos atuando como barista e bartender e tendo passado por renomados bares de coquetelaria em S&atilde;o Paulo, como Riviera, Bar dos Arcos, Astor, Blue Note, Sky Hall Terrace Bar, Mundibar, entre outros.</p>
     <p class="vs-authorcard__text">Com forte viv&ecirc;ncia pr&aacute;tica no setor de hospitalidade, trago para o mercado de tecnologia uma vis&atilde;o focada na experi&ecirc;ncia do cliente. Na Vinsancor, transformamos presen&ccedil;a digital em autoridade de marca, ajudando empresas a se posicionarem com destaque no ecossistema online &ndash; com atendimento 100% remoto para o Brasil e exterior.</p>
     <a class="vs-btn vs-btn--primary" href="https://wa.me/5521995928037?text=Gostaria%20de%20trazer%20mais%20clientes%20para%20o%20meu%20estabelecimento.%20Como%20fa%C3%A7o%3F" target="_blank" rel="noopener noreferrer">Falar com Vin&iacute;cius</a>
   </div>
