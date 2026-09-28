@@ -1064,7 +1064,7 @@
                                 @media (min-width: 768px) { .testi-card { flex-basis: calc(50% - 0.5rem); } }
                                 [x-cloak] { display: none !important; }
                             </style>
-                            <div class="relative">
+                            <div class="relative px-6 md:px-7">
                                 <div x-ref="track" @scroll.debounce.100ms="onScroll()" class="testi-track flex gap-4 overflow-x-auto">
 
                             <!-- Card 1 -->
@@ -1191,6 +1191,8 @@
                                     active: 0,
                                     total: 5,
                                     perView: 1,
+                                    scrolling: false,
+                                    _scrollTimer: null,
                                     init() {
                                         this.updatePerView();
                                         this.total = this.$refs.track.children.length;
@@ -1204,11 +1206,15 @@
                                         const first = el.children[0];
                                         if (!first) return;
                                         const w = first.offsetWidth + 16;
+                                        this.scrolling = true;
+                                        clearTimeout(this._scrollTimer);
+                                        this._scrollTimer = setTimeout(() => { this.scrolling = false; }, 600);
                                         el.scrollTo({ left: this.active * w, behavior: 'smooth' });
                                     },
                                     prev() { this.goTo(this.active - 1); },
                                     next() { this.goTo(this.active + 1); },
                                     onScroll() {
+                                        if (this.scrolling) return;
                                         const el = this.$refs.track;
                                         const first = el.children[0];
                                         if (!first) return;
