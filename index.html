@@ -713,6 +713,13 @@
                         </ul>
                     </div>
 
+                    <!-- Botão: saiba mais sobre nossos serviços -->
+                    <div class="mb-12">
+                        <a href="marketing-para-bares-restaurantes.html" class="inline-flex items-center justify-center gap-2 bg-primary text-dark font-bold text-base md:text-lg px-8 py-4 rounded-full hover:bg-white transition-all shadow-xl transform hover:-translate-y-1 text-center">
+                            Entenda melhor como nossos serviços trarão mais clientes para o seu bar ou restaurante
+                        </a>
+                    </div>
+
                     <!-- 3 Imagens Inferiores Alinhadas Lado a Lado -->
                     <div class="grid grid-cols-3 gap-4 mb-16 max-w-3xl mx-auto">
                         <img src="/assets/img/vinsancor03.jpg" alt="Contexto Estratégico em Bares" class="w-full aspect-square md:aspect-[4/3] object-cover rounded-2xl shadow-md" loading="lazy" width="400" height="300">
@@ -1047,9 +1054,41 @@
                         </div>
 
                         <!-- Testimonials Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow">
+                        <!-- Testimonials Carousel -->
+                        <div x-data="testiCarousel" class="flex-grow flex flex-col gap-4">
+                            <style>
+                                .testi-track { scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; }
+                                .testi-track::-webkit-scrollbar { display: none; }
+                                .testi-card { scroll-snap-align: start; flex: 0 0 85%; }
+                                @media (min-width: 640px) { .testi-card { flex-basis: 60%; } }
+                                @media (min-width: 768px) { .testi-card { flex-basis: calc(50% - 0.5rem); } }
+                                [x-cloak] { display: none !important; }
+                            </style>
+                            <div class="relative">
+                                <div x-ref="track" @scroll.debounce.100ms="onScroll()" class="testi-track flex gap-4 overflow-x-auto">
+
                             <!-- Card 1 -->
-                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                            <div class="testi-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjV5D-vsmCjwdAt2dSTlvR30uahoMsNo_rD9ibKoIGj0SR4BS14H=s72-c-rp-mo-br100" alt="Marina Andrade" class="w-10 h-10 rounded-full object-cover">
+                                        <div>
+                                            <h4 class="font-bold text-dark text-sm leading-tight">Marina Andrade</h4>
+                                            <p class="text-xs text-gray-400">25/09/2026</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-400 mb-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    </div>
+                                    <p class="text-sm text-gray-600 line-clamp-5">"Melhor empresa! Profissionais de excelência e um trabalho sério, estratégico e muito eficiente. Eles cuidam das minhas redes sociais e do Google, e os resultados apareceram muito rapidamente. Estou muito satisfeita com o trabalho e com todo o suporte!"</p>
+                                </div>
+                            </div>
+                        <!-- Card 2 -->
+                            <div class="testi-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <img src="https://lh3.googleusercontent.com/a-/ALV-UjWoDcPX4wDQVzLQm-R-mA_RyvZCaVVDYh__9LqJ39Mvui3-iQZV=s72-c-rp-mo-br100" alt="Anny Perfeito" class="w-10 h-10 rounded-full object-cover">
@@ -1069,8 +1108,8 @@
                                 </div>
                             </div>
                             
-                            <!-- Card 2 -->
-                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                            <!-- Card 3 -->
+                            <div class="testi-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <img src="https://lh3.googleusercontent.com/a/ACg8ocLTTRSPHHdSQmSEW5t21o6ltKpJrfbTpbuquR71Jgxuc0zJRg=s72-c-rp-mo-br100" alt="Vinícius dos Santos Siqueira" class="w-10 h-10 rounded-full object-cover">
@@ -1090,8 +1129,8 @@
                                 </div>
                             </div>
                             
-                            <!-- Card 3 -->
-                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                            <!-- Card 4 -->
+                            <div class="testi-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <img src="https://lh3.googleusercontent.com/a-/ALV-UjWC1x2bjQ7pchKEIxMgi0MCEn79x1q8bdjOCJTlM9StXkmUxvwDGA=s72-c-rp-mo-ba4-br100" alt="onira rosa de oliveira" class="w-10 h-10 rounded-full object-cover">
@@ -1111,8 +1150,8 @@
                                 </div>
                             </div>
                             
-                            <!-- Card 4 -->
-                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
+                            <!-- Card 5 -->
+                            <div class="testi-card bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                                 <div>
                                     <div class="flex items-center gap-3 mb-3">
                                         <img src="https://lh3.googleusercontent.com/a-/ALV-UjXOkReYclXPUA08NusD-eFvJpNW6d-XwKP9Xq7KY_8JgGZiuTxCVw=s72-c-rp-mo-ba4-br100" alt="Jurandi França" class="w-10 h-10 rounded-full object-cover">
@@ -1132,27 +1171,53 @@
                                 </div>
                             </div>
                             
-                            <!-- Card 5 -->
-                            <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjV5D-vsmCjwdAt2dSTlvR30uahoMsNo_rD9ibKoIGj0SR4BS14H=s72-c-rp-mo-br100" alt="Marina Andrade" class="w-10 h-10 rounded-full object-cover">
-                                        <div>
-                                            <h4 class="font-bold text-dark text-sm leading-tight">Marina Andrade</h4>
-                                            <p class="text-xs text-gray-400">25/09/2026</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex text-yellow-400 mb-2">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    </div>
-                                    <p class="text-sm text-gray-600 line-clamp-5">"Melhor empresa! Profissionais de excelência e um trabalho sério, estratégico e muito eficiente. Eles cuidam das minhas redes sociais e do Google, e os resultados apareceram muito rapidamente. Estou muito satisfeita com o trabalho e com todo o suporte!"</p>
-                                </div>
+                                                            </div>
+                                <button type="button" @click="prev()" x-show="active > 0" x-cloak aria-label="Depoimento anterior" class="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-dark hover:bg-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                                </button>
+                                <button type="button" @click="next()" x-show="active < maxIndex()" x-cloak aria-label="Próximo depoimento" class="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center text-dark hover:bg-primary transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                            </div>
+                            <div class="flex justify-center items-center gap-2 pt-1">
+                                <template x-for="i in maxIndex() + 1" :key="i">
+                                    <button type="button" @click="goTo(i - 1)" :aria-label="'Ir para o depoimento ' + i" class="h-2 rounded-full transition-all duration-300" :class="active === i - 1 ? 'w-6 bg-primary' : 'w-2 bg-gray-300 hover:bg-gray-400'"></button>
+                                </template>
                             </div>
                         </div>
+                        <script>
+                            document.addEventListener('alpine:init', () => {
+                                Alpine.data('testiCarousel', () => ({
+                                    active: 0,
+                                    total: 5,
+                                    perView: 1,
+                                    init() {
+                                        this.updatePerView();
+                                        this.total = this.$refs.track.children.length;
+                                        window.addEventListener('resize', () => { this.updatePerView(); this.goTo(0); });
+                                    },
+                                    updatePerView() { this.perView = window.innerWidth >= 768 ? 2 : 1; },
+                                    maxIndex() { return Math.max(this.total - this.perView, 0); },
+                                    goTo(i) {
+                                        this.active = Math.min(Math.max(i, 0), this.maxIndex());
+                                        const el = this.$refs.track;
+                                        const first = el.children[0];
+                                        if (!first) return;
+                                        const w = first.offsetWidth + 16;
+                                        el.scrollTo({ left: this.active * w, behavior: 'smooth' });
+                                    },
+                                    prev() { this.goTo(this.active - 1); },
+                                    next() { this.goTo(this.active + 1); },
+                                    onScroll() {
+                                        const el = this.$refs.track;
+                                        const first = el.children[0];
+                                        if (!first) return;
+                                        const w = first.offsetWidth + 16;
+                                        this.active = Math.min(this.maxIndex(), Math.round(el.scrollLeft / w));
+                                    }
+                                }));
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
