@@ -1,0 +1,7 @@
+Pacote Vinsancor com imagens WebP
+
+1. Envie os arquivos HTML para a raiz do site, substituindo as versões atuais.
+2. Envie a pasta assets/img mantendo esta estrutura. Ela contém as 23 imagens em WebP e PNGs de compatibilidade para favicon e ícones de dispositivo.
+3. Preserve no servidor outros arquivos e imagens já existentes que não foram enviados para esta conversão.
+
+Os arquivos originais em Downloads não foram alterados. Os ícones apple-touch-icon e favicon continuam referenciando PNG para manter compatibilidade; versões WebP deles também estão incluídas.
