@@ -1,14 +1,25 @@
-# Vinsancor
+# Vinsancor Presença Digital
 
-> Agência de Marketing Digital e Tráfego Pago em São Paulo.
+> Agência de SEO Local, GEO, Criação de Sites e Tráfego Pago para Micro e Pequenas Empresas
 
-## Serviços
-- Gestão de Tráfego Pago (Google Ads e Meta Ads)
-- Presença Digital e Aceleração de Vendas
-- Criação de Sites One Page de Alta Conversão
-- Gestão de Perfil da Empresa no Google
+## Sobre
+A Vinsancor Presença Digital é uma agência especializada em posicionamento, visibilidade e aceleração de vendas digitais para micro e pequenas empresas no Brasil e no exterior. O foco de atuação abrange estratégias para que empresas sejam encontradas nos motores de busca tradicionais, mapas e em sistemas de inteligência artificial gerativa.
 
-## Contato
-- Website: https://vinsancor.com
-- E-mail: vinsancor@gmail.com
-- WhatsApp: +55 21 99592-8037
+## Serviços Principais
+- **SEO Local & Perfil da Empresa no Google:** Otimização estratégica, gestão de reputação e presença do negócio nas buscas locais e Google Maps.
+- **GEO (Generative Engine Optimization):** Otimização da marca para presença e citação em IAs como ChatGPT, Gemini, Perplexity e Copilot.
+- **Criação de Sites One Page:** Desenvolvimento de páginas institucionais e landing pages de alta conversão, rápidas e adaptadas para dispositivos móveis.
+- **Tráfego Pago (Anúncios Online):** Gestão de campanhas no Google Ads e Meta Ads (Instagram/Facebook) focadas em captação de leads e vendas.
+- **Copywriting & Redes Sociais:** Criação de textos persuasivos e gestão de posicionamento em redes sociais (Instagram, Facebook, LinkedIn).
+- **Especialidade em Gastronomia:** Soluções específicas de marketing digital para bares, restaurantes e estabelecimentos do setor alimentício.
+
+## Público-Alvo
+- Micro e Pequenas Empresas (PMEs)
+- Negócios Locais e Prestadores de Serviços
+- Bares, Restaurantes e Setor de Gastronomia
+
+## Contato e Atendimento
+- **Telefone / WhatsApp:** +55 21 99592-8037
+- **E-mail:** vinsancor@gmail.com
+- **Website:** https://vinsancor.com.br
+- **Abrangência:** Atendimento para todo o Brasil e empresas no exterior.
