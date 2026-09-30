@@ -30,8 +30,8 @@
       category: "SEO Local",
       excerpt:
         "Receber uma avaliação de 1 estrela no Perfil da Empresa no Google (antigo Google Meu Negócio) dói mais do que um cliente entrar no seu estabelecimento, ver o menu, achar tudo caro e simplesmente sair.",
-      coverImage: "/assets/img/avaliacoes-google-seo-local.png?v=20260930",
-      coverAlt: "Avaliações de clientes no Perfil da Empresa no Google",
+      coverImage: "assets/img/assets/img/como-remover-avaliacoes-negativas-no-google.webp?v=20260930",
+      coverAlt: "Como remover avaliações negativas no Google",
       date: "2026-09-30",
       dateLabel: "30 de setembro de 2026",
       readingTime: "9 min de leitura",
