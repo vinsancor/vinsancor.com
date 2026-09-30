@@ -124,6 +124,22 @@ html{scroll-behavior:smooth}
 .vs-review-whatsapp:focus-visible{outline:3px solid var(--vs-dark);outline-offset:3px}
 .vs-review-whatsapp--dark{background:var(--vs-dark);color:#fff}
 @media(min-width:768px){.vs-calc-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.vs-calc-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.vs-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vs-calc-card{padding:1.4rem}}
+
+/* Texto principal ampliado para leitura confortável */
+.vs-article__content p,
+.vs-article__content li,
+.vs-article__content blockquote{font-size:1.0625rem;line-height:1.8}
+.vs-article__content p{margin-top:1rem;margin-bottom:1.15rem}
+@media(min-width:768px){
+  .vs-article__content p,
+  .vs-article__content li,
+  .vs-article__content blockquote{font-size:1.125rem;line-height:1.8}
+  .vs-article__content p{margin-top:1.1rem;margin-bottom:1.3rem}
+}
+/* Preserva o espaçamento interno dos cards explicativos */
+.vs-article__content .vs-calc-context{margin:0 0 1rem}
+.vs-article__content .vs-calc-card p{margin:0}
+.vs-article__content .vs-step-card p{margin:.1rem 0 0}
 </style>
 <link href="assets/blog-related.css?v=20260929" rel="stylesheet"/>
 </head>
