@@ -23,6 +23,29 @@
 
   var posts = [
     {
+      id: "como-remover-avaliacao-negativa-perfil-google-empresa",
+      title: "Como Remover Avaliação Negativa no Perfil do Google da Empresa?",
+      slug: "como-remover-avaliacao-negativa-perfil-google-empresa",
+      url: "como-remover-avaliacao-negativa-perfil-google-empresa.html",
+      category: "SEO Local",
+      excerpt:
+        "Receber uma avaliação de 1 estrela no Perfil da Empresa no Google (antigo Google Meu Negócio) dói mais do que um cliente entrar no seu estabelecimento, ver o menu, achar tudo caro e simplesmente sair.",
+      coverImage: "/assets/img/avaliacoes-google-seo-local.png?v=20260930",
+      coverAlt: "Avaliações de clientes no Perfil da Empresa no Google",
+      date: "2026-09-30",
+      dateLabel: "30 de setembro de 2026",
+      readingTime: "9 min de leitura",
+      tags: [
+        "avaliação negativa",
+        "google",
+        "perfil da empresa no google",
+        "seo local",
+        "reputação",
+        "avaliações",
+        "atendimento ao cliente",
+      ],
+    },
+    {
       id: "como-criar-um-cardapio-rentavel-e-atraente",
       title: "Como Criar um Cardápio Rentável e Atraente",
       slug: "como-criar-um-cardapio-rentavel-e-atraente",
