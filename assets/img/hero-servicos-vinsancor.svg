@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Serviços de presença digital da Vinsancor</title>
+  <desc id="desc">Ilustração com um marcador de localização conectado ao Perfil da Empresa no Google, SEO Local e presença em buscas com inteligência artificial.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173b34"/>
+      <stop offset="1" stop-color="#071b18"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3ad"/>
+      <stop offset=".48" stop-color="#ffc70b"/>
+      <stop offset="1" stop-color="#e99800"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffc70b" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#ffc70b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#d8c477" opacity=".16"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" rx="42" fill="url(#bg)"/>
+  <rect width="1200" height="900" rx="42" fill="url(#dots)" opacity=".55"/>
+  <ellipse cx="600" cy="470" rx="370" ry="310" fill="url(#glow)"/>
+
+  <g fill="none" stroke="#c7ae58" stroke-opacity=".14">
+    <path d="M0 690 Q300 590 600 690 T1200 690"/>
+    <path d="M0 740 Q300 640 600 740 T1200 740"/>
+    <path d="M0 800 Q300 700 600 800 T1200 800"/>
+    <path d="M100 900 600 580 1100 900M300 900 600 580 900 900M0 840 600 580 1200 840"/>
+  </g>
+
+  <text x="70" y="92" fill="#c2d3cb" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="5">VINSANCOR  •  PRESENÇA DIGITAL</text>
+  <text x="70" y="145" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="31" font-weight="700">Sua empresa no caminho de quem procura.</text>
+
+  <!-- Conexões entre o negócio e os canais de descoberta -->
+  <g fill="none" stroke="#e8bd45" stroke-width="3" stroke-opacity=".66">
+    <path d="M520 475 C435 420 395 385 340 390"/>
+    <path d="M680 455 C760 395 794 375 858 390"/>
+    <path d="M670 555 C752 610 794 650 858 660"/>
+  </g>
+  <g fill="#ffe288" filter="url(#softGlow)">
+    <circle cx="340" cy="390" r="6"/><circle cx="858" cy="390" r="6"/><circle cx="858" cy="660" r="6"/>
+  </g>
+
+  <!-- Perfil da Empresa no Google -->
+  <g transform="translate(90 300)">
+    <circle cx="125" cy="88" r="82" fill="#10332d" stroke="#e8bd45" stroke-opacity=".55" stroke-width="2"/>
+    <g fill="none" stroke="#fff5d1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M77 91h96v62H77z"/>
+      <path d="M68 91 80 62h90l12 29"/>
+      <path d="M68 91c0 15 20 19 28 5 7 15 26 15 34 0 8 15 26 15 34 0 9 14 28 10 28-5"/>
+      <path d="M111 153v-34h29v34"/>
+    </g>
+    <circle cx="77" cy="157" r="18" fill="#ffc70b"/>
+    <path d="m68 157 6 6 12-14" fill="none" stroke="#12352e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="125" y="205" text-anchor="middle" fill="#ffd94e" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" letter-spacing="1.4">PERFIL DA EMPRESA</text>
+    <text x="125" y="230" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="600">NO GOOGLE</text>
+  </g>
+
+  <!-- Marcador central -->
+  <g filter="url(#softGlow)">
+    <ellipse cx="600" cy="680" rx="150" ry="34" fill="#ffc70b" opacity=".16"/>
+    <ellipse cx="600" cy="680" rx="104" ry="22" fill="none" stroke="#ffd756" stroke-width="3" opacity=".8"/>
+    <ellipse cx="600" cy="680" rx="68" ry="13" fill="none" stroke="#fff0a7" stroke-width="2" opacity=".8"/>
+    <path d="M600 298c-80 0-145 65-145 145 0 109 145 250 145 250s145-141 145-250c0-80-65-145-145-145Z" fill="url(#gold)"/>
+    <circle cx="600" cy="443" r="57" fill="#102c27" stroke="#fff6ce" stroke-width="8"/>
+    <circle cx="600" cy="443" r="17" fill="#ffc70b"/>
+  </g>
+
+  <!-- SEO Local -->
+  <g transform="translate(865 300)">
+    <circle cx="120" cy="88" r="82" fill="#10332d" stroke="#e8bd45" stroke-opacity=".55" stroke-width="2"/>
+    <g fill="none" stroke="#fff5d1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="107" cy="80" r="34"/>
+      <path d="m132 106 31 31"/>
+      <path d="M75 151v-19m30 19v-37m30 37v-53" stroke="#ffc70b"/>
+      <path d="m76 119 27-18 24 4 22-30" stroke="#ffc70b" stroke-width="4"/>
+    </g>
+    <text x="120" y="205" text-anchor="middle" fill="#ffd94e" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="2">SEO LOCAL</text>
+    <text x="120" y="230" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="600">GOOGLE • MAPS</text>
+  </g>
+
+  <!-- Presença em buscas por IA -->
+  <g transform="translate(865 585)">
+    <rect x="22" y="0" width="196" height="112" rx="24" fill="#10332d" stroke="#e8bd45" stroke-opacity=".7" stroke-width="2"/>
+    <text x="120" y="67" text-anchor="middle" fill="#fff5d1" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="800">IA</text>
+    <path d="M83 113 69 130h34" fill="#10332d" stroke="#e8bd45" stroke-opacity=".7" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="43" y="139" width="154" height="32" rx="16" fill="#0a211d" stroke="#d9c36c" stroke-opacity=".75" stroke-width="2"/>
+    <circle cx="170" cy="155" r="7" fill="none" stroke="#fff5d1" stroke-width="2.5"/>
+    <path d="m175 160 6 6" stroke="#fff5d1" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="120" y="215" text-anchor="middle" fill="#ffd94e" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800" letter-spacing="1.2">PRESENÇA NAS BUSCAS</text>
+    <text x="120" y="240" text-anchor="middle" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="600">COM INTELIGÊNCIA ARTIFICIAL</text>
+  </g>
+
+  <text x="600" y="846" text-anchor="middle" fill="#c2d3cb" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="4">GOOGLE  •  MAPS  •  BUSCAS COM IA</text>
+</svg>
