@@ -56,6 +56,13 @@
                 object-fit: contain;
             }
         }
+        .mobile-menu-panel {
+            max-height: calc(100vh - 5rem);
+            max-height: calc(100dvh - 5rem);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
     </style>
     <script>
         if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
@@ -306,7 +313,7 @@
         </nav>
 
         <!-- Mobile Menu Panel -->
-        <div x-show="mobileMenuOpen" x-collapse x-cloak class="lg:hidden bg-primary border-t border-yellow-400 shadow-2xl absolute w-full left-0">
+        <div x-show="mobileMenuOpen" x-collapse x-cloak class="mobile-menu-panel lg:hidden bg-primary border-t border-yellow-400 shadow-2xl absolute w-full left-0">
             <div class="container mx-auto px-4 py-6 flex flex-col space-y-2 pb-8">
                 <a @click="mobileMenuOpen = false" href="#hero" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Início</a>
                 <a @click="mobileMenuOpen = false" href="#servicos" class="text-dark hover:text-white font-medium block py-3 border-b border-yellow-500/30 text-lg">Serviços</a>
