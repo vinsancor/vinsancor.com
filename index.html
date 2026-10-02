@@ -49,7 +49,19 @@
         .hero-overlay {
             background: linear-gradient(135deg, rgba(20,26,25,0.85) 0%, rgba(20,26,25,0.4) 100%);
         }
+        /* No iPhone, mantenha a proporção original das imagens dos cards de serviços. */
+        @media (max-width: 767px) {
+            .ios-device .service-card-image {
+                height: auto;
+                object-fit: contain;
+            }
+        }
     </style>
+    <script>
+        if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+            document.documentElement.classList.add('ios-device');
+        }
+    </script>
     <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
     [
@@ -421,7 +433,7 @@
                     <!-- Serviço 1 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border-2 border-primary/20 shadow-soft hover:shadow-hover transition-all duration-300 relative">
                         <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-dark font-bold px-6 py-2 rounded-full text-sm shadow-md">Mais Procurado</div>
-                        <img src="/assets/img/servico-1-solid.webp?v=20260929" alt="Gestão e Otimização do Perfil da Empresa no Google" class="w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-1-solid.webp?v=20260929" alt="Gestão e Otimização do Perfil da Empresa no Google" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Destaque-se no Google Meu Negócio</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Otimizamos o Perfil da Empresa no Google para ampliar a presença nas buscas locais e no Maps, facilitar ligações, pedidos de rota e contatos.</p>
                         
@@ -436,7 +448,7 @@
 
                     <!-- Serviço 2 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-2-solid.webp?v=20260929" alt="Criação de Sites One Page Institucionais" class="w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-2-solid.webp?v=20260929" alt="Criação de Sites One Page Institucionais" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Tenha um site que atraia os clientes</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Criamos sites One Page rápidos e responsivos para apresentar seus serviços, responder às dúvidas dos clientes e gerar contatos pelo WhatsApp. Uma solução para negócios locais, como <a href="#especialidade-gastronomia" class="text-primary font-bold hover:underline">bares e restaurantes</a>.</p>
                         
@@ -451,7 +463,7 @@
 
                     <!-- Serviço 3 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-3-solid.webp?v=20260929" alt="Tráfego Pago e Anúncios Online" class="w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-3-solid.webp?v=20260929" alt="Tráfego Pago e Anúncios Online" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Anuncie eventos, promoções ou em datas de pouco movimento</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Planejamos campanhas no Google Ads e Meta Ads (Facebook e Instagram) para alcançar potenciais clientes, captar contatos e apoiar as vendas da sua empresa.</p>
                         
@@ -466,7 +478,7 @@
 
                     <!-- Serviço 4 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-4-solid.webp?v=20260929" alt="Copywriting e Criação de Textos Persuasivos" class="w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-4-solid.webp?v=20260929" alt="Copywriting e Criação de Textos Persuasivos" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Transforme palavras em clientes</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Criamos textos para sites, anúncios, páginas de vendas e roteiros comerciais. Com copywriting e SEO, explicamos sua oferta com clareza, respondemos às dúvidas do público e orientamos o próximo passo.</p>
                         
@@ -481,7 +493,7 @@
 
                     <!-- Serviço 5 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-5-solid.webp?v=20260929" alt="Gestão Estratégica de Redes Sociais" class="w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-5-solid.webp?v=20260929" alt="Gestão Estratégica de Redes Sociais" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Torne suas Redes Sociais geradoras de desejo de compra</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Planejamos conteúdo e posicionamento para Instagram, Facebook e LinkedIn, com comunicação alinhada à identidade e aos objetivos da sua empresa.</p>
                         
@@ -497,7 +509,7 @@
                     <!-- Serviço 6 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border-2 border-secondary/40 shadow-soft hover:shadow-hover transition-all duration-300 relative">
                         <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-white font-bold px-6 py-2 rounded-full text-sm shadow-md tracking-wider uppercase">Novo</div>
-                        <img src="/assets/img/servico-6.webp?v=20260929" alt="Google Maps + SEO Local + GEO" class="w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-6.webp?v=20260929" alt="Google Maps + SEO Local + GEO" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
                         <h3 class="text-2xl font-bold text-dark mb-4">Aumente as chances de sua empresa ser recomendada pelas IAs</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Avaliamos a presença digital da sua marca em buscadores, mapas e ferramentas de IA, como ChatGPT, Gemini, Perplexity e Copilot, e indicamos oportunidades de melhoria em SEO Local e GEO.</p>
                         
