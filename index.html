@@ -46,6 +46,22 @@
     
     <style>
         [x-cloak] { display: none !important; }
+        #diagnostic-modal[hidden] { display: none !important; }
+        .diagnostic-backdrop { position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: rgba(10,15,14,.72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        .diagnostic-screen { min-height: 100%; padding: 1.25rem; background: #f6c900; }
+        .diagnostic-card { width: min(100%, 980px); margin: 2rem auto; background: #fff; border-radius: 1.5rem; box-shadow: 0 24px 80px rgba(20,26,25,.25); position: relative; }
+        .diagnostic-choice { display: flex; align-items: flex-start; gap: 1rem; width: 100%; padding: 1rem 1.2rem; border: 2px solid #dce4f0; border-radius: 1.15rem; background: #fff; color: #141a19; text-align: left; font-weight: 650; cursor: pointer; transition: border-color .15s, background .15s, transform .15s; }
+        .diagnostic-choice:hover { border-color: #f6c900; transform: translateY(-1px); }
+        .diagnostic-choice:has(input:checked) { border-color: #141a19; background: #fff9d8; }
+        .diagnostic-choice input { flex: 0 0 auto; width: 1.15rem; height: 1.15rem; margin-top: .18rem; accent-color: #141a19; }
+        .diagnostic-input { display: block; width: 100%; border: 2px solid #dce4f0; border-radius: .9rem; padding: .9rem 1rem; color: #141a19; background: #f9fafb; }
+        .diagnostic-input:focus { outline: 3px solid rgba(246,201,0,.35); border-color: #c39d00; }
+        .diagnostic-progress { height: .7rem; overflow: hidden; border-radius: 999px; background: #e5e9ef; }
+        .diagnostic-progress > span { display: block; height: 100%; border-radius: inherit; background: #f6c900; transition: width .2s ease; }
+        .diagnostic-primary { border: 0; border-radius: 999px; background: #141a19; color: #fff; padding: .95rem 1.5rem; font-weight: 800; cursor: pointer; }
+        .diagnostic-primary:disabled { opacity: .55; cursor: wait; }
+        .diagnostic-secondary { border: 2px solid #d5dbe5; border-radius: 999px; background: #fff; color: #141a19; padding: .85rem 1.3rem; font-weight: 800; cursor: pointer; }
+        @media (max-width: 640px) { .diagnostic-screen { padding: .5rem; } .diagnostic-card { margin: .5rem auto; border-radius: 1.1rem; } .diagnostic-choice { padding: .85rem; font-size: .95rem; } }
         .hero-overlay {
             background: linear-gradient(135deg, rgba(20,26,25,0.85) 0%, rgba(20,26,25,0.4) 100%);
         }
@@ -374,7 +390,7 @@
                 </h2>
                 
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-                    <a href="#contato" class="w-full sm:w-auto bg-primary text-dark font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-hover transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
+                    <a href="#diagnostic-modal" id="open-diagnostic-modal" class="w-full sm:w-auto bg-primary text-dark font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-hover transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center">
                         Solicitar Diagnóstico Gratuito
                     </a>
                     <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-dark text-primary font-bold text-lg px-8 py-4 rounded-full hover:bg-black transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
@@ -1443,6 +1459,126 @@
             Podemos ajudar?
         </span>
     </a>
+
+    <!-- Diagnóstico interativo: contato, 10 etapas e confirmação -->
+    <div id="diagnostic-modal" class="diagnostic-backdrop" role="dialog" aria-modal="true" aria-labelledby="diagnostic-title" hidden>
+        <div class="diagnostic-screen">
+            <button type="button" id="diagnostic-close" aria-label="Fechar e voltar ao site" style="position:fixed;top:1rem;right:1rem;z-index:2;width:2.8rem;height:2.8rem;border:0;border-radius:50%;background:#fff;color:#141a19;font-size:1.8rem;line-height:1;cursor:pointer">&times;</button>
+            <div class="diagnostic-card">
+                <div id="diagnostic-content" style="padding:clamp(1.25rem,4vw,3rem)"></div>
+                <div id="diagnostic-success" style="display:none;padding:clamp(2rem,7vw,5rem);text-align:center">
+                    <div style="font-size:3.5rem;line-height:1;margin-bottom:1.5rem" aria-hidden="true">✓</div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-dark mb-6">Solicitação recebida!</h2>
+                    <p style="max-width:42rem;margin:0 auto 2rem;color:#4b5563;font-size:1.2rem;line-height:1.65">Obrigado por compartilhar as informações da sua empresa. Vamos analisar suas respostas e entraremos em contato pelo telefone informado.</p>
+                    <button type="button" class="diagnostic-primary" id="diagnostic-success-close">Fechar e voltar ao site</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (() => {
+        const modal = document.getElementById('diagnostic-modal');
+        const content = document.getElementById('diagnostic-content');
+        const success = document.getElementById('diagnostic-success');
+        const formsubmitUrl = 'https://formsubmit.co/ajax/vinsancor@gmail.com';
+        const questions = [
+            { title: 'Você sabe por que algumas empresas aparecem nas primeiras posições do Google quando alguém procura por um serviço ou produto?', options: ['Não sei como funciona aparecer no Google', 'Tenho uma noção, mas ainda fico perdido', 'Sei que preciso aparecer melhor no Google', 'Já invisto em presença no Google e quero melhorar'] },
+            { title: 'Sua empresa já tem Perfil da Empresa no Google (Google Meu Negócio)?', options: ['Minha empresa não tem perfil', 'Não sei se minha empresa tem perfil', 'Minha empresa tem, mas está parado', 'Minha empresa tem, mas não aparece bem', 'Minha empresa tem e está bem organizada', 'Minha empresa tem, mas está suspensa ou com problema'] },
+            { title: 'Hoje sua empresa recebe clientes pelo Google e consegue controlar esses contatos?', options: ['Não recebo clientes pelo Google', 'Recebo muito pouco e não controlo esses contatos', 'Recebo clientes às vezes, mas não acompanho com frequência', 'Recebo clientes com frequência, mas não sei medir exatamente', 'Recebo clientes e acompanho os resultados do perfil', 'Antes recebia melhor pelo Google, mas caiu bastante'] },
+            { title: 'Qual é o maior problema hoje com a presença digital da sua empresa no Google?', options: ['Ainda não tenho Perfil da Empresa no Google', 'Não apareço quando pesquisam meu serviço', 'Apareço, mas quase não recebo contatos', 'Meu perfil está suspenso', 'Não tenho acesso ao perfil', 'Meu concorrente aparece mais do que eu', 'Quero melhorar o perfil para receber mais clientes'] },
+            { title: 'Há quanto tempo sua empresa foi fundada?', options: ['Até 6 meses', 'De 6 meses a 1 ano', 'De 1 a 2 anos', 'De 2 a 3 anos', 'Mais de 3 anos'] },
+            { title: 'Qual é o ticket médio do serviço ou produto que você vende?', options: ['Até R$ 100', 'De R$ 100 a R$ 200', 'De R$ 200 a R$ 300', 'De R$ 300 a R$ 400', 'De R$ 400 a R$ 500', 'R$ 500 ou mais'] },
+            { title: 'A empresa já investe em um profissional para melhorar a visibilidade orgânica no Google, sem depender apenas de tráfego pago?', options: ['Não invisto hoje', 'De R$ 200 a R$ 300 por mês', 'De R$ 300 a R$ 400 por mês', 'De R$ 500 a R$ 600 por mês', 'De R$ 700 a R$ 800 por mês', 'De R$ 900 a R$ 1.000 por mês', 'Mais de R$ 1.000 por mês'] },
+            { title: 'Qual valor faz sentido para você investir na visibilidade da sua empresa no Google para conseguir mais clientes?', options: ['De R$ 250 a R$ 300', 'De R$ 300 a R$ 400', 'De R$ 400 a R$ 500', 'De R$ 500 a R$ 600', 'De R$ 600 a R$ 700', 'De R$ 700 a R$ 800', 'De R$ 800 a R$ 900', 'De R$ 900 a R$ 1.000', 'Acima de R$ 1.000'] }
+        ];
+        const state = { step: 0, contact: {}, company: {}, answers: {} };
+        const esc = value => String(value || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        const inputMarkup = (label, name, placeholder, type='text', required=true) => `<label class="block text-left"><span class="mb-2 block font-bold text-dark">${label}</span><input class="diagnostic-input" name="${name}" type="${type}" placeholder="${placeholder}" ${required?'required':''} autocomplete="${name==='full_name'?'name':name==='phone'?'tel':'organization'}"></label>`;
+
+        function openModal() {
+            modal.hidden = false;
+            document.body.style.overflow = 'hidden';
+            state.step = 0; state.contact = {}; state.company = {}; state.answers = {};
+            success.style.display = 'none'; content.style.display = 'block'; render();
+            document.getElementById('diagnostic-close').focus();
+        }
+        function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
+        function render() {
+            const step = state.step;
+            const header = `<div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.5rem"><div style="font-size:1.25rem;font-weight:900;letter-spacing:.12em;color:#141a19">VINSANCOR</div>${step>0?`<span style="flex:none;border-radius:999px;background:#fff4bf;padding:.55rem 1rem;font-weight:800;color:#141a19">Etapa ${step} de 10</span>`:''}</div>`;
+            let body = '';
+            if (step === 0) {
+                body = `<div class="text-center"><h2 id="diagnostic-title" style="margin:0 0 .5rem;color:#141a19;font-size:clamp(1.8rem,4vw,3rem);line-height:1.12">O primeiro passo para <strong>mais visibilidade online</strong> começa aqui.</h2><p style="margin:0 auto 2rem;max-width:42rem;color:#687386;font-size:1.05rem">Preencha seus dados e responda às perguntas para receber um diagnóstico da presença da sua empresa no Google.</p></div><div style="display:grid;gap:1rem;max-width:42rem;margin:auto">${inputMarkup('Nome completo','full_name','Ex.: João Silva')}${inputMarkup('Cargo','role','Ex.: Proprietário(a), gerente')}${inputMarkup('Telefone com DDD','phone','(11) 99999-9999','tel')}<label style="display:flex;align-items:flex-start;gap:.65rem;color:#4b5563;font-size:.9rem;line-height:1.5"><input type="checkbox" name="privacy_consent" required style="margin-top:.25rem;accent-color:#141a19"><span>Autorizo o envio dos meus dados à Vinsancor, processado pela plataforma FormSubmit, para analisar minha solicitação e entrar em contato. Consulte a <a href="/politica-de-privacidade.html" target="_blank" rel="noopener" style="text-decoration:underline">Política de Privacidade</a>.</span></label></div>`;
+            } else if (step <= 8) {
+                const q = questions[step-1];
+                const selected = state.answers[step] || '';
+                const options = q.options.map((option,i)=>`<label class="diagnostic-choice"><input type="radio" name="diagnostic-choice" value="${esc(option)}" ${selected===option?'checked':''} required><span>${i+1}. ${esc(option)}</span></label>`).join('');
+                body = `<div class="diagnostic-progress" aria-label="Progresso: etapa ${step} de 10"><span style="width:${step*10}%"></span></div><p style="margin:1.5rem 0 .45rem;color:#687386;font-weight:650">Escolha a opção mais próxima da realidade da empresa.</p><h2 id="diagnostic-title" style="margin:0 0 1.3rem;color:#141a19;font-size:clamp(1.45rem,3.6vw,2.35rem);line-height:1.2;font-weight:850">${step}. ${esc(q.title)}</h2><div style="display:grid;gap:.8rem">${options}</div>`;
+            } else if (step === 9) {
+                body = `<div class="diagnostic-progress"><span style="width:90%"></span></div><p style="margin:1.5rem 0 .45rem;color:#687386;font-weight:650">Etapa 9 de 10</p><h2 id="diagnostic-title" style="margin:0 0 1.3rem;color:#141a19;font-size:clamp(1.45rem,3.6vw,2.35rem);line-height:1.2;font-weight:850">Agora, conte um pouco sobre a sua empresa</h2><div style="display:grid;gap:1rem">${inputMarkup('Nome da empresa no Google','business_name','Ex.: Clínica Vale Azul')}${inputMarkup('Nicho ou segmento da empresa','business_segment','Ex.: clínica, oficina, restaurante')}${inputMarkup('Endereço completo que aparece no Google','business_address','Rua, número, bairro, cidade e estado')}</div><p style="margin:1rem 0 0;color:#687386">Esses dados ajudam a localizar o perfil correto para o diagnóstico.</p>`;
+            } else {
+                const opts = [
+                    ['Sim, quero receber a análise profissional','Entendi que o pagamento de R$ 47 será feito somente após receber a análise.'],
+                    ['Quero agendar uma reunião rápida e receber a análise profissional','Quero conversar rapidamente para entender a análise e o melhor caminho para o Google da minha empresa.'],
+                    ['Não, quero receber apenas o diagnóstico básico','Quero receber apenas as informações do diagnóstico básico agora.']
+                ];
+                const options=opts.map(([title,detail],i)=>`<label class="diagnostic-choice"><input type="radio" name="diagnostic-choice" value="${esc(title)}" ${state.answers[10]===title?'checked':''} required><span><strong>${esc(title)}</strong><br><span style="display:block;margin-top:.3rem;color:#687386;font-weight:450">${esc(detail)}</span></span></label>`).join('');
+                body = `<div class="diagnostic-progress"><span style="width:100%"></span></div><p style="margin:1.5rem 0 .45rem;color:#687386;font-weight:650">Etapa 10 de 10</p><h2 id="diagnostic-title" style="margin:0 0 1rem;color:#141a19;font-size:clamp(1.45rem,3.6vw,2.35rem);line-height:1.2;font-weight:850">Deseja receber uma análise profissional do perfil da empresa?</h2><p style="color:#4b5563;font-size:1.05rem;line-height:1.6">A análise profissional mostra a situação do perfil no Google e identifica pontos que podem prejudicar a visibilidade, a confiança e a geração de contatos.</p><div style="margin:1rem 0;padding:1rem;border-radius:1rem;background:#fff4bf;color:#141a19;font-weight:800">Valor: R$ 47. Você paga somente depois de receber a análise. Se contratar o serviço de marketing, esse valor será descontado do primeiro pagamento.</div><div style="display:grid;gap:.8rem;margin-top:1rem">${options}</div>`;
+            }
+            content.innerHTML = `${header}<form id="diagnostic-step-form" novalidate>${body}<div style="display:flex;gap:.75rem;margin-top:1.6rem"><button type="button" id="diagnostic-back" class="diagnostic-secondary" ${step===0?'style="visibility:hidden"':''}>Voltar</button><button type="submit" id="diagnostic-next" class="diagnostic-primary" style="flex:1">${step===10?'Enviar solicitação':'Continuar'}</button></div><p id="diagnostic-error" role="alert" style="display:none;margin:.8rem 0 0;color:#a61b1b;font-weight:700"></p></form>`;
+            const form=document.getElementById('diagnostic-step-form');
+            if(step===0) {
+                for(const name of ['full_name','role','phone']) form.elements[name].value=state.contact[name]||'';
+            }
+            if(step===9) {
+                for(const name of ['business_name','business_segment','business_address']) form.elements[name].value=state.company[name]||'';
+            }
+            document.getElementById('diagnostic-back').addEventListener('click',()=>{if(state.step>0){state.step--;render();}});
+            form.addEventListener('submit', async event=>{
+                event.preventDefault();
+                const error=document.getElementById('diagnostic-error');
+                error.style.display='none';
+                if(step===0) {
+                    if(!form.reportValidity()) return;
+                    state.contact={full_name:form.elements.full_name.value.trim(),role:form.elements.role.value.trim(),phone:form.elements.phone.value.trim()};
+                    state.step=1; render(); return;
+                }
+                if(step>=1 && step<=8) {
+                    const selected=form.querySelector('input[name="diagnostic-choice"]:checked');
+                    if(!selected){error.textContent='Selecione uma opção para continuar.';error.style.display='block';return;}
+                    state.answers[step]=selected.value; state.step++; render(); return;
+                }
+                if(step===9) {
+                    if(!form.reportValidity()) return;
+                    state.company={business_name:form.elements.business_name.value.trim(),business_segment:form.elements.business_segment.value.trim(),business_address:form.elements.business_address.value.trim()};
+                    state.step=10; render(); return;
+                }
+                const finalChoice=form.querySelector('input[name="diagnostic-choice"]:checked');
+                if(!finalChoice){error.textContent='Selecione uma opção para enviar sua solicitação.';error.style.display='block';return;}
+                state.answers[10]=finalChoice.value;
+                const button=document.getElementById('diagnostic-next');button.disabled=true;button.textContent='Enviando…';
+                const payload={_subject:'Nova solicitação de diagnóstico pelo site Vinsancor',_template:'table','Nome completo':state.contact.full_name,'Cargo':state.contact.role,'Telefone':state.contact.phone,'Nome da empresa':state.company.business_name,'Nicho ou segmento':state.company.business_segment,'Endereço do perfil':state.company.business_address,'Consentimento de contato e uso dos dados':'Sim'};
+                questions.forEach((q,i)=>payload[`Pergunta ${i+1}: ${q.title}`]=state.answers[i+1]||'');
+                payload['Pergunta 10: Análise profissional']=state.answers[10];
+                try {
+                    const response=await fetch(formsubmitUrl,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)});
+                    const result=await response.json();
+                    if(!response.ok || (result.success!==true && result.success!=='true')) throw new Error(result.message||'Não foi possível enviar sua solicitação.');
+                    content.style.display='none';success.style.display='block';document.getElementById('diagnostic-success-close').focus();
+                } catch(err) {
+                    button.disabled=false;button.textContent='Enviar solicitação';
+                    error.textContent='Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp.';error.style.display='block';
+                }
+            });
+        }
+        document.getElementById('open-diagnostic-modal').addEventListener('click',event=>{event.preventDefault();openModal();});
+        document.getElementById('diagnostic-close').addEventListener('click',closeModal);
+        document.getElementById('diagnostic-success-close').addEventListener('click',closeModal);
+        modal.addEventListener('click',event=>{if(event.target===modal)closeModal();});
+        document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!modal.hidden)closeModal();});
+    })();
+    </script>
 
 </body>
 </html>
