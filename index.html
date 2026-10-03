@@ -323,7 +323,7 @@
     <header x-data="{ mobileMenuOpen: false }" class="fixed w-full top-0 z-50 bg-primary shadow-sm border-b border-yellow-400 transition-all">
         <nav class="container mx-auto px-4 lg:px-8 py-3 flex justify-between items-center">
             <a href="#hero" class="flex items-center gap-2">
-                <img src="/assets/img/logo_transparent.webp?v=20260929" alt="Vinsancor Presença Digital" class="h-16 w-auto object-contain" loading="lazy" width="787" height="685">
+                <img src="/assets/img/logo_transparent.webp?v=20260929" srcset="/assets/img/logo-vinsancor-256.webp 256w, /assets/img/logo-vinsancor-512.webp 512w" sizes="64px" alt="Vinsancor Presença Digital" class="h-16 w-auto object-contain" loading="eager" decoding="async" width="787" height="685">
                 <span class="sr-only">Vinsancor Presença Digital</span>
             </a>
             
@@ -376,10 +376,10 @@
         <!-- 1. Hero Section -->
         <section id="hero" class="relative bg-dark text-white min-h-[90vh] flex items-center pt-20 pb-40 lg:pb-52 overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="/assets/img/vinsancor01.webp?v=20260929" alt="Background Agência Vinsancor" class="w-full h-full object-cover opacity-100" loading="eager" width="1920" height="800">
+                <img src="/assets/img/vinsancor01.webp?v=20260929" alt="Background Agência Vinsancor" class="w-full h-full object-cover opacity-100" loading="eager" fetchpriority="high" decoding="async" width="814" height="768">
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
-            <img src="/assets/img/mapa-digital.webp?v=20261002" alt="Mapa digital iluminado com marcadores de localização em tons dourados" class="hero-map-art" width="1249" height="700" loading="eager" decoding="async">
+            <img src="/assets/img/mapa-digital.webp?v=20261002" srcset="/assets/img/mapa-digital-640.webp 640w, /assets/img/mapa-digital-960.webp 960w, /assets/img/mapa-digital-1249-opt.webp 1249w" sizes="(max-width: 767px) 92vw, 58vw" alt="Mapa digital iluminado com marcadores de localização em tons dourados" class="hero-map-art" width="1249" height="700" loading="eager" decoding="async">
             
             <div class="container mx-auto px-4 relative z-10 text-center max-w-5xl">
                 <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-8 tracking-tight text-white">
@@ -495,7 +495,7 @@
 
                     <!-- Serviço 2 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border border-gray-100 shadow-soft hover:shadow-hover transition-all duration-300">
-                        <img src="/assets/img/servico-2.webp?v=20261002" alt="Criação de sites que conectam o cliente à empresa" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" width="1585" height="992">
+                        <img src="/assets/img/servico-2.webp?v=20261002" srcset="/assets/img/servico-2-640.webp 640w, /assets/img/servico-2-1100.webp 1100w" sizes="(max-width: 767px) 90vw, 537px" alt="Criação de sites que conectam o cliente à empresa" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8" loading="lazy" decoding="async" width="1585" height="992">
                         <h3 class="text-2xl font-bold text-dark mb-4">Tenha um site que atraia os clientes</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Criamos sites atrativos, rápidos e responsivos para apresentar seus serviços, responder às dúvidas dos clientes e gerar contatos pelo WhatsApp. Uma solução para negócios locais, como oficinas mecânicas, clínicas veterinárias, lavanderias, <a href="#especialidade-gastronomia" class="text-primary font-bold hover:underline">bares e restaurantes</a><strong>, e muito mais</strong>.</p>
                         
@@ -556,7 +556,7 @@
                     <!-- Serviço 6 -->
                     <div class="bg-light rounded-3xl p-10 flex flex-col h-full border-2 border-secondary/40 shadow-soft hover:shadow-hover transition-all duration-300 relative">
                         <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-white font-bold px-6 py-2 rounded-full text-sm shadow-md tracking-wider uppercase">Novo</div>
-                        <img src="/assets/img/servico-6.webp?v=20260929" alt="Google Maps + SEO Local + GEO" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" width="600" height="400">
+                        <img src="/assets/img/servico-6.webp?v=20260929" srcset="/assets/img/servico-6-640.webp 640w, /assets/img/servico-6-1100.webp 1100w" sizes="(max-width: 767px) 90vw, 537px" alt="Google Maps + SEO Local + GEO" class="service-card-image w-full h-48 object-cover rounded-2xl mb-8 mt-2" loading="lazy" decoding="async" width="1586" height="992">
                         <h3 class="text-2xl font-bold text-dark mb-4">Aumente as chances de sua empresa ser recomendada pelas IAs</h3>
                         <p class="text-gray-600 mb-8 flex-grow leading-relaxed">Avaliamos a presença digital da sua marca em buscadores, mapas e ferramentas de IA, como ChatGPT, Gemini, Perplexity e Copilot, e indicamos oportunidades de melhoria em SEO Local e GEO.</p>
                         
@@ -1379,7 +1379,7 @@
                 <!-- Logo & Brand -->
                 <div class="col-span-1 lg:col-span-1">
                     <a href="#hero" class="block mb-6">
-                        <img src="/assets/img/logo_transparent.webp?v=20260929" alt="Vinsancor Presença Digital" class="h-12 w-auto object-contain filter brightness-0 invert opacity-90" loading="lazy" width="787" height="685">
+                        <img src="/assets/img/logo_transparent.webp?v=20260929" srcset="/assets/img/logo-vinsancor-256.webp 256w, /assets/img/logo-vinsancor-512.webp 512w" sizes="48px" alt="Vinsancor Presença Digital" class="h-12 w-auto object-contain filter brightness-0 invert opacity-90" loading="lazy" decoding="async" width="787" height="685">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Especialistas na aceleração de negócios de serviços digitais, convertendo visitas em resultados tangíveis.
