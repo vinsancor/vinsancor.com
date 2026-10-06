@@ -1,0 +1,1 @@
+Extraia este pacote na raiz do site vinsancor.com, mantendo os caminhos das pastas. Substitua criacao-sites-que-vendem-mais.html e envie a pasta assets/img/projetos com as 12 imagens WebP.
