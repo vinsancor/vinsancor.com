@@ -78,7 +78,7 @@
         .portfolio-visit-link:hover { background:rgba(255,199,11,.11); border-color:#ffc70b; }
         .portfolio-visit-arrow { color:#ffc70b; font-size:1.3rem; }
         .portfolio-project-tab:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
-        @media(max-width:900px) { .portfolio-showcase { grid-template-columns:1fr; gap:1rem; } .portfolio-projects { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.5rem; } .portfolio-project-details { grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:.75rem .45rem .5rem; } .portfolio-copy p { max-width:46rem; } .portfolio-projects-label { grid-column:1/-1; } .portfolio-project-tab { grid-template-columns:1.6rem minmax(0,1fr); min-height:3.8rem; padding:.75rem; } .portfolio-tab-indicator { display:none; } }
+        @media(max-width:900px) { .portfolio-showcase { grid-template-columns:1fr; gap:1rem; } .portfolio-projects { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.5rem; } .portfolio-project-details { grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:.75rem .45rem .5rem; } .portfolio-copy p { max-width:46rem; } .portfolio-projects-label { grid-column:1/-1; } .portfolio-project-tab { grid-template-columns:1.6rem minmax(0,1fr); min-height:3.8rem; padding:.75rem; } .portfolio-tab-indicator { display:none; } }
         @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.8rem; border-radius:1.35rem; } .portfolio-projects { grid-template-columns:1fr; } .portfolio-projects-label { padding:.4rem .45rem; } .portfolio-project-tab { min-height:3.2rem; padding:.55rem .7rem; } .portfolio-tab-name { font-size:.9rem; } .portfolio-browser-bar { height:2.8rem; padding:0 .65rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(240px,48vh,440px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
     </style>
@@ -515,6 +515,9 @@
                         </button>
                         <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3">
                             <span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span>
+                        </button>
+                        <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4">
+                            <span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span>
                         </button>
 
                         <div class="portfolio-project-details">
@@ -965,6 +968,11 @@
                         { src: '/assets/img/projetos/cariocaglass-03.webp', alt: 'Detalhes de precisão técnica e instalação da Carioca Glass.' },
                         { src: '/assets/img/projetos/cariocaglass-04.webp', alt: 'Galeria de projetos concluídos da Carioca Glass.' }
                     ]
+                }
+,                {
+                    name: 'Polain Arquitetura', domain: 'polainarquitetura.art', url: 'https://polainarquitetura.lovable.app',
+                    description: 'Site despojado, com uma atmosfera que convida à contemplação do ambiente e desperta o desejo do cliente.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/polainarquitetura-0${n}.webp`, alt: `Captura ${n} de 4 do site da Polain Arquitetura` }))
                 }
             ];
             const root = document.querySelector('[data-portfolio-showcase]');
