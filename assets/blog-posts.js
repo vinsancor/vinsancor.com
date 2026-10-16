@@ -119,6 +119,29 @@
         "avaliações",
       ],
     },
+    {
+      id: "site-para-bares-e-restaurantes",
+      title: "Por que ter um site é o divisor de águas entre o salão vazio e mesas cheias em bares e restaurantes?",
+      slug: "site-para-bares-e-restaurantes",
+      url: "site-para-bares-e-restaurantes.html",
+      category: "Marketing Gastronômico",
+      excerpt:
+        "Entenda como um site próprio ajuda bares e restaurantes a serem encontrados, apresentar cardápios e transformar buscas locais em visitas.",
+      coverImage: "assets/img/site-para-bares-e-restaurantes.webp",
+      coverAlt: "Site de um bar de coquetéis com cardápio interativo e drink em destaque",
+      date: "2026-10-16",
+      dateLabel: "16 de outubro de 2026",
+      readingTime: "7 min de leitura",
+      tags: [
+        "site para bares e restaurantes",
+        "marketing gastronômico",
+        "seo local para restaurantes",
+        "presença digital na gastronomia",
+        "desenvolvimento de sites gastronômicos",
+        "atrair clientes para restaurante",
+        "site próprio",
+      ],
+    },
   ];
 
   // ---------------------------------------------------------------- helpers
