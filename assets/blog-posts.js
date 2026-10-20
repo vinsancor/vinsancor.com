@@ -23,6 +23,20 @@
 
   var posts = [
     {
+      id: "poder-cardapio-online-site-escolha-cliente",
+      title: "O Poder do Cardápio Online em um Site: Como o Menu Influencia a Escolha do Cliente",
+      slug: "poder-cardapio-online-site-escolha-cliente",
+      url: "poder-cardapio-online-site-escolha-cliente.html",
+      category: "Marketing Gastronômico",
+      excerpt: "Descubra como o cardápio e um site próprio estruturado com SEO influenciam a tomada de decisão do consumidor ao escolher um bar ou restaurante.",
+      coverImage: "assets/img/cardapio-online-site-vinsancor.webp",
+      coverAlt: "Site de restaurante com cardápio online, fotos de pratos e preços visíveis",
+      date: "2026-10-20",
+      dateLabel: "20 de outubro de 2026",
+      readingTime: "7 min de leitura",
+      tags: ["cardápio online", "marketing gastronômico", "seo local", "restaurantes", "bares", "site próprio", "perfil da empresa no google", "decisão de compra"],
+    },
+    {
       id: "como-remover-avaliacao-negativa-perfil-google-empresa",
       title: "Como Remover Avaliação Negativa no Perfil do Google da Empresa?",
       slug: "como-remover-avaliacao-negativa-perfil-google-empresa",
