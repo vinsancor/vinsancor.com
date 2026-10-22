@@ -24,11 +24,11 @@
   var posts = [
     {
       id: "terca-feira-sem-mesa-vazia",
-      title: "Terça-Feira Sem Mesa Vazia: Como Atrair Clientes no Dia Mais Tranquilo da Semana",
+      title: "É terça-feira! O que motiva uma pessoa a sair para um bar?",
       slug: "terca-feira-sem-mesa-vazia",
       url: "terca-feira-sem-mesa-vazia.html",
       category: "Marketing Gastronômico",
-      excerpt: "Atrair clientes na terça-feira não depende de descontos: conheça estratégias para criar uma experiência memorável e ajudar seu bar a ser encontrado nas buscas locais.",
+      excerpt: "Descubra o que leva as pessoas a escolher um bar em uma terça-feira e veja ideias para criar experiências que transformam uma noite comum em um programa especial.",
       coverImage: "assets/img/terca-sem-mesa-vazia.webp",
       coverAlt: "Salão de bar movimentado, com clientes conversando em mesas",
       date: "2026-10-22",
