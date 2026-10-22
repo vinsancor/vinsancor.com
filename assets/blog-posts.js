@@ -23,6 +23,20 @@
 
   var posts = [
     {
+      id: "terca-feira-sem-mesa-vazia",
+      title: "Terça-Feira Sem Mesa Vazia: Como Atrair Clientes no Dia Mais Tranquilo da Semana",
+      slug: "terca-feira-sem-mesa-vazia",
+      url: "terca-feira-sem-mesa-vazia.html",
+      category: "Marketing Gastronômico",
+      excerpt: "Atrair clientes na terça-feira não depende de descontos: conheça estratégias para criar uma experiência memorável e ajudar seu bar a ser encontrado nas buscas locais.",
+      coverImage: "assets/img/terca-sem-mesa-vazia.webp",
+      coverAlt: "Salão de bar movimentado, com clientes conversando em mesas",
+      date: "2026-10-22",
+      dateLabel: "22 de outubro de 2026",
+      readingTime: "8 min de leitura",
+      tags: ["marketing gastronômico", "bares", "restaurantes", "terça-feira", "happy hour", "seo local", "perfil da empresa no google", "atrair clientes"],
+    },
+    {
       id: "poder-cardapio-online-site-escolha-cliente",
       title: "O Poder do Cardápio Online em um Site: Como o Menu Influencia a Escolha do Cliente",
       slug: "poder-cardapio-online-site-escolha-cliente",
