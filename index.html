@@ -2,13 +2,44 @@
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXSQNNXPNL"></script>
+    <!-- Google Analytics e Clarity são carregados após a renderização inicial e em período ocioso. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-WXSQNNXPNL');
+
+      function loadDeferredAnalytics() {
+        if (window.__vinsancorDeferredAnalyticsStarted) return;
+        window.__vinsancorDeferredAnalyticsStarted = true;
+
+        var analytics = document.createElement('script');
+        analytics.async = true;
+        analytics.src = 'https://www.googletagmanager.com/gtag/js?id=G-WXSQNNXPNL';
+        document.head.appendChild(analytics);
+
+        window.clarity = window.clarity || function(){
+          (window.clarity.q = window.clarity.q || []).push(arguments);
+        };
+        var clarityScript = document.createElement('script');
+        clarityScript.async = true;
+        clarityScript.src = 'https://www.clarity.ms/tag/ywmxdh0kbb';
+        document.head.appendChild(clarityScript);
+      }
+
+      function scheduleDeferredAnalytics() {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadDeferredAnalytics, { timeout: 3000 });
+        } else {
+          window.setTimeout(loadDeferredAnalytics, 1500);
+        }
+      }
+
+      if (document.readyState === 'complete') {
+        scheduleDeferredAnalytics();
+      } else {
+        window.addEventListener('load', scheduleDeferredAnalytics, { once: true });
+      }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEO Local, GEO e Marketing Digital | Vinsancor</title>
@@ -325,13 +356,7 @@
     ]
     </script>
 
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ywmxdh0kbb");
-</script>
+
 
 
 </head>
