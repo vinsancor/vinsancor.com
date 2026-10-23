@@ -1330,25 +1330,38 @@
                                     scrolling: false,
                                     _scrollTimer: null,
                                     _resizeHandler: null,
+                                    _resizeRaf: null,
                                     init() {
                                         this.total = this.$refs.track.children.length;
                                         this.updatePerView();
                                         this._resizeHandler = () => {
-                                            this.updatePerView();
-                                            this.$nextTick(() => this.goTo(this.active, 'instant'));
+                                            if (this._resizeRaf !== null) return;
+                                            this._resizeRaf = requestAnimationFrame(() => {
+                                                this._resizeRaf = null;
+                                                const previousPerView = this.perView;
+                                                this.updatePerView();
+                                                if (this.perView !== previousPerView) {
+                                                    this.$nextTick(() => this.goTo(this.active, 'instant'));
+                                                }
+                                            });
                                         };
-                                        window.addEventListener('resize', this._resizeHandler);
+                                        window.addEventListener('resize', this._resizeHandler, { passive: true });
                                     },
                                     destroy() {
                                         window.removeEventListener('resize', this._resizeHandler);
+                                        if (this._resizeRaf !== null) cancelAnimationFrame(this._resizeRaf);
                                         clearTimeout(this._scrollTimer);
                                     },
                                     updatePerView() {
                                         const track = this.$refs.track;
                                         const first = track.children[0];
                                         if (!first) return;
-                                        const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-                                        this.perView = Math.max(1, Math.floor((track.clientWidth + gap + 1) / (first.offsetWidth + gap)));
+                                        const style = getComputedStyle(track);
+                                        const gap = parseFloat(style.columnGap) || 0;
+                                        const trackWidth = track.clientWidth;
+                                        const cardWidth = first.offsetWidth;
+                                        const nextPerView = Math.max(1, Math.floor((trackWidth + gap + 1) / (cardWidth + gap)));
+                                        if (nextPerView !== this.perView) this.perView = nextPerView;
                                     },
                                     maxIndex() { return Math.max(this.total - this.perView, 0); },
                                     position(i) {
