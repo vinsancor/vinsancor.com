@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento Pix | 8 prompts para pizzarias</title>
+  <meta name="description" content="Finalize sua compra dos 8 prompts para pizzarias com pagamento Pix de R$ 6,99.">
+  <link rel="canonical" href="https://vinsancor.com/pagamento-prompts-para-pizzarias.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=20260929">
+  <link rel="preload" href="/assets/fonts/inter-latin-var.woff2?v=20261023b" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/prompts-pizzarias.css">
+</head>
+<body class="bg-light text-dark font-sans antialiased min-h-[90vh] flex flex-col">
+  <header class="border-b border-gray-200 bg-white"><div class="container max-w-6xl mx-auto px-6 py-4"><a href="/" aria-label="Vinsancor — página inicial"><img src="/assets/img/logo-vinsancor-128.webp" width="128" height="48" alt="Vinsancor Presença Digital" class="w-32 h-auto"></a></div></header>
+  <main class="flex-1 py-10 md:py-16"><section class="container max-w-3xl mx-auto px-6"><div class="rounded-3xl border border-gray-200 bg-white p-6 md:p-10 product-frame text-center">
+    <p class="text-sm uppercase tracking-widest font-extrabold text-secondary mb-3">Etapa 2 de 3</p>
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-3">Pague com Pix</h1>
+    <p class="text-gray-600 mb-2">Valor da compra</p><p class="text-4xl font-black mb-7">R$ 6,99</p>
+    <img src="/assets/img/prompts-pizzarias/pix-qr.png" alt="QR Code Pix para pagamento de R$ 6,99 para Vinicius dos Santos Correa" class="payment-qr mb-6">
+    <p class="font-bold mb-2">Ou copie e cole o código Pix no aplicativo do seu banco</p>
+    <textarea id="pix-code" class="pix-copy text-left text-sm mb-3" readonly aria-label="Código Pix copia e cola">00020126330014br.gov.bcb.pix01110552083275752040000530398654046.995802BR5925VINICIUS DOS SANTOS CORREA6009SAO PAULO62580520SAN2026103118183745250300017br.gov.bcb.brcode01051.0.06304C205</textarea>
+    <button id="copy-pix" type="button" class="inline-flex items-center justify-center bg-primary text-dark font-extrabold px-6 py-3 rounded-full hover:bg-primary-hover transition-colors">Copiar código Pix</button>
+    <p id="copy-status" class="mt-3 text-sm text-secondary" role="status" aria-live="polite"></p>
+    <div class="mt-7 rounded-2xl bg-light p-5 text-left"><p><strong>Recebedor:</strong> Vinicius dos Santos Correa</p><p><strong>Banco:</strong> Santander</p><p><strong>Chave Pix:</strong> 055.208.327-57</p><p class="mt-2 text-sm text-gray-600">Antes de confirmar, confira o valor e o nome do recebedor no aplicativo do seu banco.</p></div>
+    <button id="paid-button" type="button" class="w-full mt-7 bg-dark text-white font-extrabold text-lg py-4 px-6 rounded-full hover:bg-black transition-colors">Já paguei</button>
+    <p id="paid-error" class="hidden mt-4 text-red-700 font-semibold" role="alert"></p>
+  </div></section></main>
+  <footer class="py-8 text-center text-sm text-gray-500"><p>© Vinsancor Presença Digital</p></footer>
+  <script src="/assets/js/prompts-pizzarias.js" defer></script>
+</body></html>
