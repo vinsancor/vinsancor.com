@@ -40,7 +40,7 @@
         .portfolio-heading-row p { color:#6b7280; max-width:25rem; margin:0 0 .25rem; line-height:1.6; }
         .portfolio-showcase { display:flex; flex-direction:column; gap:.7rem; max-width:784px; margin:0 auto; padding:1.1rem; border:1px solid rgba(255,255,255,.08); border-radius:1.6rem; background:#141a19; color:#fff; box-shadow:0 28px 70px rgba(20,26,25,.16); }
         .portfolio-menu { min-width:0; }
-        .portfolio-projects { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:.3rem; }
+        .portfolio-projects { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:.3rem; }
         .portfolio-projects-label { display:block; color:#929b9a; font-size:.66rem; font-weight:800; letter-spacing:.14em; padding:.05rem .25rem .4rem; }
         .portfolio-project-tab { display:grid; grid-template-columns:1rem minmax(0,1fr) .4rem; align-items:center; gap:.35rem; min-height:2.5rem; padding:.35rem .45rem; border:1px solid transparent; border-radius:1rem; color:#d8dddc; text-align:left; background:rgba(255,255,255,.035); cursor:pointer; transition:background .2s,border-color .2s,color .2s,transform .2s; }
         .portfolio-project-tab:hover { background:rgba(255,255,255,.075); transform:translateY(-2px); }
@@ -514,23 +514,24 @@
                     <div class="portfolio-menu">
                         <span class="portfolio-projects-label">SELECIONE PARA EXPLORAR</span>
                         <div class="portfolio-projects" role="tablist" aria-label="Selecione uma empresa para explorar">
-                            <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0"><span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Spleen Town</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1"><span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2"><span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3"><span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4"><span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-5" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="5"><span class="portfolio-tab-number">06</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0"><span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Boquitas Bar</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1"><span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Spleen Town</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2"><span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3"><span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4"><span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-5" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="5"><span class="portfolio-tab-number">06</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span></button>
+                            <button id="portfolio-tab-6" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="6"><span class="portfolio-tab-number">07</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span></button>
                         </div>
                     </div>
                     <div class="portfolio-main" id="portfolio-preview" role="tabpanel" aria-labelledby="portfolio-tab-0" tabindex="0">
                         <div class="portfolio-browser">
                             <div class="portfolio-browser-bar">
                                 <div class="portfolio-browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-                                <div class="portfolio-browser-address"><span aria-hidden="true">⌑</span><span data-portfolio-domain>spleentown.lovable.app</span></div>
+                                <div class="portfolio-browser-address"><span aria-hidden="true">⌑</span><span data-portfolio-domain>boquitas.lovable.app</span></div>
                                 <span class="portfolio-browser-menu" aria-hidden="true">•••</span>
                             </div>
                             <div class="portfolio-screen">
-                                <img data-portfolio-image src="/assets/img/projetos/spleentown-01.webp" alt="Página inicial do site Spleen Town, bar noir de coquetéis em San Francisco" width="1600" height="900" loading="lazy" decoding="async">
+                                <img data-portfolio-image src="/assets/img/projetos/boquitasbar-01.webp" alt="Página inicial do site Boquitas Bar, coquetelaria tropical à beira-mar na Barra da Tijuca" width="1600" height="900" loading="lazy" decoding="async">
                                 <button class="portfolio-slide-arrow portfolio-slide-prev" type="button" aria-label="Imagem anterior">‹</button>
                                 <button class="portfolio-slide-arrow portfolio-slide-next" type="button" aria-label="Próxima imagem">›</button>
                                 <div class="portfolio-slide-count" aria-live="polite"><span data-portfolio-slide-current>01</span><span class="portfolio-count-divider">/</span><span data-portfolio-slide-total>04</span></div>
@@ -539,8 +540,8 @@
                         <div class="portfolio-progress" role="group" aria-label="Progresso das imagens"><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span></div>
                     </div>
                     <div class="portfolio-project-details">
-                        <div class="portfolio-copy"><h3 data-portfolio-title aria-live="polite">Spleen Town</h3><p data-portfolio-description>Site imersivo para um bar noir de coquetéis em San Francisco, com identidade visual marcante e uma experiência digital que traduz a atmosfera singular do espaço.</p></div>
-                        <a data-portfolio-link href="https://spleentown.lovable.app" target="_blank" rel="noopener noreferrer" class="portfolio-visit-link"><span>Ver o projeto completo</span><span class="portfolio-visit-arrow" aria-hidden="true">↗</span></a>
+                        <div class="portfolio-copy"><h3 data-portfolio-title aria-live="polite">Boquitas Bar</h3><p data-portfolio-description>Um site vibrante para uma coquetelaria tropical na Barra da Tijuca, que apresenta drinks autorais, sabores brasileiros e o clima descontraído de um bar à beira-mar.</p></div>
+                        <a data-portfolio-link href="https://boquitas.lovable.app" target="_blank" rel="noopener noreferrer" class="portfolio-visit-link"><span>Ver o projeto completo</span><span class="portfolio-visit-arrow" aria-hidden="true">↗</span></a>
                     </div>
                 </div>
             </div>
@@ -934,6 +935,11 @@
     <script>
         (() => {
             const projects = [
+                {
+                    name: 'Boquitas Bar', domain: 'boquitas.lovable.app', url: 'https://boquitas.lovable.app',
+                    description: 'Um site vibrante para uma coquetelaria tropical na Barra da Tijuca, que apresenta drinks autorais, sabores brasileiros e o clima descontraído de um bar à beira-mar.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/boquitasbar-0${n}.webp`, alt: `Captura ${n} de 4 do site Boquitas Bar, coquetelaria tropical na Barra da Tijuca` }))
+                },
                 {
                     name: 'Spleen Town', domain: 'spleentown.lovable.app', url: 'https://spleentown.lovable.app',
                     description: 'Site imersivo para um bar noir de coquetéis em San Francisco, com identidade visual marcante e uma experiência digital que traduz a atmosfera singular do espaço.',
