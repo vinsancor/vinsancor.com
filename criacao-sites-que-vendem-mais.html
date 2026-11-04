@@ -91,210 +91,202 @@
     <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
     [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://vinsancor.com/#organization",
+    "name": "Vinsancor Presença Digital",
+    "url": "https://vinsancor.com/",
+    "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+    "sameAs": [
+      "https://instagram.com/vinsancor"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://vinsancor.com/#localbusiness",
+    "name": "Vinsancor Presença Digital",
+    "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+    "url": "https://vinsancor.com/",
+    "telephone": "+5521995928037",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Atendimento Online",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "areaServed": "Brasil e Exterior",
+    "parentOrganization": {
+      "@id": "https://vinsancor.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://vinsancor.com/#website",
+    "url": "https://vinsancor.com/",
+    "name": "Vinsancor Presença Digital",
+    "publisher": {
+      "@id": "https://vinsancor.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://vinsancor.com/#faq",
+    "mainEntity": [
       {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://vinsancor.com/#organization",
-        "name": "Vinsancor Presença Digital",
-        "url": "https://vinsancor.com/",
-        "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "sameAs": [
-          "https://instagram.com/vinsancor"
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": "https://vinsancor.com/#localbusiness",
-        "name": "Vinsancor Presença Digital",
-        "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "url": "https://vinsancor.com/",
-        "telephone": "+5521995928037",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Atendimento Online",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        "priceRange": "$$",
-        "areaServed": "Brasil e Exterior",
-        "parentOrganization": {
-          "@id": "https://vinsancor.com/#organization"
+        "@type": "Question",
+        "name": "Como um site focado no cliente ajuda a gerar contatos e vendas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Um site pensado para o que o cliente busca apresenta as informações essenciais em uma sequência clara, responde às principais dúvidas e facilita o contato. O formato — uma página ou várias — depende do conteúdo e dos objetivos do negócio."
         }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://vinsancor.com/#website",
-        "url": "https://vinsancor.com/",
-        "name": "Vinsancor Presença Digital",
-        "publisher": {
-          "@id": "https://vinsancor.com/#organization"
+        "@type": "Question",
+        "name": "Em quanto tempo meu site fica pronto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O prazo médio é de 7 a 15 dias úteis, dependendo da complexidade do conteúdo e da rapidez no envio de materiais (logo, fotos e informações do negócio). Após a aprovação do layout, publicamos o site no seu domínio."
         }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": "https://vinsancor.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Como uma agência de marketing de serviços digitais pode fazer minha empresa aparecer no topo do Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Utilizamos técnicas avançadas de otimização de perfil e estruturação de site para que o Google reconheça seu negócio como a resposta mais relevante para a busca do cliente. Além disso, as campanhas de Tráfego Pago podem colocar sua marca imediatamente nas primeiras posições para palavras-chave específicas."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona o atendimento online para empresas localizadas em outras cidades, estados ou países?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nosso processo é 100% digital e sem barreiras geográficas. Reuniões de alinhamento por vídeo, troca rápida de informações por WhatsApp e relatórios em tempo real garantem que você tenha total controle da operação de marketing, esteja onde estiver."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo leva para a otimização do Perfil da Empresa no Google gerar resultados?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ao aplicar as técnicas de SEO Local, muitos clientes já notam o aumento de visualizações e rotas traçadas no Maps entre 3 a 6 semanas após a verificação do Google. A consistência no monitoramento e nas atualizações acelera esse ganho de relevância orgânica."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como um site focado no cliente ajuda a gerar contatos e vendas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Um site pensado para o que o cliente busca apresenta as informações essenciais em uma sequência clara, responde às principais dúvidas e facilita o contato. O formato — uma página ou várias — depende do conteúdo e dos objetivos do negócio."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Por que bares e restaurantes precisam de um marketing digital com estratégia especializada?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Porque a jornada de compra é imediata e muito focada em \"experiência\" e \"localização\". Ter fotos que dão água na boca nos anúncios, o cardápio fácil em uma One Page e o Google Maps otimizado para o horário de pico são fatores decisivos que só quem viveu a operação do balcão entende profundamente."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Não sou do ramo da gastronomia. A Vinsancor pode resolver o problema da minha empresa?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Com certeza. A psicanálise do consumidor e a base técnica de posicionamento local, sites velozes e tráfego pago funcionam de forma excepcional para qualquer modelo de negócio de serviços (clínicas, consultorias, oficinas, estúdios, entre outros)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto devo investir em tráfego pago no Google e Meta Ads para pequenas e médias empresas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O investimento inicial em plataformas não precisa ser exorbitante. A estratégia ideal é começar com orçamentos condizentes com seu fluxo de caixa, testar a recepção das mensagens e escalar o valor conforme o Retorno Sobre Investimento (ROI) se comprova no caixa da empresa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "É possível posicionar o Perfil da Empresa no Google Maps mesmo atendendo clientes em várias regiões?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim! Para prestadores de serviço com áreas de cobertura, configuramos o perfil para destacar as zonas de atendimento ao invés do endereço fixo, otimizando a presença digital para múltiplas cidades e bairros vizinhos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona a reunião de alinhamento e entrega dos projetos para quem está no exterior?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Adequamos o fluxo aos fusos horários necessários. Realizamos videochamadas de kickoff programadas e todo o acompanhamento posterior acontece de forma assíncrona, clara e documentada, prezando pela velocidade de execução."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O atendimento é feito diretamente por um especialista ou por intermediários?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Aqui na Vinsancor você lida direto com quem coloca a mão na massa. Eliminamos a figura do \"atendimento agência\", o que garante que suas dúvidas e pedidos de ajustes nas campanhas ou no site sejam compreendidos e executados de imediato por quem domina a técnica."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como investir no Perfil da Empresa no Google (Google Meu Negócio) vai ajudar a minha empresa a ter mais clientes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Porque ele intercepta clientes quentes. Alguém que pesquisa \"barbearia aberta agora\" ou \"onde almoçar\" não quer olhar vitrines no Instagram; essa pessoa quer um endereço, fotos reais, preço e horário. Quem está otimizado leva esse cliente na hora."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como solicitar uma análise gratuita ou proposta personalizada para o meu negócio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Basta clicar em qualquer botão \"Falar no WhatsApp\" ou \"Solicitar Diagnóstico Gratuito\" nesta página. Você será direcionado para o contato direto para agendarmos uma conversa rápida e focada em resultados."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Preciso me preocupar com domínio, hospedagem ou parte técnica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Nós cuidamos de tudo: registro ou configuração do domínio, hospedagem, certificado de segurança e publicação. Você recebe o site pronto e funcionando, sem precisar entender de tecnologia."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-perfil-empresa-google",
-        "name": "Perfil da Empresa no Google",
-        "description": "Otimização completa e posicionamento estratégico do Google Meu Negócio para atrair mais clientes locais.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
+        "@type": "Question",
+        "name": "Meu site vai aparecer no Google?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Entregamos o site com SEO básico configurado (títulos, descrições e estrutura otimizada) e o cadastramos no Google. Para resultados ainda melhores, recomendamos combinar com nossa Gestão do Perfil da Empresa no Google e estratégias de SEO Local."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-criacao-de-sites",
-        "name": "Criação de Sites",
-        "description": "Desenvolvimento de sites One Page institucionais de alta conversão, focados em conversão direta para o WhatsApp.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
+        "@type": "Question",
+        "name": "É possível fazer alterações e inclusões no site depois da entrega?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. É possível solicitar alterações ou inclusões depois da entrega. Antes de começar, avaliamos o escopo, o prazo e eventuais custos e apresentamos as condições para aprovação."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-trafego-pago",
-        "name": "Tráfego Pago",
-        "description": "Gestão de campanhas de anúncios direcionados no Google e Meta Ads para rápida geração de oportunidades.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
+        "@type": "Question",
+        "name": "O site também vai funcionar nos navegadores de celular?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O site é desenvolvido com layout responsivo para se adaptar a celulares, tablets e computadores e funcionar nos navegadores atuais."
+        }
       },
       {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": "https://vinsancor.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://vinsancor.com/"
-          }
-        ]
+        "@type": "Question",
+        "name": "Preciso escrever os textos para o site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode enviar os textos prontos ou as informações principais do negócio. A Vinsancor organiza o conteúdo e pode desenvolver os textos conforme o escopo definido para o projeto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se eu não tiver fotos e vídeos profissionais?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você não precisa ter uma produção profissional para começar. Podemos avaliar os materiais disponíveis e alinhar alternativas adequadas para o site. Produção de conteúdo ou licenças de terceiros são combinadas previamente, quando necessárias."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Após a entrega, todo o conteúdo do site fica sendo meu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Os materiais que você fornece continuam sendo seus. A entrega inclui o conteúdo e os arquivos previstos no projeto; imagens, fontes e ferramentas de terceiros permanecem sujeitos às respectivas licenças."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Já tenho o domínio, mas estou sem site. É possível manter o meu domínio atual ou preciso criar outro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Você pode manter seu domínio atual; não precisa criar outro. A configuração do domínio existente é feita para apontar para o novo site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para qual tipo de negócio a Vinsancor faz sites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Vinsancor cria sites para negócios locais e prestadores de serviços, como restaurantes, pousadas, clínicas, profissionais e empresas de diferentes segmentos. O projeto é adaptado ao público e aos objetivos de cada negócio."
+        }
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://vinsancor.com/#service-perfil-empresa-google",
+    "name": "Perfil da Empresa no Google",
+    "description": "Otimização completa e posicionamento estratégico do Google Meu Negócio para atrair mais clientes locais.",
+    "provider": {
+      "@id": "https://vinsancor.com/#organization"
+    },
+    "areaServed": "Brasil e Exterior"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://vinsancor.com/#service-criacao-de-sites",
+    "name": "Criação de Sites",
+    "description": "Desenvolvimento de sites One Page institucionais de alta conversão, focados em conversão direta para o WhatsApp.",
+    "provider": {
+      "@id": "https://vinsancor.com/#organization"
+    },
+    "areaServed": "Brasil e Exterior"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://vinsancor.com/#service-trafego-pago",
+    "name": "Tráfego Pago",
+    "description": "Gestão de campanhas de anúncios direcionados no Google e Meta Ads para rápida geração de oportunidades.",
+    "provider": {
+      "@id": "https://vinsancor.com/#organization"
+    },
+    "areaServed": "Brasil e Exterior"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://vinsancor.com/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vinsancor.com/"
+      }
+    ]
+  }
+]
     </script>
 
     <script type="text/javascript">
@@ -617,6 +609,76 @@
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Sim. Entregamos o site com SEO básico configurado (títulos, descrições e estrutura otimizada) e o cadastramos no Google. Para resultados ainda melhores, recomendamos combinar com nossa Gestão do Perfil da Empresa no Google e estratégias de SEO Local.
                             </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 5 ? null : 5" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">É possível fazer alterações e inclusões no site depois da entrega?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 5}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 5" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Sim. É possível solicitar alterações ou inclusões depois da entrega. Antes de começar, avaliamos o escopo, o prazo e eventuais custos e apresentamos as condições para aprovação.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 6 ? null : 6" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">O site também vai funcionar nos navegadores de celular?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 6}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 6" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Sim. O site é desenvolvido com layout responsivo para se adaptar a celulares, tablets e computadores e funcionar nos navegadores atuais.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 7 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 7 ? null : 7" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Preciso escrever os textos para o site?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 7}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 7" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Você pode enviar os textos prontos ou as informações principais do negócio. A Vinsancor organiza o conteúdo e pode desenvolver os textos conforme o escopo definido para o projeto.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 8 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 8 ? null : 8" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">E se eu não tiver fotos e vídeos profissionais?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 8}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 8" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Você não precisa ter uma produção profissional para começar. Podemos avaliar os materiais disponíveis e alinhar alternativas adequadas para o site. Produção de conteúdo ou licenças de terceiros são combinadas previamente, quando necessárias.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 9 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 9 ? null : 9" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Após a entrega, todo o conteúdo do site fica sendo meu?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 9}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 9" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Os materiais que você fornece continuam sendo seus. A entrega inclui o conteúdo e os arquivos previstos no projeto; imagens, fontes e ferramentas de terceiros permanecem sujeitos às respectivas licenças.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 10 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 10 ? null : 10" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Já tenho o domínio, mas estou sem site. É possível manter o meu domínio atual ou preciso criar outro?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 10}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 10" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Você pode manter seu domínio atual; não precisa criar outro. A configuração do domínio existente é feita para apontar para o novo site.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 11 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 11 ? null : 11" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Para qual tipo de negócio a Vinsancor faz sites?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 11}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 11" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">A Vinsancor cria sites para negócios locais e prestadores de serviços, como restaurantes, pousadas, clínicas, profissionais e empresas de diferentes segmentos. O projeto é adaptado ao público e aos objetivos de cada negócio.</div>
                         </div>
                     </div>
                 </div>
