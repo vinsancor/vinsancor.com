@@ -40,9 +40,15 @@
         .portfolio-heading-row p { color:#6b7280; max-width:25rem; margin:0 0 .25rem; line-height:1.6; }
         .portfolio-showcase { display:flex; flex-direction:column; gap:.7rem; max-width:784px; margin:0 auto; padding:1.1rem; border:1px solid rgba(255,255,255,.08); border-radius:1.6rem; background:#141a19; color:#fff; box-shadow:0 28px 70px rgba(20,26,25,.16); }
         .portfolio-menu { min-width:0; }
-        .portfolio-projects { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:.3rem; }
+        .portfolio-tabs-carousel { display:flex; align-items:center; gap:.4rem; min-width:0; }
+        .portfolio-tabs-viewport { flex:1; min-width:0; overflow:hidden; scrollbar-width:none; }
+        .portfolio-projects { display:flex; width:max-content; gap:.3rem; }
+        .portfolio-tabs-arrow { flex:0 0 2rem; display:grid; place-items:center; width:2rem; height:2rem; padding:0; border:1px solid rgba(255,199,11,.32); border-radius:.6rem; color:#ffc70b; background:rgba(255,255,255,.035); font-size:1.15rem; line-height:1; cursor:pointer; transition:background .2s,border-color .2s; }
+        .portfolio-tabs-arrow:hover { background:rgba(255,199,11,.12); border-color:#ffc70b; }
+        .portfolio-tabs-arrow:disabled { opacity:.35; cursor:default; }
         .portfolio-projects-label { display:block; color:#929b9a; font-size:.66rem; font-weight:800; letter-spacing:.14em; padding:.05rem .25rem .4rem; }
         .portfolio-project-tab { display:grid; grid-template-columns:.8rem minmax(0,1fr); align-items:center; gap:.3rem; min-width:0; min-height:2.35rem; padding:.3rem .35rem; border:1px solid transparent; border-radius:.65rem; color:#d8dddc; text-align:left; background:rgba(255,255,255,.035); cursor:pointer; transition:background .2s,border-color .2s,color .2s,transform .2s; }
+        .portfolio-project-tab { flex:0 0 8rem; }
         .portfolio-project-tab:hover { background:rgba(255,255,255,.075); transform:translateY(-2px); }
         .portfolio-project-tab.is-active { background:linear-gradient(110deg,rgba(255,199,11,.16),rgba(255,255,255,.055)); border-color:rgba(255,199,11,.4); color:#fff; }
         .portfolio-tab-number { color:#7b8583; font-size:.64rem; font-weight:800; }
@@ -77,9 +83,9 @@
         .portfolio-visit-link { flex:0 0 auto; display:inline-flex; align-items:center; gap:1.3rem; padding:.9rem 1.1rem; border:1px solid rgba(255,199,11,.45); border-radius:.9rem; color:#fff; text-decoration:none; font-weight:700; transition:background .2s,border-color .2s; }
         .portfolio-visit-link:hover { background:rgba(255,199,11,.11); border-color:#ffc70b; }
         .portfolio-visit-arrow { color:#ffc70b; font-size:1.3rem; }
-        .portfolio-project-tab:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
+        .portfolio-project-tab:focus-visible,.portfolio-tabs-arrow:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
         @media(max-width:900px) { .portfolio-showcase { gap:.65rem; } .portfolio-project-tab { padding:.28rem .3rem; min-height:2.2rem; } }
-        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-projects { display:flex; width:max-content; gap:.3rem; } .portfolio-menu { overflow-x:auto; scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.25) transparent; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex:0 0 5.8rem; min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
+        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
     </style>
     <!-- JSON-LD Schemas -->
@@ -512,14 +518,21 @@
                 <div class="portfolio-showcase" data-portfolio-showcase>
                     <div class="portfolio-menu">
                         <span class="portfolio-projects-label">SELECIONE PARA EXPLORAR</span>
-                        <div class="portfolio-projects" role="tablist" aria-label="Selecione uma empresa para explorar">
-                            <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0"><span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Boquitas Bar</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1"><span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Spleen Town</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2"><span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3"><span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4"><span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-5" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="5"><span class="portfolio-tab-number">06</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span></button>
-                            <button id="portfolio-tab-6" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="6"><span class="portfolio-tab-number">07</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span></button>
+                        <div class="portfolio-tabs-carousel">
+                            <button class="portfolio-tabs-arrow" type="button" data-tabs-prev aria-label="Ver projetos anteriores" aria-controls="portfolio-tabs">‹</button>
+                            <div class="portfolio-tabs-viewport" data-tabs-viewport>
+                                <div id="portfolio-tabs" class="portfolio-projects" role="tablist" aria-label="Selecione uma empresa para explorar">
+                                    <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0"><span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Boquitas Bar</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1"><span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Spleen Town</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2"><span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3"><span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4"><span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-5" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="5"><span class="portfolio-tab-number">06</span><span class="portfolio-tab-name">Debord</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-6" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="6"><span class="portfolio-tab-number">07</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-7" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="7"><span class="portfolio-tab-number">08</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span></button>
+                                </div>
+                            </div>
+                            <button class="portfolio-tabs-arrow" type="button" data-tabs-next aria-label="Ver próximos projetos" aria-controls="portfolio-tabs">›</button>
                         </div>
                     </div>
                     <div class="portfolio-main" id="portfolio-preview" role="tabpanel" aria-labelledby="portfolio-tab-0" tabindex="0">
@@ -960,6 +973,16 @@
                     images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/lumminousa-0${n}.webp`, alt: `Captura ${n} de 4 do site da Lumminousa` }))
                 },
                 {
+                    name: 'Debord', domain: 'debord.lovable.app', url: 'https://debord.lovable.app',
+                    description: 'Um site contemporâneo para o Debord, que apresenta o bar como ponto de encontro entre coquetelaria autoral, cultura e vida noturna, com identidade visual marcante e atmosfera urbana.',
+                    images: [
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-01.webp', alt: 'Página inicial do site Debord, bar de coquetelaria, cultura e vida noturna.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-02.webp', alt: 'Apresentação da experiência noturna do bar Debord.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-03.webp', alt: 'Carta de coquetéis do Debord, com destaque para o drink Deriva Azul.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-04.webp', alt: 'Carta de coquetéis do Debord, com destaque para o drink Tempo Vivo.' }
+                    ]
+                },
+                {
                     name: 'Vitro Jardins', domain: 'vitrojardins.site', url: 'https://vitrojardins.site/',
                     description: 'Site simples e rápido, moderno e elegante, direto, focado na conversão de clientes estruturado em SEO para buscas no Google',
                     images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/vitrojardins-0${n}.webp`, alt: `Captura ${n} de 4 do site da Vitro Jardins` }))
@@ -984,6 +1007,7 @@
             const domain = root.querySelector('[data-portfolio-domain]');
             const current = root.querySelector('[data-portfolio-slide-current]');
             const tabs = [...root.querySelectorAll('[data-project-index]')];
+            const tabsViewport = root.querySelector('[data-tabs-viewport]');
             const panel = root.querySelector('[role="tabpanel"]');
             const fills = [...root.querySelectorAll('.portfolio-progress-fill')];
             const duration = 5000;
@@ -1020,6 +1044,14 @@
                 if (resetProgress) startProgress();
             }
 
+            function revealSelectedTab() {
+                if (!tabsViewport) return;
+                const tabRect = tabs[projectIndex].getBoundingClientRect();
+                const viewportRect = tabsViewport.getBoundingClientRect();
+                if (tabRect.left < viewportRect.left) tabsViewport.scrollBy({ left: tabRect.left - viewportRect.left - 8, behavior: 'smooth' });
+                else if (tabRect.right > viewportRect.right) tabsViewport.scrollBy({ left: tabRect.right - viewportRect.right + 8, behavior: 'smooth' });
+            }
+
             function startProgress() {
                 fills.forEach((fill, index) => {
                     fill.style.transition = 'none';
@@ -1037,14 +1069,17 @@
                 projectIndex = (index + projects.length) % projects.length;
                 slideIndex = 0;
                 render();
+                revealSelectedTab();
             }
             function moveSlide(direction) {
+                const previousProjectIndex = projectIndex;
                 slideIndex = (slideIndex + direction + projects[projectIndex].images.length) % projects[projectIndex].images.length;
                 if (slideIndex === 0 && direction > 0) projectIndex = (projectIndex + 1) % projects.length;
                 if (slideIndex === projects[projectIndex].images.length - 1 && direction < 0) {
                     // Keep the selected company when moving backward from its first slide.
                 }
                 render();
+                if (projectIndex !== previousProjectIndex) revealSelectedTab();
             }
             function pause() {
                 paused = true;
@@ -1065,6 +1100,8 @@
             }
 
             tabs.forEach((tab) => tab.addEventListener('click', () => selectProject(Number(tab.dataset.projectIndex))));
+            root.querySelector('[data-tabs-prev]').addEventListener('click', () => tabsViewport.scrollBy({ left: -tabsViewport.clientWidth * 0.8, behavior: 'smooth' }));
+            root.querySelector('[data-tabs-next]').addEventListener('click', () => tabsViewport.scrollBy({ left: tabsViewport.clientWidth * 0.8, behavior: 'smooth' }));
             root.querySelector('.portfolio-slide-prev').addEventListener('click', () => moveSlide(-1));
             root.querySelector('.portfolio-slide-next').addEventListener('click', () => moveSlide(1));
             root.addEventListener('pointerenter', pause);
