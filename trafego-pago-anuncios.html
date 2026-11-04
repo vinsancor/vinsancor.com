@@ -539,72 +539,72 @@
                         </div>
                     </div>
                     <!-- FAQ 5 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 5 ? null : 5" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">Posso pausar os anúncios quando quiser se o negócio apertar?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 5}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 5" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Sim. Você pode solicitar a pausa das campanhas. A gestão pode ajudar a avaliar o momento e o impacto nos resultados; custos de gestão ou condições contratuais podem continuar conforme o serviço contratado.
                             </div>
                         </div>
                     </div>
                     <!-- FAQ 6 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 6 ? null : 6" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">Qual a diferença entre 'impulsionar posts' e fazer anúncios profissionais?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 6}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 6" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Impulsionar um post é uma forma simplificada de promover uma publicação. Em campanhas profissionais, definimos objetivos, públicos, formatos e orçamento com mais controle, acompanhamos conversões e ajustamos os anúncios com base nos dados.
                             </div>
                         </div>
                     </div>
                     <!-- FAQ 7 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 7 ? null : 7" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">Em quanto tempo o tráfego pago começa a trazer clientes?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 7}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 7" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Os anúncios podem começar a gerar visitas e contatos assim que forem aprovados e publicados. O tempo para conquistar clientes varia conforme o público, a oferta, a concorrência, a página de destino e o processo de atendimento. A campanha precisa de acompanhamento e ajustes.
                             </div>
                         </div>
                     </div>
                     <!-- FAQ 8 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 8 ? null : 8" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">Por que minha campanha gera muitos cliques, mas poucas vendas?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 8}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 8" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Cliques sem vendas podem indicar desalinhamento entre anúncio e oferta, público pouco qualificado, página lenta ou pouco clara, dificuldade para entrar em contato ou falhas no rastreamento. Analisamos o caminho do clique à conversão para identificar onde melhorar.
                             </div>
                         </div>
                     </div>
                     <!-- FAQ 9 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 9 ? null : 9" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">Preciso ter um site pronto para começar a anunciar?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 9}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 9" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Nem sempre. Dependendo do objetivo, é possível direcionar a campanha para o WhatsApp ou outro canal de contato. Para certos produtos e serviços, uma página clara e rápida pode ajudar a explicar a oferta e converter melhor.
                             </div>
                         </div>
                     </div>
                     <!-- FAQ 10 -->
-                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
-                        <button @click="activeAccordion = activeAccordion === 10 ? null : 10" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <div x-data="{ expanded: true }" class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="expanded = !expanded" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                             <span class="font-bold text-dark pr-8">O que é o Pixel/Rastreamento e por que ele é obrigatório?</span>
-                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 10}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': expanded}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div x-show="activeAccordion === 10" x-collapse>
+                        <div x-show="expanded" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Pixel e outras ferramentas de rastreamento registram ações relevantes, como visitas, contatos e compras, respeitando as configurações de consentimento e privacidade aplicáveis. Eles ajudam a medir resultados e otimizar campanhas. A implementação deve seguir as regras de privacidade e consentimento do site; a necessidade exata depende da plataforma e do objetivo da campanha.
                             </div>
