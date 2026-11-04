@@ -160,7 +160,7 @@
       },
       {
         "@type": "Question",
-        "name": "Em quanto tempo meu site fica pronto?",
+        "name": "Quanto tempo leva para o site ficar pronto?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "O prazo médio é de 7 a 15 dias úteis, dependendo da complexidade do conteúdo e da rapidez no envio de materiais (logo, fotos e informações do negócio). Após a aprovação do layout, publicamos o site no seu domínio."
@@ -236,6 +236,22 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "A Vinsancor cria sites para negócios locais e prestadores de serviços, como restaurantes, pousadas, clínicas, profissionais e empresas de diferentes segmentos. O projeto é adaptado ao público e aos objetivos de cada negócio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto custa para criar e manter um site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O custo depende do conteúdo, dos recursos e das necessidades de cada projeto. A criação e os custos recorrentes, como hospedagem e manutenção, são apresentados separadamente na proposta antes do início do trabalho."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como integro meu site ao WhatsApp e Redes Sociais?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Podemos incluir botões e links para iniciar conversas pelo WhatsApp e direcionar visitantes às redes sociais do negócio. A integração é definida conforme os canais e recursos que você utiliza."
         }
       }
     ]
@@ -679,6 +695,26 @@
                         </button>
                         <div x-show="activeAccordion === 11" x-collapse>
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">A Vinsancor cria sites para negócios locais e prestadores de serviços, como restaurantes, pousadas, clínicas, profissionais e empresas de diferentes segmentos. O projeto é adaptado ao público e aos objetivos de cada negócio.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 12 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 12 ? null : 12" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Quanto custa para criar e manter um site?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 12}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 12" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">O custo depende do conteúdo, dos recursos e das necessidades de cada projeto. A criação e os custos recorrentes, como hospedagem e manutenção, são apresentados separadamente na proposta antes do início do trabalho.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 13 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 13 ? null : 13" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-dark pr-8">Como integro meu site ao WhatsApp e Redes Sociais?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 13}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 13" x-collapse>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Podemos incluir botões e links para iniciar conversas pelo WhatsApp e direcionar visitantes às redes sociais do negócio. A integração é definida conforme os canais e recursos que você utiliza.</div>
                         </div>
                     </div>
                 </div>
