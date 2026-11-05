@@ -23,10 +23,10 @@
 
   var posts = [
     {
-      id: "redes-sociais-nao-sao-suas",
-      title: "As redes sociais não são suas e quais ferramentas são mais eficazes",
-      slug: "redes-sociais-nao-sao-suas",
-      url: "redes-sociais-nao-sao-suas.html",
+      id: "a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio",
+      title: "A rede social não é sua: por que depender só do Instagram prejudica seu negócio",
+      slug: "a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio",
+      url: "a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio.html",
       category: "Presença Digital",
       excerpt: "Entenda por que ter um site próprio, fortalecer o Perfil da Empresa no Google e reduzir a dependência das redes sociais ajuda pequenas empresas a serem encontradas.",
       coverImage: "assets/img/taxa-queda-instagram-redes-sociais-vinsancor.webp",
