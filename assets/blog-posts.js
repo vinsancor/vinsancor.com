@@ -23,6 +23,20 @@
 
   var posts = [
     {
+      id: "redes-sociais-nao-sao-suas",
+      title: "As redes sociais não são suas e quais ferramentas são mais eficazes",
+      slug: "redes-sociais-nao-sao-suas",
+      url: "redes-sociais-nao-sao-suas.html",
+      category: "Presença Digital",
+      excerpt: "Entenda por que ter um site próprio, fortalecer o Perfil da Empresa no Google e reduzir a dependência das redes sociais ajuda pequenas empresas a serem encontradas.",
+      coverImage: "assets/img/site-para-bares-e-restaurantes.webp",
+      coverAlt: "Site de um bar de coquetéis com cardápio interativo e drink em destaque",
+      date: "2026-11-05",
+      dateLabel: "5 de novembro de 2026",
+      readingTime: "9 min de leitura",
+      tags: ["por que ter um site", "site para pequena empresa", "perfil da empresa no google", "seo local", "dependência das redes sociais", "instagram vs site próprio", "site próprio", "presença digital"],
+    },
+    {
       id: "terca-feira-sem-mesa-vazia",
       title: "É terça-feira! O que motiva uma pessoa a sair para um bar?",
       slug: "terca-feira-sem-mesa-vazia",
