@@ -30,7 +30,7 @@
     return (
       '<article class="group rounded-3xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-lg" data-post="">\n' +
       '<a class="block" href="' + esc(post.url) + '">\n' +
-      '<img alt="' + esc(post.coverAlt || post.title) + '" loading="lazy" decoding="async" width="1200" height="675" src="' + esc(post.coverImage) + '" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:1rem;margin-bottom:1rem;display:block"/>\n' +
+      '<img alt="' + esc(post.coverAlt || post.title) + '" loading="lazy" decoding="async" width="1200" height="675" src="' + esc(post.coverImage) + '" style="width:100%;aspect-ratio:16/9;object-fit:' + esc(post.coverFit || "cover") + ';background-color:' + esc(post.coverBackground || "transparent") + ';border-radius:1rem;margin-bottom:1rem;display:block"/>\n' +
       '<span class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-foreground">' + esc(post.category) + "</span>\n" +
       '<h3 class="mt-4 text-xl font-extrabold tracking-tight text-foreground transition-colors group-hover:text-dark">' + esc(post.title) + "</h3>\n" +
       '<p class="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">' + esc(post.excerpt) + "</p>\n" +
