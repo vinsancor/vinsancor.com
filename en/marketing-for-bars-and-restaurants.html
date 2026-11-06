@@ -45,28 +45,84 @@
     </style>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://vinsancor.com/marketing-para-bares-restaurantes.html#service",
-      "name": "Marketing para Bares e Restaurantes",
-      "description": "Estratégias de presença digital local, anúncios, Google Maps, redes sociais e cardápios digitais para negócios gastronômicos.",
-      "url": "https://vinsancor.com/marketing-para-bares-restaurantes.html",
-      "provider": {
-        "@type": "Organization",
-        "@id": "https://vinsancor.com/#organization",
-        "name": "Vinsancor Presença Digital",
-        "url": "https://vinsancor.com/"
+      "@type": "WebSite",
+      "@id": "https://vinsancor.com/#website",
+      "url": "https://vinsancor.com/",
+      "name": "Vinsancor Presença Digital",
+      "publisher": {
+        "@id": "https://vinsancor.com/#organization"
       },
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://vinsancor.com/#organization",
+      "name": "Vinsancor Presença Digital",
+      "alternateName": "Vinsancor",
+      "url": "https://vinsancor.com/",
+      "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "telephone": "+5521995928037",
       "areaServed": "Brasil e Exterior",
-      "audience": {
-        "@type": "BusinessAudience",
-        "audienceType": "Bares, restaurantes, pubs e lanchonetes"
+      "sameAs": [
+        "https://instagram.com/vinsancor",
+        "https://www.linkedin.com/company/vinsancor-presença-digital"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vinsancor.com/en/marketing-for-bars-and-restaurants.html#webpage",
+      "url": "https://vinsancor.com/en/marketing-for-bars-and-restaurants.html",
+      "name": "Marketing for Bars and Restaurants",
+      "description": "Digital food marketing for bars, restaurants, pubs and cafeterias: attract customers, increase the movement on weak days and sell more.",
+      "isPartOf": {
+        "@id": "https://vinsancor.com/#website"
+      },
+      "about": {
+        "@id": "https://vinsancor.com/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vinsancor.com/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Marketing for Bars and Restaurants",
+          "item": "https://vinsancor.com/en/marketing-for-bars-and-restaurants.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vinsancor.com/en/marketing-for-bars-and-restaurants.html#service",
+      "name": "Marketing for Bars and Restaurants",
+      "url": "https://vinsancor.com/en/marketing-for-bars-and-restaurants.html",
+      "description": "Digital food marketing for bars, restaurants, pubs and cafeterias: attract customers, increase the movement on weak days and sell more.",
+      "provider": {
+        "@id": "https://vinsancor.com/#organization"
       }
     }
-    </script>
-
-    <script type="text/javascript">
+  ]
+}
+</script>
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
