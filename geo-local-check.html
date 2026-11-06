@@ -44,208 +44,233 @@
     </style>
     <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://vinsancor.com/#organization",
-        "name": "Vinsancor Presença Digital",
-        "url": "https://vinsancor.com/",
-        "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "sameAs": [
-          "https://instagram.com/vinsancor"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://vinsancor.com/#website",
+      "url": "https://vinsancor.com/",
+      "name": "Vinsancor Presença Digital",
+      "publisher": {
+        "@id": "https://vinsancor.com/#organization"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": "https://vinsancor.com/#localbusiness",
-        "name": "Vinsancor Presença Digital",
-        "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "url": "https://vinsancor.com/",
-        "telephone": "+5521995928037",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Atendimento Online",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://vinsancor.com/#organization",
+      "name": "Vinsancor Presença Digital",
+      "alternateName": "Vinsancor",
+      "url": "https://vinsancor.com/",
+      "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "telephone": "+5521995928037",
+      "areaServed": "Brasil e Exterior",
+      "sameAs": [
+        "https://instagram.com/vinsancor",
+        "https://www.linkedin.com/company/vinsancor-presença-digital"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vinsancor.com/geo-local-check.html#webpage",
+      "url": "https://vinsancor.com/geo-local-check.html",
+      "name": "GEO Local Check | Visibilidade no Google, Maps e IA | Vinsancor",
+      "description": "Descubra como sua empresa aparece no Google, Google Maps e nas novas buscas com inteligência artificial. Conheça o GEO Local Check da Vinsancor.",
+      "isPartOf": {
+        "@id": "https://vinsancor.com/#website"
+      },
+      "about": {
+        "@id": "https://vinsancor.com/#organization"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://vinsancor.com/"
         },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        "priceRange": "$$",
-        "areaServed": "Brasil e Exterior",
-        "parentOrganization": {
-          "@id": "https://vinsancor.com/#organization"
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GEO Local Check | Visibilidade no Google, Maps e IA | Vinsancor",
+          "item": "https://vinsancor.com/geo-local-check.html"
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://vinsancor.com/#website",
-        "url": "https://vinsancor.com/",
-        "name": "Vinsancor Presença Digital",
-        "publisher": {
-          "@id": "https://vinsancor.com/#organization"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO (otimização para mecanismos generativos) trabalha a forma como sua empresa é compreendida e apresentada em experiências de busca com IA. No GEO Local Check, analisamos sinais públicos e consultas relevantes para mostrar o que já está claro sobre o negócio e onde há oportunidades de melhorar sua presença."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O GEO garante que minha empresa apareça no ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Nenhum trabalho sério pode garantir que uma plataforma citará sua empresa ou colocá-la em uma posição específica. O GEO Local Check examina consultas e sinais públicos disponíveis, identifica lacunas e organiza recomendações para fortalecer a clareza e a consistência da sua presença digital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre SEO e GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO ajuda a melhorar a presença em mecanismos de busca tradicionais; GEO considera também respostas geradas por IA. As estratégias compartilham fundamentos, como conteúdo claro e informações confiáveis. A auditoria ajuda a entender como esses elementos estão hoje e quais ajustes podem apoiar os dois contextos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minha empresa precisa ter um site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um site claro e bem estruturado ajuda a apresentar seus serviços, área de atendimento e informações de contato, e pode facilitar a compreensão do negócio por sistemas de busca e IA. O diagnóstico também considera Google Business Profile, fontes externas, avaliações, menções e diretórios, para que você veja sua presença de forma mais completa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O GEO substitui o SEO Local?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. GEO e SEO Local se complementam. Para uma empresa que atende uma região, informações corretas no Google e no Maps continuam importantes. O GEO Local Check considera esses sinais junto de outras fontes públicas e ajuda a priorizar melhorias sem abandonar o trabalho local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais plataformas são analisadas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A auditoria pode considerar Google Search, Google Maps e ambientes com busca por IA, como ChatGPT, Gemini, Claude, Copilot e Perplexity, conforme o escopo e a disponibilidade de cada plataforma. Assim, você recebe um retrato do que foi possível analisar, com os limites claramente indicados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva para melhorar a presença GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não existe um prazo único: as plataformas mudam e a evolução depende do ponto de partida, das ações implementadas e de fatores externos. O GEO Local Check oferece um diagnóstico inicial com problemas, oportunidades e prioridades; esse retrato ajuda a decidir o que acompanhar depois, sem prometer prazo ou resultado específico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como recebo o diagnóstico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você recebe o diagnóstico de forma visual, com indicadores, pontos encontrados, oportunidades e prioridades de ação. Isso ajuda a transformar dúvidas sobre sua presença em IA em próximos passos mais claros para o site e os demais canais públicos da empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minha pequena empresa realmente tem chance de ser citada por IAs contra grandes marcas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Empresas menores também podem ser relevantes para consultas específicas, especialmente quando as informações disponíveis deixam claro o que oferecem e onde atendem. Não há garantia de citação, mas o diagnóstico pode revelar como sua marca aparece hoje e quais lacunas merecem atenção para competir melhor por relevância local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como eu sei se a minha empresa já está sendo recomendada pelo ChatGPT ou Gemini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma forma prática é testar perguntas que seus clientes fariam e registrar as respostas em diferentes momentos e plataformas. Os resultados podem variar conforme contexto, localização e disponibilidade de busca. No GEO Local Check, essa análise ajuda a compor um retrato organizado, em vez de depender de uma consulta isolada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que eu preciso mudar no meu site para ser 'entendido' pelas IAs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comece deixando explícitos os serviços, a localização ou área atendida, os diferenciais e os meios de contato. Conteúdo organizado, páginas relevantes e informações consistentes entre site e fontes públicas facilitam a interpretação. A auditoria aponta oportunidades específicas para o seu caso e ajuda a priorizar ajustes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ter um Perfil da Empresa no Google (Google Maps) ajuda no GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode ajudar. Um Perfil da Empresa completo e coerente fortalece a presença local e oferece informações públicas úteis sobre o negócio. Ele não garante citação por IA, mas é um dos sinais que o GEO Local Check considera ao avaliar como sua empresa é apresentada na busca local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vale a pena investir em GEO agora ou é melhor esperar o mercado amadurecer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se sua empresa já depende de buscas online, vale conhecer o cenário atual e corrigir fundamentos que também servem ao SEO tradicional, sem apostar em promessas de curto prazo. O GEO Local Check oferece um diagnóstico para decidir com mais informação se e onde investir agora, e o que pode esperar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Se a IA dá a resposta pronta sem enviar o usuário para o meu site, como vou vender?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma resposta sem clique ainda pode colocar sua marca no radar, mas não substitui um caminho claro para a contratação. Mantenha informações úteis, diferenciais e canais de contato fáceis de encontrar. O diagnóstico ajuda a identificar se sua presença pública comunica bem a oferta e facilita o próximo passo para quem quer saber mais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A IA prioriza empresas que pagam anúncios como no Google Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anúncios pagos e citações orgânicas em respostas de IA são coisas diferentes. Comprar anúncios não garante recomendação orgânica. A análise GEO observa a presença pública e as respostas disponíveis no escopo, ajudando a separar oportunidades de mídia paga das melhorias de conteúdo e informação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "As avaliações no Google Meu Negócio (Perfil da Empresa no Google) interferem em uma IA citar ou não a minha empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avaliações podem contribuir para a percepção pública da reputação, mas não determinam sozinhas se uma IA vai citar sua empresa. O importante é conquistar avaliações genuínas e manter informações consistentes. A auditoria considera avaliações e outros sinais públicos sem tratar nenhum deles como garantia de recomendação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minhas postagens no Instagram e TikTok ajudam a IA a citar minha marca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não ajuda tanto. As redes sociais como Instagram e Tik Tok são usadas como fontes quando não há outras fontes onde buscar determinadas informações ou quando determinadas postagens possuem muita relevância. Há ainda algumas IAs que usam o Instagram como fonte importante, como a Meta AI. Entretanto, canais como YouTube e Reddit possuem peso muito forte no ChatGPT, Claude e Perplexity. Além disso, redes sociais não trazem informações organizadas sobre o negócio, o que não auxilia tanto na decisão de compra do consumidor como auxiliam o Perfil da Empresa no Google e um site bem estruturado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que é tão importante ser citado por IAs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ser citado pode ajudar mais pessoas a descobrir e considerar sua empresa quando buscam soluções. Como cada plataforma escolhe e apresenta fontes de modo próprio, citação não significa venda garantida nem substitui uma boa experiência de contratação. Mas ajuda a fortalecer a sua empresa como uma opção de escolha do consumidor, que vai usar seu site e/ou o perfil da sua empresa no Google para encontrar mais informações e decidir se sua empresa atende ao que ela busca. O GEO Local Check mostra o cenário encontrado e ajuda a escolher ações para fortalecer sua presença com mais critério."
+          }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": "https://vinsancor.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "O que é GEO?",
-            "acceptedAnswer": {"@type": "Answer", "text": "GEO (otimização para mecanismos generativos) trabalha a forma como sua empresa é compreendida e apresentada em experiências de busca com IA. No GEO Local Check, analisamos sinais públicos e consultas relevantes para mostrar o que já está claro sobre o negócio e onde há oportunidades de melhorar sua presença."}
-          },
-          {
-            "@type": "Question",
-            "name": "O GEO garante que minha empresa apareça no ChatGPT?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Não. Nenhum trabalho sério pode garantir que uma plataforma citará sua empresa ou colocá-la em uma posição específica. O GEO Local Check examina consultas e sinais públicos disponíveis, identifica lacunas e organiza recomendações para fortalecer a clareza e a consistência da sua presença digital."}
-          },
-          {
-            "@type": "Question",
-            "name": "Qual a diferença entre SEO e GEO?",
-            "acceptedAnswer": {"@type": "Answer", "text": "SEO ajuda a melhorar a presença em mecanismos de busca tradicionais; GEO considera também respostas geradas por IA. As estratégias compartilham fundamentos, como conteúdo claro e informações confiáveis. A auditoria ajuda a entender como esses elementos estão hoje e quais ajustes podem apoiar os dois contextos."}
-          },
-          {
-            "@type": "Question",
-            "name": "Minha empresa precisa ter um site?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Um site claro e bem estruturado ajuda a apresentar seus serviços, área de atendimento e informações de contato, e pode facilitar a compreensão do negócio por sistemas de busca e IA. O diagnóstico também considera Google Business Profile, fontes externas, avaliações, menções e diretórios, para que você veja sua presença de forma mais completa."}
-          },
-          {
-            "@type": "Question",
-            "name": "O GEO substitui o SEO Local?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Não. GEO e SEO Local se complementam. Para uma empresa que atende uma região, informações corretas no Google e no Maps continuam importantes. O GEO Local Check considera esses sinais junto de outras fontes públicas e ajuda a priorizar melhorias sem abandonar o trabalho local."}
-          },
-          {
-            "@type": "Question",
-            "name": "Quais plataformas são analisadas?",
-            "acceptedAnswer": {"@type": "Answer", "text": "A auditoria pode considerar Google Search, Google Maps e ambientes com busca por IA, como ChatGPT, Gemini, Claude, Copilot e Perplexity, conforme o escopo e a disponibilidade de cada plataforma. Assim, você recebe um retrato do que foi possível analisar, com os limites claramente indicados."}
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo leva para melhorar a presença GEO?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Não existe um prazo único: as plataformas mudam e a evolução depende do ponto de partida, das ações implementadas e de fatores externos. O GEO Local Check oferece um diagnóstico inicial com problemas, oportunidades e prioridades; esse retrato ajuda a decidir o que acompanhar depois, sem prometer prazo ou resultado específico."}
-          },
-          {
-            "@type": "Question",
-            "name": "Como recebo o diagnóstico?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Você recebe o diagnóstico de forma visual, com indicadores, pontos encontrados, oportunidades e prioridades de ação. Isso ajuda a transformar dúvidas sobre sua presença em IA em próximos passos mais claros para o site e os demais canais públicos da empresa."}
-          },
-          {
-            "@type": "Question",
-            "name": "Minha pequena empresa realmente tem chance de ser citada por IAs contra grandes marcas?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Sim. Empresas menores também podem ser relevantes para consultas específicas, especialmente quando as informações disponíveis deixam claro o que oferecem e onde atendem. Não há garantia de citação, mas o diagnóstico pode revelar como sua marca aparece hoje e quais lacunas merecem atenção para competir melhor por relevância local."}
-          },
-          {
-            "@type": "Question",
-            "name": "Como eu sei se a minha empresa já está sendo recomendada pelo ChatGPT ou Gemini?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Uma forma prática é testar perguntas que seus clientes fariam e registrar as respostas em diferentes momentos e plataformas. Os resultados podem variar conforme contexto, localização e disponibilidade de busca. No GEO Local Check, essa análise ajuda a compor um retrato organizado, em vez de depender de uma consulta isolada."}
-          },
-          {
-            "@type": "Question",
-            "name": "O que eu preciso mudar no meu site para ser 'entendido' pelas IAs?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Comece deixando explícitos os serviços, a localização ou área atendida, os diferenciais e os meios de contato. Conteúdo organizado, páginas relevantes e informações consistentes entre site e fontes públicas facilitam a interpretação. A auditoria aponta oportunidades específicas para o seu caso e ajuda a priorizar ajustes."}
-          },
-          {
-            "@type": "Question",
-            "name": "Ter um Perfil da Empresa no Google (Google Maps) ajuda no GEO?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Pode ajudar. Um Perfil da Empresa completo e coerente fortalece a presença local e oferece informações públicas úteis sobre o negócio. Ele não garante citação por IA, mas é um dos sinais que o GEO Local Check considera ao avaliar como sua empresa é apresentada na busca local."}
-          },
-          {
-            "@type": "Question",
-            "name": "Vale a pena investir em GEO agora ou é melhor esperar o mercado amadurecer?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Se sua empresa já depende de buscas online, vale conhecer o cenário atual e corrigir fundamentos que também servem ao SEO tradicional, sem apostar em promessas de curto prazo. O GEO Local Check oferece um diagnóstico para decidir com mais informação se e onde investir agora, e o que pode esperar."}
-          },
-          {
-            "@type": "Question",
-            "name": "Se a IA dá a resposta pronta sem enviar o usuário para o meu site, como vou vender?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Uma resposta sem clique ainda pode colocar sua marca no radar, mas não substitui um caminho claro para a contratação. Mantenha informações úteis, diferenciais e canais de contato fáceis de encontrar. O diagnóstico ajuda a identificar se sua presença pública comunica bem a oferta e facilita o próximo passo para quem quer saber mais."}
-          },
-          {
-            "@type": "Question",
-            "name": "A IA prioriza empresas que pagam anúncios como no Google Ads?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Anúncios pagos e citações orgânicas em respostas de IA são coisas diferentes. Comprar anúncios não garante recomendação orgânica. A análise GEO observa a presença pública e as respostas disponíveis no escopo, ajudando a separar oportunidades de mídia paga das melhorias de conteúdo e informação."}
-          },
-          {
-            "@type": "Question",
-            "name": "As avaliações no Google Meu Negócio (Perfil da Empresa no Google) interferem em uma IA citar ou não a minha empresa?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Avaliações podem contribuir para a percepção pública da reputação, mas não determinam sozinhas se uma IA vai citar sua empresa. O importante é conquistar avaliações genuínas e manter informações consistentes. A auditoria considera avaliações e outros sinais públicos sem tratar nenhum deles como garantia de recomendação."}
-          },
-          {
-            "@type": "Question",
-            "name": "Minhas postagens no Instagram e TikTok ajudam a IA a citar minha marca?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Não ajuda tanto. As redes sociais como Instagram e Tik Tok são usadas como fontes quando não há outras fontes onde buscar determinadas informações ou quando determinadas postagens possuem muita relevância. Há ainda algumas IAs que usam o Instagram como fonte importante, como a Meta AI. Entretanto, canais como YouTube e Reddit possuem peso muito forte no ChatGPT, Claude e Perplexity. Além disso, redes sociais não trazem informações organizadas sobre o negócio, o que não auxilia tanto na decisão de compra do consumidor como auxiliam o Perfil da Empresa no Google e um site bem estruturado."}
-          },
-          {
-            "@type": "Question",
-            "name": "Por que é tão importante ser citado por IAs?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Ser citado pode ajudar mais pessoas a descobrir e considerar sua empresa quando buscam soluções. Como cada plataforma escolhe e apresenta fontes de modo próprio, citação não significa venda garantida nem substitui uma boa experiência de contratação. Mas ajuda a fortalecer a sua empresa como uma opção de escolha do consumidor, que vai usar seu site e/ou o perfil da sua empresa no Google para encontrar mais informações e decidir se sua empresa atende ao que ela busca. O GEO Local Check mostra o cenário encontrado e ajuda a escolher ações para fortalecer sua presença com mais critério."}
-          }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-perfil-empresa-google",
-        "name": "Perfil da Empresa no Google",
-        "description": "Otimização completa e posicionamento estratégico do Google Meu Negócio para atrair mais clientes locais.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-criacao-de-sites",
-        "name": "Criação de Sites",
-        "description": "Desenvolvimento de sites One Page institucionais de alta conversão, focados em conversão direta para o WhatsApp.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-trafego-pago",
-        "name": "Tráfego Pago",
-        "description": "Gestão de campanhas de anúncios direcionados no Google e Meta Ads para rápida geração de oportunidades.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": "https://vinsancor.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://vinsancor.com/"
-          }
-        ]
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vinsancor.com/geo-local-check.html#service",
+      "name": "GEO Local Check | Visibilidade no Google, Maps e IA | Vinsancor",
+      "url": "https://vinsancor.com/geo-local-check.html",
+      "description": "Descubra como sua empresa aparece no Google, Google Maps e nas novas buscas com inteligência artificial. Conheça o GEO Local Check da Vinsancor.",
+      "provider": {
+        "@id": "https://vinsancor.com/#organization"
       }
-    ]
-    </script>
-
-    <script type="text/javascript">
+    }
+  ]
+}
+</script>
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;

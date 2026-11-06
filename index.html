@@ -155,216 +155,169 @@
     </script>
     <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://vinsancor.com/#organization",
-        "name": "Vinsancor Presença Digital",
-        "url": "https://vinsancor.com/",
-        "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "sameAs": [
-          "https://instagram.com/vinsancor"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://vinsancor.com/#website",
+      "url": "https://vinsancor.com/",
+      "name": "Vinsancor Presença Digital",
+      "publisher": {
+        "@id": "https://vinsancor.com/#organization"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": "https://vinsancor.com/#localbusiness",
-        "name": "Vinsancor Presença Digital",
-        "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
-        "url": "https://vinsancor.com/",
-        "telephone": "+5521995928037",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Atendimento Online",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "08:00",
-          "closes": "18:00"
-        },
-        "priceRange": "$$",
-        "areaServed": "Brasil e Exterior",
-        "parentOrganization": {
-          "@id": "https://vinsancor.com/#organization"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://vinsancor.com/#website",
-        "url": "https://vinsancor.com/",
-        "name": "Vinsancor Presença Digital",
-        "publisher": {
-          "@id": "https://vinsancor.com/#organization"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": "https://vinsancor.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Como o SEO Local ajuda minha empresa a aparecer nas buscas do Google e no Maps?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O SEO Local organiza as informações do negócio, o Perfil da Empresa no Google e o conteúdo do site para ajudar mecanismos de busca a entenderem sua relevância para consultas locais. O posicionamento varia conforme a busca, a concorrência e outros fatores; anúncios no Google Ads são identificados como publicidade."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona o atendimento online para empresas localizadas em outras cidades, estados ou países?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nosso processo é 100% digital e sem barreiras geográficas. Reuniões de alinhamento por vídeo, troca rápida de informações por WhatsApp e relatórios em tempo real garantem que você tenha total controle da operação de marketing, esteja onde estiver."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto tempo leva para notar mudanças após otimizar o Perfil da Empresa no Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O prazo varia conforme a situação inicial do perfil, a concorrência local e a frequência das atualizações. A otimização pode melhorar a qualidade das informações e a presença local, mas não há prazo fixo nem garantia de posição; acompanhamos métricas como visualizações, ligações e pedidos de rota."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quando um site One Page é uma boa opção para uma pequena empresa?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Um site One Page reúne em uma única página as informações essenciais sobre a empresa, seus serviços e formas de contato. Pode ser adequado para apresentar uma oferta ou negócio com escopo objetivo; a estrutura e o desempenho dependem do conteúdo e da implementação."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como o marketing digital pode ajudar bares e restaurantes a serem encontrados?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Uma estratégia pode combinar Perfil da Empresa no Google, cardápio e informações úteis no site, conteúdo em redes sociais e anúncios. Esses canais ajudam o público a encontrar dados como localização, horário, opções do menu e formas de pedir ou reservar."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "A Vinsancor atende empresas de outros segmentos além da gastronomia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. Atendemos micro e pequenas empresas, negócios locais e prestadores de serviços de diferentes segmentos. As soluções podem incluir SEO Local, Perfil da Empresa no Google, sites One Page, anúncios, copywriting, redes sociais e GEO, conforme os objetivos de cada empresa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quanto devo investir em tráfego pago no Google e Meta Ads para pequenas e médias empresas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "O investimento inicial em plataformas não precisa ser exorbitante. A estratégia ideal é começar com orçamentos condizentes com seu fluxo de caixa, testar a recepção das mensagens e escalar o valor conforme o Retorno Sobre Investimento (ROI) se comprova no caixa da empresa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "É possível posicionar o Perfil da Empresa no Google Maps mesmo atendendo clientes em várias regiões?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim! Para prestadores de serviço com áreas de cobertura, configuramos o perfil para destacar as zonas de atendimento ao invés do endereço fixo, otimizando a presença digital para múltiplas cidades e bairros vizinhos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona a reunião de alinhamento e entrega dos projetos para quem está no exterior?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Adequamos o fluxo aos fusos horários necessários. Realizamos videochamadas de kickoff programadas e todo o acompanhamento posterior acontece de forma assíncrona, clara e documentada, prezando pela velocidade de execução."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O atendimento é feito diretamente por um especialista ou por intermediários?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Aqui na Vinsancor você lida direto com quem coloca a mão na massa. Eliminamos a figura do \"atendimento agência\", o que garante que suas dúvidas e pedidos de ajustes nas campanhas ou no site sejam compreendidos e executados de imediato por quem domina a técnica."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O que é o Perfil da Empresa no Google e como ele ajuda um negócio local?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "É a ficha que apresenta informações do negócio no Google e no Maps, como endereço ou área atendida, horário, telefone, fotos e avaliações. Mantê-la correta facilita que as pessoas encontrem informações e entrem em contato; a presença na busca não garante novos clientes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como solicitar uma análise gratuita ou proposta personalizada para o meu negócio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Basta clicar em qualquer botão \"Falar no WhatsApp\" ou \"Solicitar Diagnóstico Gratuito\" nesta página. Você será direcionado para o contato direto para agendarmos uma conversa rápida e focada em resultados."
-            }
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://vinsancor.com/#organization",
+      "name": "Vinsancor Presença Digital",
+      "alternateName": "Vinsancor",
+      "url": "https://vinsancor.com/",
+      "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "telephone": "+5521995928037",
+      "areaServed": "Brasil e Exterior",
+      "sameAs": [
+        "https://instagram.com/vinsancor",
+        "https://www.linkedin.com/company/vinsancor-presença-digital"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://vinsancor.com/#person",
+      "name": "Vinícius Corrêa",
+      "url": "https://vinsancor.com/sobre-vinicius-correa.html",
+      "image": "https://vinsancor.com/assets/img/vinsancor01.webp?v=20260929",
+      "jobTitle": "Jornalista especializado em Marketing de Serviços e Presença Digital",
+      "sameAs": [
+        "https://www.instagram.com/vinsancor/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como o SEO Local ajuda minha empresa a aparecer nas buscas do Google e no Maps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O SEO Local organiza as informações do negócio, o Perfil da Empresa no Google e o conteúdo do site para ajudar mecanismos de busca a entenderem sua relevância para consultas locais. O posicionamento varia conforme a busca, a concorrência e outros fatores; anúncios no Google Ads são identificados como publicidade."
           }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-perfil-empresa-google",
-        "name": "Perfil da Empresa no Google",
-        "description": "Otimização do Perfil da Empresa no Google para ampliar a presença nas buscas locais e no Maps e facilitar ligações, pedidos de rota e contatos.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
         },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-criacao-de-sites",
-        "name": "Criação de Sites",
-        "description": "Criação de sites One Page rápidos e responsivos para apresentar serviços, responder às dúvidas dos clientes e gerar contatos pelo WhatsApp.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://vinsancor.com/#service-trafego-pago",
-        "name": "Tráfego Pago",
-        "description": "Planejamento de campanhas no Google Ads e Meta Ads para alcançar potenciais clientes, captar contatos e apoiar as vendas.",
-        "provider": {
-          "@id": "https://vinsancor.com/#organization"
-        },
-        "areaServed": "Brasil e Exterior"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": "https://vinsancor.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://vinsancor.com/"
+        {
+          "@type": "Question",
+          "name": "Como funciona o atendimento online para empresas localizadas em outras cidades, estados ou países?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nosso processo é 100% digital e sem barreiras geográficas. Reuniões de alinhamento por vídeo, troca rápida de informações por WhatsApp e relatórios em tempo real garantem que você tenha total controle da operação de marketing, esteja onde estiver."
           }
-        ]
-      }
-    ]
-    </script>
-
-
-
-
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva para notar mudanças após otimizar o Perfil da Empresa no Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo varia conforme a situação inicial do perfil, a concorrência local e a frequência das atualizações. A otimização pode melhorar a qualidade das informações e a presença local, mas não há prazo fixo nem garantia de posição; acompanhamos métricas como visualizações, ligações e pedidos de rota."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando um site One Page é uma boa opção para uma pequena empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um site One Page reúne em uma única página as informações essenciais sobre a empresa, seus serviços e formas de contato. Pode ser adequado para apresentar uma oferta ou negócio com escopo objetivo; a estrutura e o desempenho dependem do conteúdo e da implementação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como o marketing digital pode ajudar bares e restaurantes a serem encontrados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Uma estratégia pode combinar Perfil da Empresa no Google, cardápio e informações úteis no site, conteúdo em redes sociais e anúncios. Esses canais ajudam o público a encontrar dados como localização, horário, opções do menu e formas de pedir ou reservar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Vinsancor atende empresas de outros segmentos além da gastronomia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Atendemos micro e pequenas empresas, negócios locais e prestadores de serviços de diferentes segmentos. As soluções podem incluir SEO Local, Perfil da Empresa no Google, sites One Page, anúncios, copywriting, redes sociais e GEO, conforme os objetivos de cada empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto devo investir em tráfego pago no Google e Meta Ads para pequenas e médias empresas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O investimento inicial em plataformas não precisa ser exorbitante. A estratégia ideal é começar com orçamentos condizentes com seu fluxo de caixa, testar a recepção das mensagens e escalar o valor conforme o Retorno Sobre Investimento (ROI) se comprova no caixa da empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível posicionar o Perfil da Empresa no Google Maps mesmo atendendo clientes em várias regiões?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Para prestadores de serviço com áreas de cobertura, configuramos o perfil para destacar as zonas de atendimento ao invés do endereço fixo, otimizando a presença digital para múltiplas cidades e bairros vizinhos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a reunião de alinhamento e entrega dos projetos para quem está no exterior?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adequamos o fluxo aos fusos horários necessários. Realizamos videochamadas de kickoff programadas e todo o acompanhamento posterior acontece de forma assíncrona, clara e documentada, prezando pela velocidade de execução."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O atendimento é feito diretamente por um especialista ou por intermediários?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aqui na Vinsancor você lida direto com quem coloca a mão na massa. Eliminamos a figura do \"atendimento agência\", o que garante que suas dúvidas e pedidos de ajustes nas campanhas ou no site sejam compreendidos e executados de imediato por quem domina a técnica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o Perfil da Empresa no Google e como ele ajuda um negócio local?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É a ficha que apresenta informações do negócio no Google e no Maps, como endereço ou área atendida, horário, telefone, fotos e avaliações. Mantê-la correta facilita que as pessoas encontrem informações e entrem em contato; a presença na busca não garante novos clientes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como solicitar uma análise gratuita ou proposta personalizada para o meu negócio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basta clicar em qualquer botão \"Falar no WhatsApp\" ou \"Solicitar Diagnóstico Gratuito\" nesta página. Você será direcionado para o contato direto para agendarmos uma conversa rápida e focada em resultados."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vinsancor.com/#webpage",
+      "url": "https://vinsancor.com/",
+      "name": "SEO Local, GEO e Marketing Digital | Vinsancor",
+      "description": "SEO Local, Perfil da Empresa no Google, GEO, sites One Page e anúncios Google Ads e Meta Ads para micro e pequenas empresas. Atendimento no Brasil e exterior.",
+      "isPartOf": {
+        "@id": "https://vinsancor.com/#website"
+      },
+      "about": {
+        "@id": "https://vinsancor.com/#organization"
+      },
+      "inLanguage": "pt-BR"
+    }
+  ]
+}
+</script>
 </head>
 <body class="bg-light text-dark font-sans antialiased">
 

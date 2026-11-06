@@ -31,8 +31,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/tailwind.css?v=20260929">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Vinícius Corrêa","url":"https://vinsancor.com/sobre-vinicius-correa.html","image":"https://vinsancor.com/assets/img/vinsancor01.webp?v=20260929","jobTitle":"Jornalista especializado em Marketing de Serviços e Presença Digital","sameAs":["https://www.instagram.com/vinsancor/"]}</script>
-    <style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://vinsancor.com/#website",
+      "url": "https://vinsancor.com/",
+      "name": "Vinsancor Presença Digital",
+      "publisher": {
+        "@id": "https://vinsancor.com/#organization"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://vinsancor.com/#organization",
+      "name": "Vinsancor Presença Digital",
+      "alternateName": "Vinsancor",
+      "url": "https://vinsancor.com/",
+      "logo": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "image": "https://vinsancor.com/assets/img/logo.webp?v=20260929",
+      "telephone": "+5521995928037",
+      "areaServed": "Brasil e Exterior",
+      "sameAs": [
+        "https://instagram.com/vinsancor",
+        "https://www.linkedin.com/company/vinsancor-presença-digital"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://vinsancor.com/#person",
+      "name": "Vinícius Corrêa",
+      "url": "https://vinsancor.com/sobre-vinicius-correa.html",
+      "image": "https://vinsancor.com/assets/img/vinsancor01.webp?v=20260929",
+      "jobTitle": "Jornalista especializado em Marketing de Serviços e Presença Digital",
+      "sameAs": [
+        "https://www.instagram.com/vinsancor/"
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://vinsancor.com/sobre-vinicius-correa.html#webpage",
+      "url": "https://vinsancor.com/sobre-vinicius-correa.html",
+      "name": "Vinícius Corrêa | Especialista em Marketing de Serviços | Vinsancor",
+      "description": "Conheça Vinícius Corrêa, jornalista especializado em Marketing de Serviços e Presença Digital, com foco em Psicanálise do Consumidor e gastronomia.",
+      "isPartOf": {
+        "@id": "https://vinsancor.com/#website"
+      },
+      "about": {
+        "@id": "https://vinsancor.com/#person"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://vinsancor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vinícius Corrêa | Especialista em Marketing de Serviços | Vinsancor",
+          "item": "https://vinsancor.com/sobre-vinicius-correa.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
         .vs-profile-main { flex:1; background:#000; color:#141a19; }
         .vs-profile-wrap { max-width:80rem; margin:0 auto; padding:3rem 1rem 5rem; }
         .vs-profile-breadcrumb { max-width:64rem; margin:0 auto 1.25rem; font-size:.875rem; color:#69716e; }
