@@ -26,7 +26,7 @@
       id: "otimizacao-perfil-da-empresa-google-2026",
       title: "Otimizando o Perfil da Empresa no Google em 2026: Guia Completo",
       slug: "otimizacao-perfil-da-empresa-google-2026",
-      url: "/blog/otimizacao-perfil-da-empresa-google-2026.html",
+      url: "/otimizacao-perfil-da-empresa-google-2026.html",
       category: "SEO Local",
       excerpt: "Descubra o que é SEO Local e como otimizar o antigo Google Meu Negócio no Google Maps. Guia prático com exemplos reais para pequenas empresas.",
       coverImage: "assets/img/google-meu-negocio-perfil-vinsancor.webp",
