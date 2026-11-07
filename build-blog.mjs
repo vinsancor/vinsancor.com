@@ -32,7 +32,10 @@ for (const file of ["assets/blog-posts.js", "assets/blog-render.js"]) {
 const Blog = sandbox.VinsancorBlog;
 const Render = sandbox.VinsancorBlogRender;
 
-const htmlFiles = readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+const htmlFiles = [
+  ...readdirSync(ROOT).filter((f) => f.endsWith(".html")),
+  ...readdirSync(join(ROOT, "blog")).filter((f) => f.endsWith(".html")).map((f) => `blog/${f}`),
+];
 let changed = 0;
 
 for (const file of htmlFiles) {
