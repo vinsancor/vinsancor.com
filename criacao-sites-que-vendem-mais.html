@@ -47,20 +47,26 @@
         .portfolio-eyebrow { display:block; color:#516460; font-size:.78rem; font-weight:800; letter-spacing:.16em; margin-bottom:.65rem; }
         .portfolio-heading-row h2 { color:#141a19; font-size:clamp(2rem,4vw,3.25rem); line-height:1.08; font-weight:800; letter-spacing:-.04em; margin:0; }
         .portfolio-heading-row p { color:#6b7280; max-width:25rem; margin:0 0 .25rem; line-height:1.6; }
-        .portfolio-showcase { display:grid; grid-template-columns:minmax(220px,.31fr) minmax(0,1fr); gap:1.75rem; max-width:1240px; margin:0 auto; padding:1.5rem; border:1px solid rgba(255,255,255,.08); border-radius:2rem; background:#141a19; color:#fff; box-shadow:0 28px 70px rgba(20,26,25,.16); }
-        .portfolio-projects { display:flex; flex-direction:column; gap:.55rem; }
-        .portfolio-projects-label { color:#929b9a; font-size:.72rem; font-weight:800; letter-spacing:.14em; padding:.35rem .8rem .55rem; }
-        .portfolio-project-tab { display:grid; grid-template-columns:2rem minmax(0,1fr) .55rem; align-items:center; gap:.8rem; min-height:4.5rem; padding:1rem .9rem; border:1px solid transparent; border-radius:1rem; color:#d8dddc; text-align:left; background:rgba(255,255,255,.035); cursor:pointer; transition:background .2s,border-color .2s,color .2s,transform .2s; }
-        .portfolio-project-tab:hover { background:rgba(255,255,255,.075); transform:translateX(2px); }
+        .portfolio-showcase { display:flex; flex-direction:column; gap:.7rem; max-width:784px; margin:0 auto; padding:1.1rem; border:1px solid rgba(255,255,255,.08); border-radius:1.6rem; background:#141a19; color:#fff; box-shadow:0 28px 70px rgba(20,26,25,.16); }
+        .portfolio-menu { min-width:0; }
+        .portfolio-tabs-carousel { display:flex; align-items:center; gap:.4rem; min-width:0; }
+        .portfolio-tabs-viewport { flex:1; min-width:0; overflow:hidden; scrollbar-width:none; }
+        .portfolio-projects { display:flex; width:max-content; gap:.3rem; }
+        .portfolio-tabs-arrow { flex:0 0 2rem; display:grid; place-items:center; width:2rem; height:2rem; padding:0; border:1px solid rgba(255,199,11,.32); border-radius:.6rem; color:#ffc70b; background:rgba(255,255,255,.035); font-size:1.15rem; line-height:1; cursor:pointer; transition:background .2s,border-color .2s; }
+        .portfolio-tabs-arrow:hover { background:rgba(255,199,11,.12); border-color:#ffc70b; }
+        .portfolio-tabs-arrow:disabled { opacity:.35; cursor:default; }
+        .portfolio-projects-label { display:block; color:#929b9a; font-size:.66rem; font-weight:800; letter-spacing:.14em; padding:.05rem .25rem .4rem; }
+        .portfolio-project-tab { display:grid; grid-template-columns:.8rem minmax(0,1fr); align-items:center; gap:.3rem; min-width:0; min-height:2.35rem; padding:.3rem .35rem; border:1px solid transparent; border-radius:.65rem; color:#d8dddc; text-align:left; background:rgba(255,255,255,.035); cursor:pointer; transition:background .2s,border-color .2s,color .2s,transform .2s; }
+        .portfolio-project-tab { flex:0 0 8rem; }
+        .portfolio-project-tab:hover { background:rgba(255,255,255,.075); transform:translateY(-2px); }
         .portfolio-project-tab.is-active { background:linear-gradient(110deg,rgba(255,199,11,.16),rgba(255,255,255,.055)); border-color:rgba(255,199,11,.4); color:#fff; }
-        .portfolio-tab-number { color:#7b8583; font-size:.78rem; font-weight:800; }
+        .portfolio-tab-number { color:#7b8583; font-size:.64rem; font-weight:800; }
         .portfolio-project-tab.is-active .portfolio-tab-number { color:#ffc70b; }
-        .portfolio-tab-name { font-size:.98rem; font-weight:700; }
-        .portfolio-tab-indicator { width:.55rem; height:.55rem; border-radius:50%; background:#516460; }
-        .portfolio-project-tab.is-active .portfolio-tab-indicator { background:#ffc70b; box-shadow:0 0 14px rgba(255,199,11,.55); }
+        .portfolio-tab-name { min-width:0; font-size:.69rem; font-weight:700; line-height:1.12; overflow-wrap:anywhere; }
+        .portfolio-tab-indicator { display:none; }
         .portfolio-main { min-width:0; }
         .portfolio-browser { overflow:hidden; border:1px solid rgba(255,255,255,.12); border-radius:1.25rem; background:#0c100f; }
-        .portfolio-browser-bar { display:grid; grid-template-columns:1fr minmax(130px,1.2fr) 1fr; align-items:center; gap:1rem; height:3.5rem; padding:0 1rem; background:#1b211f; border-bottom:1px solid rgba(255,255,255,.1); }
+        .portfolio-browser-bar { display:grid; grid-template-columns:1fr minmax(130px,1.2fr) 1fr; align-items:center; gap:1rem; height:3rem; padding:0 .85rem; background:#1b211f; border-bottom:1px solid rgba(255,255,255,.1); }
         .portfolio-browser-dots { display:flex; gap:.42rem; }
         .portfolio-browser-dots i { width:.58rem; height:.58rem; border-radius:50%; background:#ef7166; }
         .portfolio-browser-dots i:nth-child(2) { background:#f4c65e; }
@@ -68,7 +74,7 @@
         .portfolio-browser-address { display:flex; align-items:center; gap:.55rem; min-width:0; padding:.55rem .8rem; border-radius:.6rem; background:#0c100f; color:#9ca6a4; font-size:.78rem; }
         .portfolio-browser-address span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
         .portfolio-browser-menu { justify-self:end; color:#68716f; letter-spacing:.18em; }
-        .portfolio-screen { position:relative; display:grid; place-items:center; height:clamp(280px,44vh,520px); overflow:hidden; background:#0a0d0c; }
+        .portfolio-screen { position:relative; display:grid; place-items:center; height:clamp(420px,62vh,700px); overflow:hidden; background:#0a0d0c; }
         .portfolio-screen img { display:block; width:100%; height:100%; object-fit:contain; transition:opacity .2s ease; }
         .portfolio-screen img.is-loading-next { opacity:.35; }
         .portfolio-slide-arrow { position:absolute; top:50%; display:grid; place-items:center; width:2.65rem; height:2.65rem; transform:translateY(-50%); border:1px solid rgba(255,255,255,.22); border-radius:50%; color:#fff; background:rgba(10,13,12,.78); font-size:1.8rem; line-height:1; cursor:pointer; transition:background .2s,transform .2s; }
@@ -77,18 +83,18 @@
         .portfolio-slide-next { right:1rem; }
         .portfolio-slide-count { position:absolute; left:50%; bottom:.8rem; transform:translateX(-50%); display:flex; align-items:center; gap:.4rem; padding:.45rem .85rem; border:1px solid rgba(255,255,255,.14); border-radius:999px; background:rgba(10,13,12,.8); color:#ffc70b; font-size:.75rem; font-weight:800; }
         .portfolio-count-divider { color:#89918f; }
-        .portfolio-progress { display:grid; grid-template-columns:repeat(4,1fr); gap:.45rem; margin:1rem .15rem 1.25rem; }
+        .portfolio-progress { display:grid; grid-template-columns:repeat(4,1fr); gap:.4rem; margin:.65rem .15rem .8rem; }
         .portfolio-progress-track { height:.22rem; overflow:hidden; border-radius:999px; background:rgba(255,255,255,.14); }
         .portfolio-progress-fill { display:block; width:100%; height:100%; transform:scaleX(0); transform-origin:left; background:#ffc70b; }
-        .portfolio-project-details { display:flex; flex-direction:column; align-items:flex-start; gap:1rem; padding:1.35rem .8rem .2rem; }
+        .portfolio-project-details { display:flex; justify-content:space-between; align-items:center; gap:1.5rem; padding:.25rem .45rem .15rem; }
         .portfolio-copy h3 { margin:0 0 .35rem; color:#fff; font-size:clamp(1.6rem,3vw,2.35rem); font-weight:800; letter-spacing:-.035em; }
         .portfolio-copy p { max-width:24rem; margin:0; color:#aab2b0; line-height:1.65; }
         .portfolio-visit-link { flex:0 0 auto; display:inline-flex; align-items:center; gap:1.3rem; padding:.9rem 1.1rem; border:1px solid rgba(255,199,11,.45); border-radius:.9rem; color:#fff; text-decoration:none; font-weight:700; transition:background .2s,border-color .2s; }
         .portfolio-visit-link:hover { background:rgba(255,199,11,.11); border-color:#ffc70b; }
         .portfolio-visit-arrow { color:#ffc70b; font-size:1.3rem; }
-        .portfolio-project-tab:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
-        @media(max-width:900px) { .portfolio-showcase { grid-template-columns:1fr; gap:1rem; } .portfolio-projects { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.5rem; } .portfolio-project-details { grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; padding:.75rem .45rem .5rem; } .portfolio-copy p { max-width:46rem; } .portfolio-projects-label { grid-column:1/-1; } .portfolio-project-tab { grid-template-columns:1.6rem minmax(0,1fr); min-height:3.8rem; padding:.75rem; } .portfolio-tab-indicator { display:none; } }
-        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.8rem; border-radius:1.35rem; } .portfolio-projects { grid-template-columns:1fr; } .portfolio-projects-label { padding:.4rem .45rem; } .portfolio-project-tab { min-height:3.2rem; padding:.55rem .7rem; } .portfolio-tab-name { font-size:.9rem; } .portfolio-browser-bar { height:2.8rem; padding:0 .65rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(210px,38vh,340px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
+        .portfolio-project-tab:focus-visible,.portfolio-tabs-arrow:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
+        @media(max-width:900px) { .portfolio-showcase { gap:.65rem; } .portfolio-project-tab { padding:.28rem .3rem; min-height:2.2rem; } }
+        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
     </style>
     <!-- JSON-LD Schemas -->
@@ -490,131 +496,47 @@
                 </div>
 
                 <div class="portfolio-showcase" data-portfolio-showcase>
-                    <div class="portfolio-projects" role="tablist" aria-label="Selecione uma empresa para explorar">
-                        <span class="portfolio-projects-label" role="presentation">SELECIONE PARA EXPLORAR</span>
-                        <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0">
-                            <span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span>
-                        </button>
-                        <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1">
-                            <span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span>
-                        </button>
-                        <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2">
-                            <span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span>
-                        </button>
-                        <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3">
-                            <span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span>
-                        </button>
-                        <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4">
-                            <span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span>
-                        </button>
-
-                        <div class="portfolio-project-details">
-                            <div class="portfolio-copy">
-                                <h3 data-portfolio-title aria-live="polite">Vitro Jardins</h3>
-                                <p data-portfolio-description>Site simples e rápido, moderno e elegante, direto, focado na conversão de clientes estruturado em SEO para buscas no Google</p>
+                    <div class="portfolio-menu">
+                        <span class="portfolio-projects-label">SELECIONE PARA EXPLORAR</span>
+                        <div class="portfolio-tabs-carousel">
+                            <button class="portfolio-tabs-arrow" type="button" data-tabs-prev aria-label="Ver projetos anteriores" aria-controls="portfolio-tabs">‹</button>
+                            <div class="portfolio-tabs-viewport" data-tabs-viewport>
+                                <div id="portfolio-tabs" class="portfolio-projects" role="tablist" aria-label="Selecione uma empresa para explorar">
+                                    <button id="portfolio-tab-0" class="portfolio-project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-preview" data-project-index="0"><span class="portfolio-tab-number">01</span><span class="portfolio-tab-name">Imaré Salinas</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-1" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="1"><span class="portfolio-tab-number">02</span><span class="portfolio-tab-name">Apysy Restaurante</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-2" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="2"><span class="portfolio-tab-number">03</span><span class="portfolio-tab-name">Boquitas Bar</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-3" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="3"><span class="portfolio-tab-number">04</span><span class="portfolio-tab-name">Spleen Town</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-4" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="4"><span class="portfolio-tab-number">05</span><span class="portfolio-tab-name">Polain Arquitetura</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-5" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="5"><span class="portfolio-tab-number">06</span><span class="portfolio-tab-name">Bar Bah Raridade</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-6" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="6"><span class="portfolio-tab-number">07</span><span class="portfolio-tab-name">Lumminousa</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-7" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="7"><span class="portfolio-tab-number">08</span><span class="portfolio-tab-name">Debord</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-8" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="8"><span class="portfolio-tab-number">09</span><span class="portfolio-tab-name">Vitro Jardins</span><span class="portfolio-tab-indicator"></span></button>
+                                    <button id="portfolio-tab-9" class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-preview" data-project-index="9"><span class="portfolio-tab-number">10</span><span class="portfolio-tab-name">Carioca Glass</span><span class="portfolio-tab-indicator"></span></button>
+                                </div>
                             </div>
-                            <a data-portfolio-link href="https://vitrojardins.site/" target="_blank" rel="noopener noreferrer" class="portfolio-visit-link">
-                                <span>Ver projeto completo</span><span class="portfolio-visit-arrow" aria-hidden="true">↗</span>
-                            </a>
+                            <button class="portfolio-tabs-arrow" type="button" data-tabs-next aria-label="Ver próximos projetos" aria-controls="portfolio-tabs">›</button>
                         </div>
                     </div>
-
                     <div class="portfolio-main" id="portfolio-preview" role="tabpanel" aria-labelledby="portfolio-tab-0" tabindex="0">
                         <div class="portfolio-browser">
                             <div class="portfolio-browser-bar">
                                 <div class="portfolio-browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-                                <div class="portfolio-browser-address"><span aria-hidden="true">⌑</span><span data-portfolio-domain>vitrojardins.site</span></div>
+                                <div class="portfolio-browser-address"><span aria-hidden="true">⌑</span><span data-portfolio-domain>imaresalinas.com</span></div>
                                 <span class="portfolio-browser-menu" aria-hidden="true">•••</span>
                             </div>
                             <div class="portfolio-screen">
-                                <img data-portfolio-image src="/assets/img/projetos/vitrojardins-01.webp" alt="Captura 1 de 4 do site da Vitro Jardins" width="1600" height="900" loading="lazy" decoding="async">
+                                <img data-portfolio-image src="/assets/img/projetos/imare-salinas-criacao-site-pousadas-vinsancor-01.webp" alt="Página inicial do site da Pousada Imaré Salinas, em Salinópolis" width="1600" height="900" loading="lazy" decoding="async">
                                 <button class="portfolio-slide-arrow portfolio-slide-prev" type="button" aria-label="Imagem anterior">‹</button>
                                 <button class="portfolio-slide-arrow portfolio-slide-next" type="button" aria-label="Próxima imagem">›</button>
                                 <div class="portfolio-slide-count" aria-live="polite"><span data-portfolio-slide-current>01</span><span class="portfolio-count-divider">/</span><span data-portfolio-slide-total>04</span></div>
                             </div>
                         </div>
-                        <div class="portfolio-progress" role="group" aria-label="Progresso das imagens">
-                            <span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span>
-                            <span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span>
-                            <span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span>
-                            <span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span>
-                        </div>
+                        <div class="portfolio-progress" role="group" aria-label="Progresso das imagens"><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span><span class="portfolio-progress-track"><span class="portfolio-progress-fill"></span></span></div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Comparativo de formatos de site -->
-        <section id="formatos-de-site" class="py-20 bg-[#f3f4ed]">
-            <div class="container mx-auto px-4 max-w-7xl">
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">GUIA DE ESCOLHA</span>
-                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-5">One Page, Landing Page ou Site Institucional: qual é o ideal para seu negócio?</h2>
-                    <p class="mt-8 text-lg text-gray-600">Compare o objetivo, a estrutura e o potencial de cada formato antes de escolher como apresentar sua empresa na internet.</p>
-                    <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-6"></div>
-                </div>
-
-                <div class="rounded-3xl border border-[#dfe3d7] bg-white p-3 shadow-xl md:p-5">
-                    <div class="overflow-x-auto rounded-2xl" role="region" aria-label="Tabela comparativa entre One Page, Landing Page e Site Institucional" tabindex="0" style="overscroll-behavior-inline:contain">
-                        <table style="width:100%;min-width:820px;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:16px;text-align:left">
-                            <caption class="sr-only">Comparação de objetivos, estrutura, navegação, conversão, SEO, perfil institucional, custo e exemplo de uso de One Page, Landing Page e Site Institucional.</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="width:19%;padding:20px 18px;background:#141a19;color:#f3f4ed;font-size:.9rem;text-transform:uppercase;letter-spacing:.08em">Critério</th>
-                                    <th scope="col" style="width:27%;padding:20px 18px;background:#202927;color:#fff;text-align:center;font-size:1.2rem;font-weight:800">One Page<span style="display:block;margin-top:5px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase">Foco em conversão</span></th>
-                                    <th scope="col" style="width:27%;padding:20px 18px;background:#ffc70b;color:#141a19;text-align:center;font-size:1.2rem;font-weight:800">Landing Page<span style="display:block;margin-top:5px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase">Foco em conversão específica</span></th>
-                                    <th scope="col" style="width:27%;padding:20px 18px;background:#202927;color:#fff;text-align:center;font-size:1.2rem;font-weight:800">Site Institucional</th>
-                                </tr>
-                            </thead>
-                            <tbody style="color:#36413d;font-size:.95rem;line-height:1.5">
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">🎯 Objetivo</th><td style="padding:15px 18px">Apresentar a empresa de forma rápida e gerar conversão</td><td style="padding:15px 18px;background:#fff9df">Gerar uma ação ou conversão <strong>em torno de uma ação principal e específica</strong></td><td style="padding:15px 18px">Apresentar a empresa de forma completa</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">📄 Estrutura</th><td style="padding:15px 18px">Uma única página</td><td style="padding:15px 18px;background:#fff9df">Geralmente uma única página</td><td style="padding:15px 18px">Várias páginas</td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">🧭 Navegação</th><td style="padding:15px 18px">Seções da mesma página</td><td style="padding:15px 18px;background:#fff9df">Normalmente mínima</td><td style="padding:15px 18px">Menu e várias páginas</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">📞 Foco em conversão</th><td style="padding:15px 18px">Médio</td><td style="padding:15px 18px;background:#fff9df"><strong style="color:#141a19">Alto</strong></td><td style="padding:15px 18px">Baixo ou médio</td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">🔎 SEO</th><td style="padding:15px 18px">Sim</td><td style="padding:15px 18px;background:#fff9df">Sim, focado em uma ação/oferta</td><td style="padding:15px 18px"><strong style="color:#141a19">SEO em alta performance</strong></td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">🏢 Institucional</th><td style="padding:15px 18px">Sim</td><td style="padding:15px 18px;background:#fff9df">Pouco</td><td style="padding:15px 18px"><strong style="color:#141a19">Sim, completo</strong></td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">💰 Custo</th><td style="padding:15px 18px">Baixo</td><td style="padding:15px 18px;background:#fff9df">Baixo ou médio</td><td style="padding:15px 18px">Médio ou alto</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 18px;background:#f3f4ed;color:#141a19;font-weight:800">Exemplo</th><td style="padding:15px 18px">Empresa, serviços e contato</td><td style="padding:15px 18px;background:#fff9df">“Peça agora” ou “Aproveite a oferta!”</td><td style="padding:15px 18px">Empresa, serviços, sobre, blog e contato</td></tr>
-                            </tbody>
-                        </table>
+                    <div class="portfolio-project-details">
+                        <div class="portfolio-copy"><h3 data-portfolio-title aria-live="polite">Imaré Salinas</h3><p data-portfolio-description>Um site acolhedor para uma pousada em Salinópolis, que destaca as acomodações, comodidades e atrações locais para ajudar os hóspedes a planejar a estadia.</p></div>
+                        <a data-portfolio-link href="https://imaresalinas.com" target="_blank" rel="noopener noreferrer" class="portfolio-visit-link"><span>Ver o projeto completo</span><span class="portfolio-visit-arrow" aria-hidden="true">↗</span></a>
                     </div>
-                    <p class="mt-3 px-2 text-xs text-gray-500 md:hidden">Deslize a tabela para o lado para comparar as três opções.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Investimento em site estruturado em SEO Local -->
-        <section id="investimento-site-seo-local" class="py-20 bg-white" style="padding-top:6rem">
-            <div class="container mx-auto px-4 max-w-5xl">
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">FAIXAS DE INVESTIMENTO</span>
-                    <h2 class="text-3xl md:text-5xl font-bold text-dark mb-5">Quanto custa um site estruturado em SEO Local?</h2>
-                    <p class="mt-8 text-lg text-gray-600">Valores médios de referência para diferentes formatos e necessidades de projeto.</p>
-                    <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-6"></div>
-                </div>
-                <div class="rounded-3xl border border-[#dfe3d7] bg-[#f3f4ed] p-3 shadow-xl md:p-5">
-                    <div class="overflow-hidden rounded-2xl border border-[#dfe3d7]">
-                        <table style="width:100%;border-collapse:collapse;text-align:left">
-                            <caption class="sr-only">Faixas médias de investimento em sites e custos recorrentes de domínio, hospedagem e manutenção.</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col" style="width:66%;padding:18px 20px;background:#141a19;color:#f3f4ed;font-size:.9rem;text-transform:uppercase;letter-spacing:.07em">Serviço / Tipo de projeto</th>
-                                    <th scope="col" style="width:34%;padding:18px 20px;background:#ffc70b;color:#141a19;text-align:right;font-size:.9rem;text-transform:uppercase;letter-spacing:.07em">Investimento médio</th>
-                                </tr>
-                            </thead>
-                            <tbody style="color:#36413d;font-size:.95rem;line-height:1.45">
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 20px;font-weight:750">One Page profissional</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 497 – R$ 1.997</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 20px;font-weight:750">Landing Page profissional</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 697 – R$ 3.497</td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 20px;font-weight:750">Site institucional simples (4–6 páginas)</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 1.497 – R$ 4.297</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 20px;font-weight:750">Site institucional completo (6–10 páginas)</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 3.497 – R$ 6.597</td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 20px;font-weight:750">Site personalizado + estratégia/SEO/conteúdo</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 3.497 – R$ 9.999</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 20px;font-weight:750">Domínio (.com.br)</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">~R$ 40/ano</td></tr>
-                                <tr style="background:#fff"><th scope="row" style="padding:15px 20px;font-weight:750">Hospedagem</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 20 – R$ 100/mês</td></tr>
-                                <tr style="background:#f8f9f6"><th scope="row" style="padding:15px 20px;font-weight:750">Manutenção</th><td style="padding:15px 20px;background:#fff9df;text-align:right;font-weight:800;white-space:nowrap">R$ 100 – R$ 500/mês</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="mt-4 px-2 text-xs leading-relaxed text-gray-500">Faixas de referência. O investimento final depende do escopo, dos recursos e do conteúdo de cada projeto.</p>
                 </div>
             </div>
         </section>
@@ -1088,19 +1010,54 @@
         (() => {
             const projects = [
                 {
-                    name: 'Vitro Jardins', domain: 'vitrojardins.site', url: 'https://vitrojardins.site/',
-                    description: 'Site simples e rápido, moderno e elegante, direto, focado na conversão de clientes estruturado em SEO para buscas no Google',
-                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/vitrojardins-0${n}.webp`, alt: `Captura ${n} de 4 do site da Vitro Jardins` }))
+                    name: 'Imaré Salinas', domain: 'imaresalinas.com', url: 'https://imaresalinas.com',
+                    description: 'Um site acolhedor para uma pousada em Salinópolis, que destaca as acomodações, comodidades e atrações locais para ajudar os hóspedes a planejar a estadia.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/imare-salinas-criacao-site-pousadas-vinsancor-0${n}.webp`, alt: `Captura ${n} de 4 do site da Pousada Imaré Salinas, em Salinópolis` }))
                 },
                 {
-                    name: 'Lumminousa', domain: 'lumminousa.lovable.app', url: 'https://lumminousa.lovable.app/',
-                    description: 'Site sofisticado e rápido, arrojado, focado em estilo e clientes de alta performance, estruturado em SEO para buscas no Google',
-                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/lumminousa-0${n}.webp`, alt: `Captura ${n} de 4 do site da Lumminousa` }))
+                    name: 'Apysy Restaurante', domain: 'apysy.lovable.app', url: 'https://apysy.lovable.app',
+                    description: 'Um site para restaurante contemporâneo na Barra da Tijuca, que apresenta os pratos, a história do chef e uma proposta gastronômica brasileira autoral.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/apysy-criacao-site-restaurantes-vinsancor-0${n}.webp`, alt: `Captura ${n} de 4 do site do restaurante Apysy, na Barra da Tijuca` }))
+                },
+                {
+                    name: 'Boquitas Bar', domain: 'boquitas.lovable.app', url: 'https://boquitas.lovable.app',
+                    description: 'Um site vibrante para uma coquetelaria tropical na Barra da Tijuca, com apresentação de cardápio por vídeo, de forma rápida e atraente.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/boquitas-criacao-site-bares-marketing-vinsancor-0${n}.webp`, alt: `Captura ${n} de 4 do site Boquitas Bar, coquetelaria tropical na Barra da Tijuca` }))
+                },
+                {
+                    name: 'Spleen Town', domain: 'spleentown.lovable.app', url: 'https://spleentown.lovable.app',
+                    description: 'Site imersivo para um bar noir de coquetéis em San Francisco, com identidade visual marcante e uma experiência digital que traduz a atmosfera singular do espaço.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/spleen-town-criacao-sites-bares-restaurantes-vinsancor-0${n}.webp`, alt: `Captura ${n} de 4 do site Spleen Town, bar noir de coquetéis em San Francisco` }))
+                },
+                {
+                    name: 'Polain Arquitetura', domain: 'polainarquitetura.art', url: 'https://polainarquitetura.lovable.app',
+                    description: 'Site despojado, com uma atmosfera que convida à contemplação do ambiente e desperta o desejo do cliente.',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/polainarquitetura-0${n}.webp`, alt: `Captura ${n} de 4 do site da Polain Arquitetura` }))
                 },
                 {
                     name: 'Bar Bah Raridade', domain: 'vinnivicious.shop', url: 'https://vinnivicious.shop/',
                     description: 'Site refinado com elementos de animação e design elegante e alto nível, com foco na experiência do cliente e valorização de imagens, estruturado em SEO para buscas no Google',
-                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/barbahraridade-0${n}.webp`, alt: `Captura ${n} de 4 do site Bar Bah Raridade` }))
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/barbahraridade-0${n}.webp`, alt: `Captura ${n} de 4 do site Bar Bah Raridade` }))
+                },
+                {
+                    name: 'Lumminousa', domain: 'lumminousa.lovable.app', url: 'https://lumminousa.lovable.app/',
+                    description: 'Site sofisticado e rápido, arrojado, focado em estilo e clientes de alta performance, estruturado em SEO para buscas no Google',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/lumminousa-0${n}.webp`, alt: `Captura ${n} de 4 do site da Lumminousa` }))
+                },
+                {
+                    name: 'Debord', domain: 'debord.lovable.app', url: 'https://debord.lovable.app',
+                    description: 'Um site contemporâneo para o Debord, que apresenta o bar como ponto de encontro entre coquetelaria autoral, cultura e vida noturna, com identidade visual marcante e atmosfera urbana.',
+                    images: [
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-01.webp', alt: 'Página inicial do site Debord, bar de coquetelaria, cultura e vida noturna.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-02.webp', alt: 'Apresentação da experiência noturna do bar Debord.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-03.webp', alt: 'Carta de coquetéis do Debord, com destaque para o drink Deriva Azul.' },
+                        { src: '/assets/img/projetos/debord-criacao-site-bares-marketing-vinsancor-04.webp', alt: 'Carta de coquetéis do Debord, com destaque para o drink Tempo Vivo.' }
+                    ]
+                },
+                {
+                    name: 'Vitro Jardins', domain: 'vitrojardins.site', url: 'https://vitrojardins.site/',
+                    description: 'Site simples e rápido, moderno e elegante, direto, focado na conversão de clientes estruturado em SEO para buscas no Google',
+                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/vitrojardins-0${n}.webp`, alt: `Captura ${n} de 4 do site da Vitro Jardins` }))
                 },
                 {
                     name: 'Carioca Glass', domain: 'cariocaglass.com.br', url: 'https://share-zip-buddy.lovable.app',
@@ -1112,11 +1069,6 @@
                         { src: '/assets/img/projetos/cariocaglass-04.webp', alt: 'Galeria de projetos concluídos da Carioca Glass.' }
                     ]
                 }
-,                {
-                    name: 'Polain Arquitetura', domain: 'polainarquitetura.art', url: 'https://polainarquitetura.lovable.app',
-                    description: 'Site despojado, com uma atmosfera que convida à contemplação do ambiente e desperta o desejo do cliente.',
-                    images: [1, 2, 3, 4].map((n) => ({ src: `/assets/img/projetos/polainarquitetura-0${n}.webp`, alt: `Captura ${n} de 4 do site da Polain Arquitetura` }))
-                }
             ];
             const root = document.querySelector('[data-portfolio-showcase]');
             if (!root) return;
@@ -1127,6 +1079,7 @@
             const domain = root.querySelector('[data-portfolio-domain]');
             const current = root.querySelector('[data-portfolio-slide-current]');
             const tabs = [...root.querySelectorAll('[data-project-index]')];
+            const tabsViewport = root.querySelector('[data-tabs-viewport]');
             const panel = root.querySelector('[role="tabpanel"]');
             const fills = [...root.querySelectorAll('.portfolio-progress-fill')];
             const duration = 5000;
@@ -1163,6 +1116,14 @@
                 if (resetProgress) startProgress();
             }
 
+            function revealSelectedTab() {
+                if (!tabsViewport) return;
+                const tabRect = tabs[projectIndex].getBoundingClientRect();
+                const viewportRect = tabsViewport.getBoundingClientRect();
+                if (tabRect.left < viewportRect.left) tabsViewport.scrollBy({ left: tabRect.left - viewportRect.left - 8, behavior: 'smooth' });
+                else if (tabRect.right > viewportRect.right) tabsViewport.scrollBy({ left: tabRect.right - viewportRect.right + 8, behavior: 'smooth' });
+            }
+
             function startProgress() {
                 fills.forEach((fill, index) => {
                     fill.style.transition = 'none';
@@ -1180,14 +1141,17 @@
                 projectIndex = (index + projects.length) % projects.length;
                 slideIndex = 0;
                 render();
+                revealSelectedTab();
             }
             function moveSlide(direction) {
+                const previousProjectIndex = projectIndex;
                 slideIndex = (slideIndex + direction + projects[projectIndex].images.length) % projects[projectIndex].images.length;
                 if (slideIndex === 0 && direction > 0) projectIndex = (projectIndex + 1) % projects.length;
                 if (slideIndex === projects[projectIndex].images.length - 1 && direction < 0) {
                     // Keep the selected company when moving backward from its first slide.
                 }
                 render();
+                if (projectIndex !== previousProjectIndex) revealSelectedTab();
             }
             function pause() {
                 paused = true;
@@ -1208,6 +1172,8 @@
             }
 
             tabs.forEach((tab) => tab.addEventListener('click', () => selectProject(Number(tab.dataset.projectIndex))));
+            root.querySelector('[data-tabs-prev]').addEventListener('click', () => tabsViewport.scrollBy({ left: -tabsViewport.clientWidth * 0.8, behavior: 'smooth' }));
+            root.querySelector('[data-tabs-next]').addEventListener('click', () => tabsViewport.scrollBy({ left: tabsViewport.clientWidth * 0.8, behavior: 'smooth' }));
             root.querySelector('.portfolio-slide-prev').addEventListener('click', () => moveSlide(-1));
             root.querySelector('.portfolio-slide-next').addEventListener('click', () => moveSlide(1));
             root.addEventListener('pointerenter', pause);
