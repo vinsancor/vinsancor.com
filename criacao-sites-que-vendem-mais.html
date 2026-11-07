@@ -167,6 +167,94 @@
             "@type": "Answer",
             "text": "Um site pensado para o que o cliente busca apresenta as informações essenciais em uma sequência clara, responde às principais dúvidas e facilita o contato. O formato — uma página ou várias — depende do conteúdo e dos objetivos do negócio."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Em quanto tempo meu site fica pronto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo médio é de 7 a 15 dias úteis, dependendo da complexidade do conteúdo e da rapidez no envio de materiais (logo, fotos e informações do negócio). Após a aprovação do layout, publicamos o site no seu domínio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso me preocupar com domínio, hospedagem ou parte técnica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Nós cuidamos de tudo: registro ou configuração do domínio, hospedagem, certificado de segurança e publicação. Você recebe o site pronto e funcionando, sem precisar entender de tecnologia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meu site vai aparecer no Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Entregamos o site com SEO básico configurado (títulos, descrições e estrutura otimizada) e o cadastramos no Google. Para resultados ainda melhores, recomendamos combinar com nossa Gestão do Perfil da Empresa no Google e estratégias de SEO Local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa a criação de site para pequenas empresas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O investimento depende do formato, do número de páginas, do conteúdo e dos recursos necessários. Uma One Page costuma ter um custo menor; um site institucional completo exige mais planejamento e produção. Depois de entender seus objetivos, apresentamos uma proposta com escopo e valores definidos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é site otimizado para SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É um site organizado para que mecanismos de busca compreendam suas páginas e para que as pessoas encontrem respostas úteis. Isso inclui conteúdo alinhado às buscas, títulos e descrições claros, estrutura técnica adequada, boa velocidade e uma experiência acessível em celulares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre criar um site comum e um site otimizado em SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Um site comum pode priorizar apenas a aparência ou a presença institucional. Um site estruturado em SEO combina design com arquitetura da informação, conteúdo relevante, páginas bem organizadas, desempenho técnico e chamadas para ação, ajudando buscadores e visitantes a entenderem a oferta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível refazer o site da minha empresa para ele aparecer no Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Podemos revisar a estrutura, o conteúdo, a velocidade e a experiência móvel do site atual e planejar uma reformulação orientada a SEO. A reformulação melhora a base para ser encontrado, mas posições e prazos dependem da concorrência, da autoridade do domínio e da qualidade do trabalho contínuo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que o site da minha empresa não aparece no Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode haver problemas de indexação, conteúdo insuficiente ou pouco relacionado às buscas, falhas técnicas, baixa autoridade ou concorrência forte. Uma análise permite identificar o que impede o Google de rastrear, compreender ou priorizar as páginas e indicar os próximos passos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Já tenho perfil no Google e estou bem posicionado. Por que me preocupar em fazer um site para a minha empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O Perfil da Empresa no Google ajuda na descoberta local, enquanto o site permite apresentar serviços com mais profundidade, responder dúvidas, mostrar diferenciais e receber contatos. Os dois canais se complementam e oferecem mais controle sobre a presença digital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora para um site novo aparecer no Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O prazo varia. Depois da publicação e do envio para indexação, o Google pode levar dias ou semanas para rastrear e incluir páginas. Aparecer nos resultados não significa alcançar posições altas, o que depende de conteúdo, concorrência, autoridade e consistência de SEO."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são as etapas do desenvolvimento de um site com foco em SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Começamos pelo diagnóstico do negócio e das buscas do público; definimos objetivos, arquitetura e palavras-chave; produzimos e organizamos o conteúdo; desenvolvemos o site responsivo com cuidados técnicos de SEO; e publicamos, configuramos a medição e acompanhamos oportunidades de melhoria."
+          }
         }
       ]
     },
@@ -587,6 +675,86 @@
                             <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">
                                 Sim. Entregamos o site com SEO básico configurado (títulos, descrições e estrutura otimizada) e o cadastramos no Google. Para resultados ainda melhores, recomendamos combinar com nossa Gestão do Perfil da Empresa no Google e estratégias de SEO Local.
                             </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 5 ? null : 5" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Quanto custa a criação de site para pequenas empresas?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 5}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 5" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">O investimento depende do formato, do número de páginas, do conteúdo e dos recursos necessários. Uma One Page costuma ter um custo menor; um site institucional completo exige mais planejamento e produção. Depois de entender seus objetivos, apresentamos uma proposta com escopo e valores definidos.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 6 ? null : 6" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">O que é site otimizado para SEO?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 6}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 6" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">É um site organizado para que mecanismos de busca compreendam suas páginas e para que as pessoas encontrem respostas úteis. Isso inclui conteúdo alinhado às buscas, títulos e descrições claros, estrutura técnica adequada, boa velocidade e uma experiência acessível em celulares.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 7 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 7 ? null : 7" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Qual a diferença entre criar um site comum e um site otimizado em SEO?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 7}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 7" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Um site comum pode priorizar apenas a aparência ou a presença institucional. Um site estruturado em SEO combina design com arquitetura da informação, conteúdo relevante, páginas bem organizadas, desempenho técnico e chamadas para ação, ajudando buscadores e visitantes a entenderem a oferta.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 8 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 8 ? null : 8" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">É possível refazer o site da minha empresa para ele aparecer no Google?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 8}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 8" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Sim. Podemos revisar a estrutura, o conteúdo, a velocidade e a experiência móvel do site atual e planejar uma reformulação orientada a SEO. A reformulação melhora a base para ser encontrado, mas posições e prazos dependem da concorrência, da autoridade do domínio e da qualidade do trabalho contínuo.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 9 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 9 ? null : 9" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Por que o site da minha empresa não aparece no Google?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 9}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 9" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Pode haver problemas de indexação, conteúdo insuficiente ou pouco relacionado às buscas, falhas técnicas, baixa autoridade ou concorrência forte. Uma análise permite identificar o que impede o Google de rastrear, compreender ou priorizar as páginas e indicar os próximos passos.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 10 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 10 ? null : 10" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Já tenho perfil no Google e estou bem posicionado. Por que me preocupar em fazer um site para a minha empresa?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 10}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 10" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">O Perfil da Empresa no Google ajuda na descoberta local, enquanto o site permite apresentar serviços com mais profundidade, responder dúvidas, mostrar diferenciais e receber contatos. Os dois canais se complementam e oferecem mais controle sobre a presença digital.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 11 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 11 ? null : 11" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Quanto tempo demora para um site novo aparecer no Google?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 11}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 11" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">O prazo varia. Depois da publicação e do envio para indexação, o Google pode levar dias ou semanas para rastrear e incluir páginas. Aparecer nos resultados não significa alcançar posições altas, o que depende de conteúdo, concorrência, autoridade e consistência de SEO.</div>
+                        </div>
+                    </div>
+                    <!-- FAQ 12 -->
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden bg-light">
+                        <button @click="activeAccordion = activeAccordion === 12 ? null : 12" class="w-full flex justify-between items-center p-6 text-left focus:outline-none" aria-expanded="false">
+                            <span class="font-bold text-dark pr-8">Quais são as etapas do desenvolvimento de um site com foco em SEO?</span>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-300" :class="{'rotate-180': activeAccordion === 12}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-show="activeAccordion === 12" x-collapse x-cloak>
+                            <div class="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100">Começamos pelo diagnóstico do negócio e das buscas do público; definimos objetivos, arquitetura e palavras-chave; produzimos e organizamos o conteúdo; desenvolvemos o site responsivo com cuidados técnicos de SEO; e publicamos, configuramos a medição e acompanhamos oportunidades de melhoria.</div>
                         </div>
                     </div>
                 </div>
