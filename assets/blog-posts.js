@@ -23,6 +23,19 @@
 
   var posts = [
     {
+      id: "otimizacao-perfil-da-empresa-google-2026",
+      title: "Otimizando o Perfil da Empresa no Google em 2026: Guia Completo",
+      slug: "otimizacao-perfil-da-empresa-google-2026",
+      url: "/blog/otimizacao-perfil-da-empresa-google-2026",
+      category: "SEO Local",
+      excerpt: "Descubra o que é SEO Local e como otimizar o antigo Google Meu Negócio no Google Maps. Guia prático com exemplos reais para pequenas empresas.",
+      coverImage: "assets/img/google-meu-negocio-perfil-vinsancor.webp",
+      coverAlt: "Resultados locais no Google Maps para uma busca por marmitex em Viamão",
+      date: "2026-11-07",
+      dateLabel: "7 de novembro de 2026",
+      readingTime: "8 min de leitura",
+      tags: ["seo local", "perfil da empresa no google", "google maps", "pequenas empresas", "busca local", "presença digital", "avaliações"],
+    },    {
       id: "a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio",
       title: "A rede social não é sua: por que depender só do Instagram prejudica seu negócio",
       slug: "a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio",
