@@ -97,6 +97,12 @@
         @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
 
+
+        /* Keep the wide site-format comparison table within the page on small screens. */
+        .site-format-table-scroll { box-sizing:border-box; width:100%; max-width:100%; min-width:0; overflow-x:auto; overflow-y:hidden; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
+        .site-format-table-scroll > table { width:100%; min-width:900px; }
+        .site-format-table-scroll:focus-visible { outline:3px solid #516460; outline-offset:3px; }
+
         /* Calculadora de investimento: estilos isolados para manter o restante da página intacto. */
         .site-quote-calculator { margin-top:3rem; padding:clamp(1.25rem,3vw,2.25rem); border:1px solid #e5e7eb; border-radius:1.5rem; background:#f3f4ed; box-shadow:0 12px 32px rgba(20,26,25,.07); }
         .site-quote-calculator :focus-visible { outline:3px solid #516460; outline-offset:3px; }
@@ -566,7 +572,7 @@
                     <h2 class="text-3xl md:text-5xl font-bold text-dark mb-5">One Page, Landing Page ou Site Institucional: qual é o ideal para seu negócio?</h2>
                     <p class="mt-8 text-lg text-gray-600">Compare o objetivo, a estrutura e o potencial de cada formato antes de escolher como apresentar sua empresa na internet.</p>
                 </div>
-                <div class="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg bg-white">
+                <div class="overflow-x-auto site-format-table-scroll rounded-2xl border border-gray-200 shadow-lg bg-white" role="region" aria-label="Tabela de comparação de formatos de site. Deslize horizontalmente para comparar as opções." tabindex="0">
                     <table class="w-full min-w-[900px] border-collapse text-left">
                         <thead><tr>
                             <th scope="col" class="p-5 bg-primary text-dark">Critério</th>
