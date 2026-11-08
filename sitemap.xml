@@ -41,6 +41,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://vinsancor.com/criacao-sites-one-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vinsancor.com/trafego-pago-anuncios.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -86,6 +91,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vinsancor.com/a-rede-social-nao-e-sua-por-que-depender-so-do-instagram-prejudica-seu-negocio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vinsancor.com/terca-feira-sem-mesa-vazia.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -104,5 +114,60 @@
     <loc>https://vinsancor.com/termos-de-servico.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/websites-that-turn-searches-into-clicks.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/one-page-business-websites.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/google-business-profile-management.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/local-geo-check.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/paid-advertising-google-meta-ads.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/copywriting-persuasive-writing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/social-media-strategy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/marketing-for-bars-and-restaurants.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/calculator-lost-google-sales.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vinsancor.com/en/about-vinicius-correa.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
