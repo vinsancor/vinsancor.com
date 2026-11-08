@@ -96,6 +96,23 @@
         @media(max-width:900px) { .portfolio-showcase { gap:.65rem; } .portfolio-project-tab { padding:.28rem .3rem; min-height:2.2rem; } }
         @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
+
+        /* Calculadora de investimento: estilos isolados para manter o restante da página intacto. */
+        .site-quote-calculator { margin-top:3rem; padding:clamp(1.25rem,3vw,2.25rem); border:1px solid #e5e7eb; border-radius:1.5rem; background:#f3f4ed; box-shadow:0 12px 32px rgba(20,26,25,.07); }
+        .site-quote-calculator :focus-visible { outline:3px solid #516460; outline-offset:3px; }
+        .site-quote-calculator select { width:100%; min-height:3rem; padding:.7rem .9rem; border:1px solid #9ca3af; border-radius:.75rem; color:#141a19; background:#fff; }
+        .site-quote-types { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr)); gap:.75rem; }
+        .site-quote-type { position:relative; display:flex; align-items:flex-start; gap:.7rem; min-height:6.2rem; padding:1rem; border:1px solid #d1d5db; border-radius:1rem; background:#fff; cursor:pointer; transition:border-color .18s,box-shadow .18s,transform .18s; }
+        .site-quote-type:hover { border-color:#516460; transform:translateY(-1px); }
+        .site-quote-type:has(input:checked) { border:2px solid #141a19; box-shadow:0 0 0 2px rgba(255,199,11,.8); }
+        .site-quote-type input,.site-quote-extra input { width:1.1rem; height:1.1rem; flex:0 0 auto; margin:.15rem 0 0; accent-color:#141a19; }
+        .site-quote-extras { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr)); gap:.65rem; }
+        .site-quote-extra { display:flex; align-items:flex-start; gap:.65rem; padding:.85rem .95rem; border:1px solid #d1d5db; border-radius:.85rem; background:#fff; cursor:pointer; }
+        .site-quote-result { padding:1.25rem; border:1px solid rgba(255,199,11,.55); border-radius:1.1rem; background:#fff; }
+        .site-quote-breakdown { display:grid; gap:.45rem; }
+        .site-quote-breakdown li { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; padding:.65rem 0; border-bottom:1px solid #e5e7eb; }
+        .site-quote-breakdown li:last-child { border-bottom:0; }
+        @media(max-width:640px) { .site-quote-calculator { margin-top:2rem; border-radius:1.1rem; } .site-quote-breakdown li { display:block; } .site-quote-breakdown li strong { display:block; margin-top:.2rem; } }
     </style>
     <!-- JSON-LD Schemas -->
     <script type="application/ld+json">
@@ -594,6 +611,86 @@
                             <tr><th scope="row" class="p-4 font-semibold">Manutenção</th><td class="p-4 text-right font-bold">R$ 100 – R$ 500/mês</td></tr>
                         </tbody>
                     </table>
+                </div>
+
+                <!-- Simulador de investimento; os valores detalhados são configurados no JavaScript ao final da página. -->
+                <div class="site-quote-calculator" id="simulador-preco-site" aria-labelledby="site-quote-title">
+                    <div class="max-w-3xl mb-8">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block">SIMULADOR DE INVESTIMENTO</span>
+                        <h3 id="site-quote-title" class="text-2xl md:text-3xl font-bold text-dark mb-3">Simule o investimento do seu site</h3>
+                        <p class="text-gray-600">Escolha o formato e os serviços que deseja incluir para ver uma estimativa atualizada na hora.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-7">
+                            <div>
+                                <label for="site-quote-country" class="block text-sm font-bold text-dark mb-2">País / moeda</label>
+                                <select id="site-quote-country" name="country" data-quote-country>
+                                    <option value="BR">Brasil (BRL)</option>
+                                    <option value="US">Estados Unidos (USD)</option>
+                                    <option value="AR">Argentina (ARS)</option>
+                                    <option value="MX">México (MXN)</option>
+                                    <option value="GB">Inglaterra (GBP)</option>
+                                    <option value="EU">Europa (EUR)</option>
+                                </select>
+                            </div>
+
+                            <fieldset>
+                                <legend class="text-sm font-bold text-dark mb-3">Tipo de site <span class="font-normal text-gray-500">(obrigatório)</span></legend>
+                                <div class="site-quote-types">
+                                    <label class="site-quote-type">
+                                        <input type="radio" name="site-type" value="onePage" data-quote-type>
+                                        <span><strong class="block text-dark">One Page</strong><span class="block mt-1 text-sm text-gray-600">Apresente seu negócio em uma página objetiva.</span></span>
+                                    </label>
+                                    <label class="site-quote-type">
+                                        <input type="radio" name="site-type" value="landing" data-quote-type>
+                                        <span><strong class="block text-dark">Landing Page</strong><span class="block mt-1 text-sm text-gray-600">Direcione o visitante para uma oferta específica.</span></span>
+                                    </label>
+                                    <label class="site-quote-type">
+                                        <input type="radio" name="site-type" value="institutional46" data-quote-type checked>
+                                        <span><strong class="block text-dark">Site Institucional</strong><span class="block mt-1 text-sm text-gray-600">De 4 a 6 páginas para apresentar seu negócio.</span></span>
+                                    </label>
+                                    <label class="site-quote-type">
+                                        <input type="radio" name="site-type" value="institutional610" data-quote-type>
+                                        <span><strong class="block text-dark">Site Institucional</strong><span class="block mt-1 text-sm text-gray-600">De 6 a 10 páginas para uma presença completa.</span></span>
+                                    </label>
+                                    <label class="site-quote-type">
+                                        <input type="radio" name="site-type" value="custom" data-quote-type>
+                                        <span><strong class="block text-dark">Site Personalizado</strong><span class="block mt-1 text-sm text-gray-600">Estratégia, SEO e conteúdo sob medida.</span></span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend class="text-sm font-bold text-dark mb-3">O que deseja incluir na proposta?</legend>
+                                <div class="site-quote-extras">
+                                    <label class="site-quote-extra"><input type="checkbox" value="domain" data-quote-extra><span class="text-sm text-dark">Inclui domínio na proposta?</span></label>
+                                    <label class="site-quote-extra"><input type="checkbox" value="hosting" data-quote-extra><span class="text-sm text-dark">Inclui hospedagem na proposta?</span></label>
+                                    <label class="site-quote-extra"><input type="checkbox" value="maintenance" data-quote-extra><span class="text-sm text-dark">Inclui manutenção na proposta?</span></label>
+                                    <label class="site-quote-extra"><input type="checkbox" value="animation" data-quote-extra><span class="text-sm text-dark">Inclui animação na proposta?</span></label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="flex flex-col gap-5">
+                            <div class="site-quote-result" data-quote-result aria-live="polite" aria-atomic="true">
+                                <p class="text-sm font-bold uppercase tracking-wide text-gray-600">Valor médio estimado</p>
+                                <p class="mt-2 text-4xl md:text-5xl font-extrabold text-dark" data-quote-average>R$ 2.900</p>
+                                <p class="mt-2 text-sm text-gray-600">Faixa de referência: <strong data-quote-range>R$ 1.500 – R$ 4.300</strong></p>
+                                <ul class="site-quote-breakdown mt-5 text-sm text-gray-700" data-quote-breakdown>
+                                    <li><span>Site (pagamento único)</span><strong>R$ 2.900</strong></li>
+                                </ul>
+                            </div>
+                            <p class="text-xs leading-relaxed text-gray-600" data-quote-conversion-note hidden></p>
+                            <p class="text-xs leading-relaxed text-gray-500" data-quote-status role="status">Consultando cotação de câmbio…</p>
+                            <p class="text-sm leading-relaxed text-gray-700">Este cálculo é apenas uma simulação. Não é um orçamento e não representa exatamente o valor final do seu site, que pode ser menor ou maior conforme o projeto.</p>
+                            <div class="mt-auto">
+                                <p class="text-sm font-semibold text-dark mb-3">Envie agora e um dos nossos especialistas entrará em contato.</p>
+                                <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" data-quote-whatsapp class="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-4 text-center font-bold text-dark shadow-md transition hover:bg-primary-hover focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3">Solicitar proposta no WhatsApp</a>
+                            </div>
+                            <p class="text-xs text-gray-500">Cotações por <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-dark">Exchange Rate API</a>.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1241,6 +1338,232 @@
             });
             render();
             if (!reducedMotion) timer = setInterval(() => moveSlide(1), duration);
+        })();
+    </script>
+
+    <script>
+        /*
+         * CONFIGURAÇÃO EDITÁVEL DO SIMULADOR
+         * Atualize os preços em reais aqui. Os preços em BRL são a única base
+         * de cálculo; as moedas estrangeiras são aplicadas somente ao final.
+         * As reservas abaixo foram consultadas em open.er-api.com/v6/latest/BRL.
+         * Fonte: ExchangeRate-API Open Access; referência: 08/11/2026 (UTC).
+         * A resposta confirmou Access-Control-Allow-Origin: *, portanto permite fetch/CORS.
+         */
+        const SITE_QUOTE_CONFIG = {
+            MESES_RECORRENTES: 12,
+            API_CAMBIO: 'https://open.er-api.com/v6/latest/BRL',
+            DATA_COTACAO_RESERVA: '08/11/2026',
+            COTACOES_RESERVA: { BRL: 1, USD: 0.181729, ARS: 280.842296, MXN: 3.394588, GBP: 0.135852, EUR: 0.162791 },
+            TIPOS_DE_SITE: [
+                { id: 'onePage', nome: 'One Page', minimo: 497, maximo: 1997 },
+                { id: 'landing', nome: 'Landing Page', minimo: 697, maximo: 3497 },
+                { id: 'institutional46', nome: 'Site Institucional (de 4 a 6 páginas)', minimo: 1497, maximo: 4297 },
+                { id: 'institutional610', nome: 'Site Institucional (de 6 a 10 páginas)', minimo: 2497, maximo: 6597 },
+                { id: 'custom', nome: 'Site Personalizado (com estratégia, SEO e conteúdo)', minimo: 3497, maximo: 9999 }
+            ],
+            EXTRAS: {
+                domain: { nome: 'Domínio', minimo: 40, maximo: 40, unidade: 'ano', meses: 1 },
+                hosting: { nome: 'Hospedagem', minimo: 20, maximo: 100, unidade: 'mês', meses: 12 },
+                maintenance: { nome: 'Manutenção', minimo: 100, maximo: 500, unidade: 'mês', meses: 12 },
+                animation: { nome: 'Animação', minimo: 1000, maximo: 1000, unidade: 'pagamento único', meses: 1 }
+            },
+            MOEDAS: {
+                BR: { pais: 'Brasil', moeda: 'BRL', locale: 'pt-BR' },
+                US: { pais: 'Estados Unidos', moeda: 'USD', locale: 'en-US' },
+                AR: { pais: 'Argentina', moeda: 'ARS', locale: 'es-AR' },
+                MX: { pais: 'México', moeda: 'MXN', locale: 'es-MX' },
+                GB: { pais: 'Inglaterra', moeda: 'GBP', locale: 'en-GB' },
+                EU: { pais: 'Europa', moeda: 'EUR', locale: 'pt-PT' }
+            }
+        };
+
+        (() => {
+            const root = document.getElementById('simulador-preco-site');
+            if (!root) return;
+
+            const countrySelect = root.querySelector('[data-quote-country]');
+            const averageOutput = root.querySelector('[data-quote-average]');
+            const rangeOutput = root.querySelector('[data-quote-range]');
+            const breakdownOutput = root.querySelector('[data-quote-breakdown]');
+            const conversionNote = root.querySelector('[data-quote-conversion-note]');
+            const statusOutput = root.querySelector('[data-quote-status]');
+            const whatsappLink = root.querySelector('[data-quote-whatsapp]');
+            let exchangeRates = { ...SITE_QUOTE_CONFIG.COTACOES_RESERVA };
+            let exchangeDate = SITE_QUOTE_CONFIG.DATA_COTACAO_RESERVA;
+            let usingFallbackRates = true;
+            let exchangeStatus = 'loading';
+
+            function getPreferredCountry() {
+                const language = (navigator.language || '').toLowerCase();
+                if (language.startsWith('en-us')) return 'US';
+                if (language.startsWith('es-ar')) return 'AR';
+                if (language.startsWith('es-mx')) return 'MX';
+                if (language.startsWith('en-gb')) return 'GB';
+                if (language.startsWith('pt-pt') || language.startsWith('es-es') || language.startsWith('de-de')) return 'EU';
+                return 'BR';
+            }
+
+            function getCurrencySettings() {
+                const selected = SITE_QUOTE_CONFIG.MOEDAS[countrySelect.value] || SITE_QUOTE_CONFIG.MOEDAS.BR;
+                let locale = selected.locale;
+                if (countrySelect.value === 'EU') {
+                    const language = (navigator.language || '').toLowerCase();
+                    locale = language.startsWith('es') ? 'es-ES' : language.startsWith('de') ? 'de-DE' : 'pt-PT';
+                }
+                return { ...selected, locale };
+            }
+
+            function roundToSignificantDigits(value, digits = 2) {
+                if (!Number.isFinite(value) || value === 0) return 0;
+                const factor = 10 ** (digits - 1 - Math.floor(Math.log10(Math.abs(value))));
+                return Math.round(value * factor) / factor;
+            }
+
+            function formatMoney(valueBRL, currencySettings) {
+                const rate = exchangeRates[currencySettings.moeda];
+                if (!Number.isFinite(valueBRL) || !Number.isFinite(rate) || rate <= 0) throw new Error('Cotação indisponível.');
+                const converted = valueBRL * rate;
+                if (!Number.isFinite(converted)) throw new Error('Não foi possível converter este valor.');
+                if (currencySettings.moeda === 'BRL') {
+                    const roundedBRL = Math.round(converted / 10) * 10;
+                    return new Intl.NumberFormat(currencySettings.locale, { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(roundedBRL);
+                }
+                const rounded = roundToSignificantDigits(converted, 2);
+                return new Intl.NumberFormat(currencySettings.locale, {
+                    style: 'currency', currency: currencySettings.moeda,
+                    minimumSignificantDigits: 2, maximumSignificantDigits: 2
+                }).format(rounded);
+            }
+
+            function calculateQuote(siteTypeId, selectedExtras) {
+                const site = SITE_QUOTE_CONFIG.TIPOS_DE_SITE.find((item) => item.id === siteTypeId) || SITE_QUOTE_CONFIG.TIPOS_DE_SITE.find((item) => item.id === 'institutional46');
+                const lines = [{
+                    nome: 'Site (pagamento único)', minimo: site.minimo, maximo: site.maximo,
+                    fator: 1, observacao: ''
+                }];
+
+                selectedExtras.forEach((extraId) => {
+                    const extra = SITE_QUOTE_CONFIG.EXTRAS[extraId];
+                    if (!extra) return;
+                    const factor = extra.meses === 12 ? SITE_QUOTE_CONFIG.MESES_RECORRENTES : extra.meses;
+                    const unit = extra.unidade === 'ano' ? 'por ano' : extra.unidade === 'mês' ? 'por mês' : 'pagamento único';
+                    const observation = extra.unidade === 'mês'
+                        ? `Incluído por ${SITE_QUOTE_CONFIG.MESES_RECORRENTES} meses; valor mensal médio: ${(extra.minimo + extra.maximo) / 2}.`
+                        : '';
+                    lines.push({ nome: `${extra.nome} (${unit})`, minimo: extra.minimo, maximo: extra.maximo, fator: factor, observacao: observation });
+                });
+
+                const minimo = lines.reduce((sum, line) => sum + line.minimo * line.fator, 0);
+                const maximo = lines.reduce((sum, line) => sum + line.maximo * line.fator, 0);
+                const media = lines.reduce((sum, line) => sum + ((line.minimo + line.maximo) / 2) * line.fator, 0);
+                if (![minimo, maximo, media].every(Number.isFinite)) throw new Error('Não foi possível calcular a estimativa. Revise as opções escolhidas.');
+                return { media, minimo, maximo, linhas: lines };
+            }
+
+            function updateWhatsAppLink(quote, currencySettings, site, selectedExtras) {
+                const isIncluded = (extra) => selectedExtras.includes(extra) ? 'Sim' : 'Não';
+                const average = formatMoney(quote.media, currencySettings);
+                const range = `${formatMoney(quote.minimo, currencySettings)} – ${formatMoney(quote.maximo, currencySettings)}`;
+                const lines = [
+                    'Olá! Fiz uma simulação no site da Vinsancor e gostaria de receber uma proposta.', '',
+                    `Tipo de site: ${site.nome}`,
+                    `País/moeda: ${currencySettings.pais} (${currencySettings.moeda})`,
+                    `Inclui domínio: ${isIncluded('domain')}`,
+                    `Inclui hospedagem: ${isIncluded('hosting')}`,
+                    `Inclui manutenção: ${isIncluded('maintenance')}`,
+                    `Inclui animação: ${isIncluded('animation')}`,
+                    `Valor médio simulado: ${average} (faixa de referência: ${range})`
+                ];
+                if (currencySettings.moeda !== 'BRL') lines.push(`Equivalente na tabela base: ${formatMoney(quote.media, { ...currencySettings, moeda: 'BRL', locale: 'pt-BR' })}`);
+                lines.push('', 'Pode me enviar uma proposta?');
+                whatsappLink.href = `https://wa.me/5521995928037?text=${encodeURIComponent(lines.join('\n'))}`;
+            }
+
+            function render() {
+                try {
+                    const currencySettings = getCurrencySettings();
+                    const selectedTypeId = root.querySelector('[data-quote-type]:checked')?.value || 'institutional46';
+                    const selectedExtras = [...root.querySelectorAll('[data-quote-extra]:checked')].map((input) => input.value);
+                    const site = SITE_QUOTE_CONFIG.TIPOS_DE_SITE.find((item) => item.id === selectedTypeId) || SITE_QUOTE_CONFIG.TIPOS_DE_SITE[2];
+                    const quote = calculateQuote(selectedTypeId, selectedExtras);
+                    averageOutput.textContent = formatMoney(quote.media, currencySettings);
+                    rangeOutput.textContent = `${formatMoney(quote.minimo, currencySettings)} – ${formatMoney(quote.maximo, currencySettings)}`;
+
+                    breakdownOutput.replaceChildren();
+                    quote.linhas.forEach((line) => {
+                        const minimum = line.minimo * line.fator;
+                        const maximum = line.maximo * line.fator;
+                        const average = ((line.minimo + line.maximo) / 2) * line.fator;
+                        const item = document.createElement('li');
+                        const label = document.createElement('span');
+                        const amount = document.createElement('strong');
+                        const range = document.createElement('small');
+                        label.textContent = line.nome;
+                        amount.textContent = formatMoney(average, currencySettings);
+                        range.className = 'block mt-1 text-xs font-normal text-gray-500';
+                        range.textContent = line.fator > 1
+                            ? `${formatMoney(minimum, currencySettings)} – ${formatMoney(maximum, currencySettings)} no período · média mensal ${formatMoney((line.minimo + line.maximo) / 2, currencySettings)} × ${line.fator} meses`
+                            : `${formatMoney(minimum, currencySettings)} – ${formatMoney(maximum, currencySettings)}`;
+                        const detail = document.createElement('span');
+                        detail.append(amount, range);
+                        item.append(label, detail);
+                        breakdownOutput.append(item);
+                    });
+
+                    conversionNote.hidden = currencySettings.moeda === 'BRL';
+                    conversionNote.textContent = currencySettings.moeda === 'BRL' ? '' : `Valores convertidos de reais (BRL) a uma cotação aproximada de ${exchangeDate}.`;
+                    if (exchangeStatus === 'loading') {
+                        statusOutput.textContent = 'Consultando a cotação atual de câmbio…';
+                    } else if (usingFallbackRates) {
+                        statusOutput.textContent = `Cotações de reserva com referência em ${SITE_QUOTE_CONFIG.DATA_COTACAO_RESERVA}; a atualização automática não foi concluída.`;
+                    } else {
+                        statusOutput.textContent = `Cotação automática consultada em ${exchangeDate}.`;
+                    }
+                    updateWhatsAppLink(quote, currencySettings, site, selectedExtras);
+                } catch (error) {
+                    averageOutput.textContent = 'Estimativa indisponível';
+                    rangeOutput.textContent = 'Não foi possível calcular os valores. Atualize a página ou escolha outra moeda.';
+                    breakdownOutput.replaceChildren();
+                    conversionNote.hidden = true;
+                    statusOutput.textContent = error instanceof Error ? error.message : 'Ocorreu um erro ao calcular a estimativa.';
+                    whatsappLink.href = 'https://wa.me/5521995928037';
+                }
+            }
+
+            countrySelect.value = getPreferredCountry();
+            root.querySelectorAll('[data-quote-type], [data-quote-extra]').forEach((input) => input.addEventListener('change', render));
+            countrySelect.addEventListener('change', render);
+            render();
+
+            // API aberta, sem chave; atualiza uma vez ao carregar e conserva as cotações de reserva em caso de falha.
+            fetch(SITE_QUOTE_CONFIG.API_CAMBIO, { method: 'GET', mode: 'cors' })
+                .then((response) => {
+                    if (!response.ok) throw new Error('A consulta de câmbio respondeu com erro.');
+                    return response.json();
+                })
+                .then((data) => {
+                    if (data.result !== 'success' || data.base_code !== 'BRL' || !data.rates) throw new Error('A resposta da API de câmbio está incompleta.');
+                    const freshRates = { ...exchangeRates };
+                    ['BRL', 'USD', 'ARS', 'MXN', 'GBP', 'EUR'].forEach((currency) => {
+                        const rate = Number(data.rates[currency]);
+                        if (!Number.isFinite(rate) || rate <= 0) throw new Error(`Cotação de ${currency} indisponível.`);
+                        freshRates[currency] = rate;
+                    });
+                    exchangeRates = freshRates;
+                    if (data.time_last_update_utc) {
+                        const date = new Date(data.time_last_update_utc);
+                        if (!Number.isNaN(date.getTime())) exchangeDate = date.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+                    }
+                    usingFallbackRates = false;
+                    exchangeStatus = 'live';
+                    render();
+                })
+                .catch(() => {
+                    usingFallbackRates = true;
+                    exchangeStatus = 'fallback';
+                    render();
+                });
         })();
     </script>
 
