@@ -43,10 +43,32 @@
         [x-cloak] { display: none !important; }
         .portfolio-section { padding: 4rem 1.25rem; background: #f9fafb; }
         .portfolio-container { max-width: 1440px; margin: 0 auto; }
-        .portfolio-heading-row { display:flex; align-items:end; justify-content:space-between; gap:2rem; margin-bottom:2rem; }
+.portfolio-heading-row { display:flex; flex-direction:column; align-items:flex-start; gap:.85rem; margin-bottom:2rem; }
+        .portfolio-heading-row p { width:100%; max-width:none; margin:0; text-align:left; line-height:1.6; }
+        .portfolio-content-grid { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(18rem,.85fr); align-items:start; gap:1.5rem; }
+        .portfolio-gallery-column { min-width:0; }
+        .portfolio-gallery-column .portfolio-showcase { max-width:none; width:100%; margin:0; }
+        .portfolio-sidebar { display:grid; gap:1.25rem; min-width:0; }
+        .portfolio-video-card { overflow:hidden; margin:0; border:1px solid #e5e7eb; border-radius:1.25rem; background:#fff; box-shadow:0 12px 32px rgba(20,26,25,.08); }
+        .portfolio-video-frame { position:relative; width:100%; aspect-ratio:16/9; background:#141a19; }
+        .portfolio-video-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+        .portfolio-video-caption { padding:.85rem 1rem; color:#141a19; font-size:.9rem; font-weight:700; }
+        .portfolio-sidebar .vs-authorcard { margin:0; display:flex; flex-direction:column; gap:1.25rem; border:1px solid #e5e7eb; border-radius:1.25rem; background:#fff; padding:1.25rem; box-shadow:0 12px 32px rgba(20,26,25,.06); }
+        .portfolio-sidebar .vs-authorcard__img { width:100%; max-width:100px; aspect-ratio:1; border-radius:1rem; object-fit:cover; object-position:center top; flex:0 0 auto; }
+        .portfolio-sidebar .vs-authorcard__eyebrow { margin:0; color:#e6b300; font-size:.75rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+        .portfolio-sidebar .vs-authorcard__name { display:flex; align-items:center; flex-wrap:wrap; gap:.65rem; margin:.25rem 0 0; color:#141a19; font-size:1.35rem; font-weight:800; letter-spacing:-.02em; }
+        .portfolio-sidebar .vs-authorcard__name a:first-child { color:inherit; text-decoration:none; }
+        .portfolio-sidebar .vs-authorcard__text { margin:.7rem 0 0; color:#5b6461; font-size:.82rem; line-height:1.65; }
+        .portfolio-sidebar .vs-instagram-button { display:inline-flex; align-items:center; gap:.4rem; padding:.38rem .68rem; border-radius:9999px; background:linear-gradient(115deg,#7c3aed,#c026d3 58%,#ea5808); color:#fff; text-decoration:none; font-size:.75rem; font-weight:750; line-height:1; white-space:nowrap; }
+        .portfolio-sidebar .vs-instagram-button svg { width:1rem; height:1rem; }
+        .portfolio-sidebar .vs-btn { display:inline-flex; align-items:center; justify-content:center; margin-top:1rem; border-radius:9999px; padding:.75rem 1.25rem; background:#ffc70b; color:#141a19; font-size:.875rem; font-weight:700; text-decoration:none; }
+        .portfolio-sidebar .vs-btn:hover { background:#e6b300; }
+        .portfolio-sidebar a:focus-visible { outline:3px solid #516460; outline-offset:3px; }
+        @media(max-width:1050px) { .portfolio-content-grid { grid-template-columns:minmax(0,1fr); } .portfolio-gallery-column { max-width:784px; width:100%; margin:0 auto; } .portfolio-sidebar { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; } }
+        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:flex; } .portfolio-heading-row p { margin:0; } .portfolio-sidebar { grid-template-columns:minmax(0,1fr); } .portfolio-sidebar .vs-authorcard { flex-direction:row; align-items:flex-start; } .portfolio-sidebar .vs-authorcard__img { width:80px; } }
         .portfolio-eyebrow { display:block; color:#516460; font-size:.78rem; font-weight:800; letter-spacing:.16em; margin-bottom:.65rem; }
         .portfolio-heading-row h2 { color:#141a19; font-size:clamp(2rem,4vw,3.25rem); line-height:1.08; font-weight:800; letter-spacing:-.04em; margin:0; }
-        .portfolio-heading-row p { color:#6b7280; max-width:25rem; margin:0 0 .25rem; line-height:1.6; }
+
         .portfolio-showcase { display:flex; flex-direction:column; gap:.7rem; max-width:784px; margin:0 auto; padding:1.1rem; border:1px solid rgba(255,255,255,.08); border-radius:1.6rem; background:#141a19; color:#fff; box-shadow:0 28px 70px rgba(20,26,25,.16); }
         .portfolio-menu { min-width:0; }
         .portfolio-tabs-carousel { display:flex; align-items:center; gap:.4rem; min-width:0; }
@@ -94,7 +116,7 @@
         .portfolio-visit-arrow { color:#ffc70b; font-size:1.3rem; }
         .portfolio-project-tab:focus-visible,.portfolio-tabs-arrow:focus-visible,.portfolio-slide-arrow:focus-visible,.portfolio-visit-link:focus-visible { outline:3px solid #ffc70b; outline-offset:3px; }
         @media(max-width:900px) { .portfolio-showcase { gap:.65rem; } .portfolio-project-tab { padding:.28rem .3rem; min-height:2.2rem; } }
-        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:block; } .portfolio-heading-row p { margin-top:1rem; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
+        @media(max-width:640px) { .portfolio-section { padding:3.5rem 1rem; } .portfolio-heading-row { display:flex; } .portfolio-heading-row p { margin:0; } .portfolio-showcase { padding:.65rem; border-radius:1.2rem; gap:.55rem; } .portfolio-tabs-carousel { gap:.25rem; } .portfolio-tabs-arrow { flex-basis:1.65rem; width:1.65rem; height:1.85rem; } .portfolio-projects { gap:.3rem; } .portfolio-projects-label { padding:.25rem .2rem .4rem; } .portfolio-project-tab { flex-basis:calc((100vw - 5.5rem)/2); min-height:2.25rem; padding:.28rem .3rem; } .portfolio-tab-name { font-size:.66rem; line-height:1.1; } .portfolio-tab-number { font-size:.58rem; } .portfolio-browser-bar { height:2.6rem; padding:0 .6rem; grid-template-columns:auto minmax(100px,1fr) auto; gap:.5rem; } .portfolio-browser-address { font-size:.68rem; padding:.45rem .55rem; } .portfolio-screen { height:clamp(340px,58vh,520px); } .portfolio-slide-arrow { width:2.3rem; height:2.3rem; } .portfolio-slide-prev { left:.55rem; } .portfolio-slide-next { right:.55rem; } .portfolio-project-details { display:block; padding:.1rem .25rem .2rem; } .portfolio-visit-link { margin-top:1.2rem; width:100%; justify-content:space-between; } }
         @media(prefers-reduced-motion:reduce) { .portfolio-project-tab,.portfolio-slide-arrow,.portfolio-screen img,.portfolio-visit-link { transition:none; } }
 
         /* Keep the wide site-format comparison table within the page on small screens. */
@@ -507,6 +529,8 @@
                     <p>Explore SEO-optimized websites created by Vinsancor.</p>
                 </div>
 
+                <div class="portfolio-content-grid">
+                    <div class="portfolio-gallery-column">
                 <div class="portfolio-showcase" data-portfolio-showcase>
                     <div class="portfolio-menu">
                         <span class="portfolio-projects-label">BROWSE THE PROJECTS</span>
@@ -550,6 +574,27 @@
                         <a data-portfolio-link href="https://imaresalinas.com" target="_blank" rel="noopener noreferrer" class="portfolio-visit-link"><span>View the full project</span><span class="portfolio-visit-arrow" aria-hidden="true">↗</span></a>
                     </div>
                 </div>
+                    </div>
+                    <aside class="portfolio-sidebar" aria-label="Video and author information">
+                        <figure class="portfolio-video-card">
+                            <div class="portfolio-video-frame">
+                                <iframe src="https://www.youtube-nocookie.com/embed/cTqIPVIVBls?rel=0" title="Vinsancor introduction on YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <figcaption class="portfolio-video-caption">Get to know Vinsancor</figcaption>
+                        </figure>
+                        <section aria-labelledby="portfolio-author-title" class="vs-authorcard">
+                            <img alt="Vinícius Corrêa, Services Marketing and Digital Presence specialist at Vinsancor" class="vs-authorcard__img" decoding="async" height="200" loading="lazy" src="https://vinsancor.com/assets/img/vinsancor01.webp?v=20260929" width="200">
+                            <div class="vs-authorcard__body">
+                                <p class="vs-authorcard__eyebrow" id="portfolio-author-title">About the author</p>
+                                <p class="vs-authorcard__name"><a href="/en/about-vinicius-correa.html">Vinícius Corrêa</a> <a class="vs-instagram-button" href="https://www.instagram.com/vinsancor/" rel="noopener noreferrer" target="_blank" aria-label="Vinícius Corrêa on Instagram: @vinsancor"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.25" fill="currentColor"></circle></svg><span>@vinsancor</span></a></p>
+                                <p class="vs-authorcard__text">I’m Vinícius Corrêa, a journalist specializing in Services Marketing and Digital Presence, with a focus on Consumer Psychoanalysis, and I lead Vinsancor. For over 20 years, I have worked on the front lines of customer service, decoding the motivations behind purchasing decisions.</p>
+                                <p class="vs-authorcard__text">In the food and beverage industry, I spent seven years working as a barista and bartender at renowned cocktail bars in São Paulo, including Riviera, Bar dos Arcos, Astor, Blue Note, Sky Hall Terrace Bar and Mundibar.</p>
+                                <p class="vs-authorcard__text">With hands-on experience in hospitality, I bring a customer-experience-focused perspective to technology. At Vinsancor, we turn digital presence into brand authority, helping businesses stand out online—with fully remote service across Brazil and internationally.</p>
+                                <a class="vs-btn vs-btn--primary" href="https://wa.me/5521995928037?text=I%27d%20like%20to%20learn%20more%20about%20Vinsancor%27s%20services." rel="noopener noreferrer" target="_blank">Talk to Vinícius</a>
+                            </div>
+                        </section>
+                    </aside>
+                </div>                </div>
             </div>
         </section>
 
@@ -671,6 +716,7 @@
                                 <p class="text-sm font-bold uppercase tracking-wide text-gray-600">Estimated minimum investment</p>
                                 <p class="mt-2 text-4xl md:text-5xl font-extrabold text-dark" data-quote-average>R$ 1.500</p>
                                 <p class="mt-2 text-sm text-gray-600">Reference range: <strong data-quote-range>R$ 1.500 – R$ 4.300</strong></p>
+                                <p class="mt-2 text-xs leading-relaxed text-gray-600">Payment terms: PIX or bank deposit, payable in up to 3 installments.</p>
                                 <ul class="site-quote-breakdown mt-5 text-sm text-gray-700" data-quote-breakdown>
                                     <li><span>Website (one-time payment)</span><strong>R$ 1.500</strong></li>
                                 </ul>
@@ -678,9 +724,11 @@
                             <p class="text-xs leading-relaxed text-gray-600" data-quote-conversion-note hidden></p>
                             <p class="text-xs leading-relaxed text-gray-500" data-quote-status role="status">Checking exchange rates…</p>
                             <p class="text-sm leading-relaxed text-gray-700">This is only a simulation. It is not a quote and does not represent the exact final cost of your website, which may be lower or higher depending on the project.</p>
+                            <p class="text-sm leading-relaxed text-gray-700">You receive the complete website according to the scope and specifications set out in the proposal: responsive, published on your domain, with the contracted features and planned optimizations.</p>
+                            <p class="text-sm leading-relaxed text-gray-700">After delivery, you may request adjustments needed to match the approved brief at no additional cost, provided they remain within the contracted scope.</p>
                             <div class="mt-auto">
                                 <p class="text-sm font-semibold text-dark mb-3">Send your request now and one of our specialists will get in touch.</p>
-                                <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" data-quote-whatsapp class="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-4 text-center font-bold text-dark shadow-md transition hover:bg-primary-hover focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3">Request a proposal on WhatsApp</a>
+                                <a href="https://wa.me/5521995928037" target="_blank" rel="noopener noreferrer" data-quote-whatsapp class="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-4 text-center font-bold text-dark shadow-md transition hover:bg-primary-hover focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-3">I want my professional website</a>
                             </div>
                             <p class="text-xs text-gray-500">Exchange rates by <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-dark">Exchange Rate API</a>.</p>
                         </div>
