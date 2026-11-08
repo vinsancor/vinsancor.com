@@ -674,11 +674,11 @@
 
                         <div class="flex flex-col gap-5">
                             <div class="site-quote-result" data-quote-result aria-live="polite" aria-atomic="true">
-                                <p class="text-sm font-bold uppercase tracking-wide text-gray-600">Valor médio estimado</p>
-                                <p class="mt-2 text-4xl md:text-5xl font-extrabold text-dark" data-quote-average>R$ 2.900</p>
+                                <p class="text-sm font-bold uppercase tracking-wide text-gray-600">Investimento mínimo estimado</p>
+                                <p class="mt-2 text-4xl md:text-5xl font-extrabold text-dark" data-quote-average>R$ 1.500</p>
                                 <p class="mt-2 text-sm text-gray-600">Faixa de referência: <strong data-quote-range>R$ 1.500 – R$ 4.300</strong></p>
                                 <ul class="site-quote-breakdown mt-5 text-sm text-gray-700" data-quote-breakdown>
-                                    <li><span>Site (pagamento único)</span><strong>R$ 2.900</strong></li>
+                                    <li><span>Site (pagamento único)</span><strong>R$ 1.500</strong></li>
                                 </ul>
                             </div>
                             <p class="text-xs leading-relaxed text-gray-600" data-quote-conversion-note hidden></p>
@@ -1394,16 +1394,6 @@
             let usingFallbackRates = true;
             let exchangeStatus = 'loading';
 
-            function getPreferredCountry() {
-                const language = (navigator.language || '').toLowerCase();
-                if (language.startsWith('en-us')) return 'US';
-                if (language.startsWith('es-ar')) return 'AR';
-                if (language.startsWith('es-mx')) return 'MX';
-                if (language.startsWith('en-gb')) return 'GB';
-                if (language.startsWith('pt-pt') || language.startsWith('es-es') || language.startsWith('de-de')) return 'EU';
-                return 'BR';
-            }
-
             function getCurrencySettings() {
                 const selected = SITE_QUOTE_CONFIG.MOEDAS[countrySelect.value] || SITE_QUOTE_CONFIG.MOEDAS.BR;
                 let locale = selected.locale;
@@ -1456,14 +1446,13 @@
 
                 const minimo = lines.reduce((sum, line) => sum + line.minimo * line.fator, 0);
                 const maximo = lines.reduce((sum, line) => sum + line.maximo * line.fator, 0);
-                const media = lines.reduce((sum, line) => sum + ((line.minimo + line.maximo) / 2) * line.fator, 0);
-                if (![minimo, maximo, media].every(Number.isFinite)) throw new Error('Não foi possível calcular a estimativa. Revise as opções escolhidas.');
-                return { media, minimo, maximo, linhas: lines };
+                if (![minimo, maximo].every(Number.isFinite)) throw new Error('Não foi possível calcular a estimativa. Revise as opções escolhidas.');
+                return { minimo, maximo, linhas: lines };
             }
 
             function updateWhatsAppLink(quote, currencySettings, site, selectedExtras) {
                 const isIncluded = (extra) => selectedExtras.includes(extra) ? 'Sim' : 'Não';
-                const average = formatMoney(quote.media, currencySettings);
+                const minimum = formatMoney(quote.minimo, currencySettings);
                 const range = `${formatMoney(quote.minimo, currencySettings)} – ${formatMoney(quote.maximo, currencySettings)}`;
                 const lines = [
                     'Olá! Fiz uma simulação no site da Vinsancor e gostaria de receber uma proposta.', '',
@@ -1473,9 +1462,9 @@
                     `Inclui hospedagem: ${isIncluded('hosting')}`,
                     `Inclui manutenção: ${isIncluded('maintenance')}`,
                     `Inclui animação: ${isIncluded('animation')}`,
-                    `Valor médio simulado: ${average} (faixa de referência: ${range})`
+                    `Valor mínimo simulado: ${minimum} (faixa de referência: ${range})`
                 ];
-                if (currencySettings.moeda !== 'BRL') lines.push(`Equivalente na tabela base: ${formatMoney(quote.media, { ...currencySettings, moeda: 'BRL', locale: 'pt-BR' })}`);
+                if (currencySettings.moeda !== 'BRL') lines.push(`Equivalente na tabela base: ${formatMoney(quote.minimo, { ...currencySettings, moeda: 'BRL', locale: 'pt-BR' })}`);
                 lines.push('', 'Pode me enviar uma proposta?');
                 whatsappLink.href = `https://wa.me/5521995928037?text=${encodeURIComponent(lines.join('\n'))}`;
             }
@@ -1487,23 +1476,22 @@
                     const selectedExtras = [...root.querySelectorAll('[data-quote-extra]:checked')].map((input) => input.value);
                     const site = SITE_QUOTE_CONFIG.TIPOS_DE_SITE.find((item) => item.id === selectedTypeId) || SITE_QUOTE_CONFIG.TIPOS_DE_SITE[2];
                     const quote = calculateQuote(selectedTypeId, selectedExtras);
-                    averageOutput.textContent = formatMoney(quote.media, currencySettings);
+                    averageOutput.textContent = formatMoney(quote.minimo, currencySettings);
                     rangeOutput.textContent = `${formatMoney(quote.minimo, currencySettings)} – ${formatMoney(quote.maximo, currencySettings)}`;
 
                     breakdownOutput.replaceChildren();
                     quote.linhas.forEach((line) => {
                         const minimum = line.minimo * line.fator;
                         const maximum = line.maximo * line.fator;
-                        const average = ((line.minimo + line.maximo) / 2) * line.fator;
                         const item = document.createElement('li');
                         const label = document.createElement('span');
                         const amount = document.createElement('strong');
                         const range = document.createElement('small');
                         label.textContent = line.nome;
-                        amount.textContent = formatMoney(average, currencySettings);
+                        amount.textContent = formatMoney(minimum, currencySettings);
                         range.className = 'block mt-1 text-xs font-normal text-gray-500';
                         range.textContent = line.fator > 1
-                            ? `${formatMoney(minimum, currencySettings)} – ${formatMoney(maximum, currencySettings)} no período · média mensal ${formatMoney((line.minimo + line.maximo) / 2, currencySettings)} × ${line.fator} meses`
+                            ? `${formatMoney(minimum, currencySettings)} – ${formatMoney(maximum, currencySettings)} no período · mínimo mensal ${formatMoney(line.minimo, currencySettings)} × ${line.fator} meses`
                             : `${formatMoney(minimum, currencySettings)} – ${formatMoney(maximum, currencySettings)}`;
                         const detail = document.createElement('span');
                         detail.append(amount, range);
@@ -1531,7 +1519,8 @@
                 }
             }
 
-            countrySelect.value = getPreferredCountry();
+            // A calculadora sempre inicia em reais; a pessoa pode trocar a moeda manualmente.
+            countrySelect.value = 'BR';
             root.querySelectorAll('[data-quote-type], [data-quote-extra]').forEach((input) => input.addEventListener('change', render));
             countrySelect.addEventListener('change', render);
             render();
