@@ -23,6 +23,22 @@
 
   var posts = [
     {
+      id: "prepare-se-para-2027-seo-local-geo-local-empresas",
+      title: "Prepare-se para 2027: Se sua empresa depende exclusivamente do Perfil da Empresa no Google, o SEO Local vai dar espaço para o GEO Local",
+      slug: "prepare-se-para-2027-seo-local-geo-local-empresas",
+      url: "prepare-se-para-2027-seo-local-geo-local-empresas.html",
+      category: "SEO Local",
+      excerpt: "Entenda como o GEO Local pode complementar o SEO Local e veja como preparar sua empresa para a descoberta por mecanismos de busca com inteligência artificial.",
+      coverImage: "assets/img/chatgpt-claim-your-business-hub-google-search-console.webp",
+      coverFit: "contain",
+      coverBackground: "#ffffff",
+      coverAlt: "Tela de apresentação do recurso Claim your business in ChatGPT, identificada como unreleased/beta",
+      date: "2026-11-10",
+      dateLabel: "10 de novembro de 2026",
+      readingTime: "8 min de leitura",
+      tags: ["seo local", "geo local", "inteligência artificial", "chatgpt", "pequenas empresas", "busca local", "presença digital"],
+    },
+    {
       id: "otimizacao-perfil-da-empresa-google-2026",
       title: "Otimizando o Perfil da Empresa no Google em 2026: Guia Completo",
       slug: "otimizacao-perfil-da-empresa-google-2026",
