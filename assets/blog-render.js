@@ -89,7 +89,44 @@
 
     var grid = d.querySelector("[data-posts-grid]");
     if (grid) {
-      grid.innerHTML = blog.getAllPosts().map(homeCardHTML).join("\n");
+      var location = d.defaultView && d.defaultView.location;
+      var params = location && typeof URLSearchParams !== "undefined"
+        ? new URLSearchParams(location.search)
+        : null;
+      var category = params ? (params.get("categoria") || "").trim() : "";
+      function normalizeCategory(value) {
+        return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+      }
+      var posts = blog.getAllPosts();
+      if (category) {
+        var wantedCategory = normalizeCategory(category);
+        posts = posts.filter(function (post) {
+          return normalizeCategory(post.category) === wantedCategory;
+        });
+      }
+      grid.innerHTML = posts.map(homeCardHTML).join("\n");
+      var title = d.querySelector("[data-blog-title]");
+      var description = d.querySelector("[data-blog-description]");
+      var heading = d.getElementById("recentes");
+      var reset = d.getElementById("blog-category-reset");
+      var empty = d.getElementById("blog-empty");
+      if (category) {
+        if (title) title.textContent = "Blog Vinsancor — " + category;
+        if (description) description.textContent = "Artigos da categoria " + category + " no Blog Vinsancor.";
+        if (heading) heading.textContent = "Artigos de " + category;
+        if (reset) reset.hidden = false;
+        if (empty) {
+          empty.classList.toggle("hidden", posts.length > 0);
+          var message = empty.querySelector("p:last-child");
+          if (message) message.textContent = posts.length ? "Tente buscar por outro termo." : "Ainda não há artigos nesta categoria.";
+        }
+      } else {
+        if (title) title.textContent = "Blog Vinsancor";
+        if (description) description.textContent = "Marketing, SEO, presença digital e estratégias para transformar buscas em clientes.";
+        if (heading) heading.textContent = "Artigos recentes";
+        if (reset) reset.hidden = true;
+        if (empty) empty.classList.add("hidden");
+      }
     }
 
     var blocks = d.querySelectorAll("[data-related-posts]");
