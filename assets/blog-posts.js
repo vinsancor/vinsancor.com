@@ -29,7 +29,7 @@
       url: "prepare-se-para-2027-seo-local-geo-local-empresas.html",
       category: "SEO Local",
       excerpt: "Entenda como o GEO Local pode complementar o SEO Local e veja como preparar sua empresa para a descoberta por mecanismos de busca com inteligência artificial.",
-      coverImage: "assets/img/chatgpt-claim-your-business-hub-google-search-console.webp",
+      coverImage: "assets/img/chatgpt-claim-your-business-hub-google-search-console-v2.webp",
       coverFit: "contain",
       coverBackground: "#ffffff",
       coverAlt: "Tela de apresentação do recurso Claim your business in ChatGPT, identificada como unreleased/beta",
