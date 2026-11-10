@@ -12,7 +12,8 @@ const require = createRequire(import.meta.url);
 const root = path.dirname(fileURLToPath(import.meta.url));
 const blog = require('./assets/blog-posts.js');
 const posts = blog.getAllPosts();
-const POSTS_VERSION = '20261110-5';
+const POSTS_VERSION = '20261110-8';
+const RENDER_VERSION = '20261110-8';
 const esc = (v = '') => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function homeCard(post) {
@@ -40,6 +41,7 @@ function relatedCard(post) {
 const blogFile = path.join(root, 'blog-vinsancor.html');
 let home = await readFile(blogFile, 'utf8');
 home = home.replace(/assets\/blog-posts\.js(?:\?[^\"]*)?/g, `assets/blog-posts.js?v=${POSTS_VERSION}`);
+home = home.replace(/assets\/blog-render\.js(?:\?[^\"]*)?/g, `assets/blog-render.js?v=${RENDER_VERSION}`);
 home = home.replace(/(<div class="grid gap-6 md:grid-cols-2" data-posts-grid="">)[\s\S]*?(<\/div>\n<div class="hidden[^>]*id="blog-empty">)/, (_, start, end) => `${start}\n${posts.map(homeCard).join('\n')}\n${end}`);
 // Refresh the structured article list in the existing JSON-LD script.
 home = home.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (whole, json) => {
@@ -65,11 +67,10 @@ const categoryListClose = categoryListStart >= 0 ? home.indexOf('</ul>', categor
 if (categoryStart >= 0 && categoryListStart >= 0 && categoryListClose >= categoryListStart) {
   const categories = new Map();
   posts.forEach((post) => {
-    if (!categories.has(post.category)) categories.set(post.category, { count: 0, firstUrl: post.url });
-    categories.get(post.category).count += 1;
+    categories.set(post.category, (categories.get(post.category) || 0) + 1);
   });
-  const categoryHTML = `<ul class="mt-3 space-y-2 text-sm">${Array.from(categories.entries()).map(([name, info]) =>
-    `<li><a class="text-muted-foreground transition-colors hover:text-foreground" href="${esc(info.firstUrl)}">${esc(name)} <span class="text-xs">(${info.count})</span></a></li>`
+  const categoryHTML = `<ul class="mt-3 space-y-2 text-sm">${Array.from(categories.entries()).map(([name, count]) =>
+    `<li><a class="text-muted-foreground transition-colors hover:text-foreground" href="blog-vinsancor.html?categoria=${encodeURIComponent(name)}">${esc(name)} <span class="text-xs">(${count})</span></a></li>`
   ).join('')}</ul>`;
   home = home.slice(0, categoryListStart) + categoryHTML + home.slice(categoryListClose);
 }
