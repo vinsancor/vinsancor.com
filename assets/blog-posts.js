@@ -23,6 +23,21 @@
 
   var posts = [
     {
+      id: "de-confidente-a-guia-de-compras-como-as-ias-terapeutas-estao-mudando-o-geo-local",
+      title: "De Confidente a Guia de Compras: Como as IAs \"Terapeutas\" Estão Mudando o GEO Local",
+      slug: "de-confidente-a-guia-de-compras-como-as-ias-terapeutas-estao-mudando-o-geo-local",
+      url: "de-confidente-a-guia-de-compras-como-as-ias-terapeutas-estao-mudando-o-geo-local.html",
+      category: "SEO Local",
+      excerpt: "Do desabafo emocional ao agendamento no mundo real: entenda como o comportamento de busca em chats generativos está transformando a recomendação de empresas e por que sua marca precisa ser citada pelas IAs.",
+      coverImage: "assets/img/De-Confidente-a-Guia-de-Compras-Como-as-IAs-Terapeutas-Estao-Mudando-o-GEO-Local.webp?v=20261110-7",
+      coverFit: "cover",
+      coverAlt: "Mulher conversa com uma assistente de inteligência artificial em um computador, ilustrando as IAs como confidentes e guias de compras.",
+      date: "2026-11-10",
+      dateLabel: "10 de novembro de 2026",
+      readingTime: "8 min de leitura",
+      tags: ["seo local", "geo local", "inteligência artificial", "busca generativa", "negócios locais", "recomendação por IA", "presença digital"],
+    },
+    {
       id: "prepare-se-para-2027-seo-local-geo-local-empresas",
       title: "Prepare-se para 2027: Se sua empresa depende exclusivamente do Perfil da Empresa no Google, o SEO Local vai dividir espaço com o GEO Local",
       slug: "prepare-se-para-2027-seo-local-geo-local-empresas",
