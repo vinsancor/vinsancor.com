@@ -24,7 +24,7 @@
   var posts = [
     {
       id: "prepare-se-para-2027-seo-local-geo-local-empresas",
-      title: "Prepare-se para 2027: Se sua empresa depende exclusivamente do Perfil da Empresa no Google, o SEO Local vai dar espaço para o GEO Local",
+      title: "Prepare-se para 2027: Se sua empresa depende exclusivamente do Perfil da Empresa no Google, o SEO Local vai dividir espaço com o GEO Local",
       slug: "prepare-se-para-2027-seo-local-geo-local-empresas",
       url: "prepare-se-para-2027-seo-local-geo-local-empresas.html",
       category: "SEO Local",
