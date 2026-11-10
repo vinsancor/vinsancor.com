@@ -12,6 +12,7 @@ const require = createRequire(import.meta.url);
 const root = path.dirname(fileURLToPath(import.meta.url));
 const blog = require('./assets/blog-posts.js');
 const posts = blog.getAllPosts();
+const POSTS_VERSION = '20261110-3';
 const esc = (v = '') => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function homeCard(post) {
@@ -38,7 +39,8 @@ function relatedCard(post) {
 
 const blogFile = path.join(root, 'blog-vinsancor.html');
 let home = await readFile(blogFile, 'utf8');
-home = home.replace(/(<div class="grid gap-6 md:grid-cols-2" data-posts-grid="">)[\s\S]*?(<\/div><\/section><aside)/, (_, start, end) => `${start}\n${posts.map(homeCard).join('\n')}\n${end}`);
+home = home.replace(/assets\/blog-posts\.js(?:\?[^\"]*)?/g, `assets/blog-posts.js?v=${POSTS_VERSION}`);
+home = home.replace(/(<div class="grid gap-6 md:grid-cols-2" data-posts-grid="">)[\s\S]*?(<\/div>\n<div class="hidden[^>]*id="blog-empty">)/, (_, start, end) => `${start}\n${posts.map(homeCard).join('\n')}\n${end}`);
 // Refresh the structured article list in the existing JSON-LD script.
 home = home.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (whole, json) => {
   try {
@@ -56,6 +58,21 @@ home = home.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g
     return `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2)}\n</script>`;
   } catch { return whole; }
 });
+// Keep the category totals in sync with the same post list as the cards.
+const categoryStart = home.indexOf('<h2 class="text-lg font-extrabold text-foreground" id="cat-title">');
+const categoryListStart = home.indexOf('<ul class="mt-3 space-y-2 text-sm">', categoryStart);
+const categoryListClose = categoryListStart >= 0 ? home.indexOf('</ul>', categoryListStart) + '</ul>'.length : -1;
+if (categoryStart >= 0 && categoryListStart >= 0 && categoryListClose >= categoryListStart) {
+  const categories = new Map();
+  posts.forEach((post) => {
+    if (!categories.has(post.category)) categories.set(post.category, { count: 0, firstUrl: post.url });
+    categories.get(post.category).count += 1;
+  });
+  const categoryHTML = `<ul class="mt-3 space-y-2 text-sm">${Array.from(categories.entries()).map(([name, info]) =>
+    `<li><a class="text-muted-foreground transition-colors hover:text-foreground" href="${esc(info.firstUrl)}">${esc(name)} <span class="text-xs">(${info.count})</span></a></li>`
+  ).join('')}</ul>`;
+  home = home.slice(0, categoryListStart) + categoryHTML + home.slice(categoryListClose);
+}
 await writeFile(blogFile, home);
 
 // Bake related cards into every article that uses the documented placeholder.
@@ -64,6 +81,7 @@ for (const entry of await readdir(root, { withFileTypes: true })) {
   const file = path.join(root, entry.name);
   let html = await readFile(file, 'utf8');
   if (!html.includes('data-related-posts=')) continue;
+  html = html.replace(/assets\/blog-posts\.js(?:\?[^\"]*)?/g, `assets/blog-posts.js?v=${POSTS_VERSION}`);
   html = html.replace(/(<section class="vs-related"[^>]*>)[\s\S]*?(<\/section>)/, (whole, open, close) => {
     const slug = whole.match(/data-current-slug="([^"]+)"/)?.[1] || entry.name.replace(/\.html$/, '');
     const related = blog.getRelatedPosts(slug, 3);
