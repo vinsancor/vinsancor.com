@@ -12,7 +12,7 @@ const require = createRequire(import.meta.url);
 const root = path.dirname(fileURLToPath(import.meta.url));
 const blog = require('./assets/blog-posts.js');
 const posts = blog.getAllPosts();
-const POSTS_VERSION = '20261110-3';
+const POSTS_VERSION = '20261110-4';
 const esc = (v = '') => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 function homeCard(post) {
