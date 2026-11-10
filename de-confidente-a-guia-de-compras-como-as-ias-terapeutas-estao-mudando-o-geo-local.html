@@ -231,6 +231,23 @@ html{scroll-behavior:smooth}
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ywmxdh0kbb");
 </script>
+
+<style id="vs-comic-dialogs">
+.comic-brutal-button-container{--primary-color:#ff3d3d;--secondary-color:#3d3dff;--text-color:#000;--accent-color:#ffef00;--panel-color:#fff;--shadow-color:rgba(0,0,0,.75);position:relative;display:flex;justify-content:flex-start;align-items:center;width:100%;margin:1.75rem 0;padding:.65rem .6rem .9rem;isolation:isolate}
+.comic-brutal-button{position:relative;width:100%;font-size:1rem;transform:rotate(-1deg);transform-origin:center;transition:transform .15s cubic-bezier(.22,.61,.36,1)}
+.comic-brutal-button-container:hover .comic-brutal-button{transform:rotate(-.4deg) scale(1.015)}
+.comic-brutal-button .button-inner{position:relative;display:flex;align-items:center;background:var(--primary-color);color:var(--text-color);padding:1.15rem 1.35rem;z-index:3;overflow:hidden;transform:skew(-1deg,.5deg);transition:transform .15s cubic-bezier(.22,.61,.36,1),background-color .15s;clip-path:polygon(0 4%,2% 0,98% 0,100% 5%,100% 95%,98% 100%,2% 100%,0 96%)}
+.comic-brutal-button-container:hover .button-inner{transform:skew(-2deg,1deg);background:var(--secondary-color)}
+.comic-brutal-button .button-text{position:relative;z-index:5;display:block;font-size:1.05rem;line-height:1.65;font-weight:700;letter-spacing:0;text-transform:none;color:var(--text-color);text-shadow:.035em .035em 0 var(--panel-color),-.035em -.035em 0 var(--panel-color),.035em -.035em 0 var(--panel-color),-.035em .035em 0 var(--panel-color);transform:rotate(.5deg)}
+.comic-brutal-button-container:hover .button-text{color:var(--panel-color);text-shadow:.04em .04em 0 var(--text-color),-.04em -.04em 0 var(--text-color),.04em -.04em 0 var(--text-color),-.04em .04em 0 var(--text-color)}
+.comic-brutal-button-container .button-frame{position:absolute;inset:.15rem .15rem .55rem .15rem;background:var(--accent-color);border:.15rem solid var(--text-color);z-index:1;transition:transform .15s cubic-bezier(.22,.61,.36,1)}
+.comic-brutal-button-container .button-shadow{position:absolute;top:.7rem;left:1rem;right:.1rem;bottom:.05rem;background:var(--shadow-color);z-index:0;transition:transform .15s cubic-bezier(.22,.61,.36,1)}
+.comic-brutal-button-container:hover .button-shadow{transform:translate(.2rem,.2rem)}
+.comic-brutal-button-container .halftone-overlay{position:absolute;inset:.55rem .5rem .85rem .5rem;background-image:radial-gradient(circle at 30% 30%,rgba(0,0,0,.2) .08rem,transparent .09rem);background-size:.42rem .42rem;background-position:0 0;opacity:.24;z-index:4;mix-blend-mode:multiply;pointer-events:none}
+.comic-brutal-button-container .ink-splatter{position:absolute;inset:.55rem .5rem .85rem .5rem;z-index:2;opacity:.16;pointer-events:none;background:radial-gradient(circle at 20% 30%,rgba(0,0,0,.2) 0%,transparent 45%),radial-gradient(circle at 70% 65%,rgba(0,0,0,.18) 0%,transparent 45%),radial-gradient(circle at 40% 50%,rgba(0,0,0,.12) 0%,transparent 55%)}
+@media(max-width:640px){.comic-brutal-button-container{padding:.4rem .2rem .7rem}.comic-brutal-button .button-inner{padding:1rem}.comic-brutal-button .button-text{font-size:.98rem;line-height:1.6}}
+@media(prefers-reduced-motion:reduce){.comic-brutal-button,.comic-brutal-button .button-inner,.comic-brutal-button-container .button-shadow,.comic-brutal-button-container .button-frame{transition:none}}
+</style>
 </head><body>
 <div class="flex min-h-screen flex-col bg-background"><header class="sticky top-0 z-50 w-full border-b border-primary-hover bg-primary shadow-sm">
 <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 xl:px-8">
@@ -264,42 +281,54 @@ html{scroll-behavior:smooth}
 <h2 class="text-2xl font-extrabold tracking-tight text-foreground">Veja como isso funciona na prática através de histórias reais que presenciei recentemente:</h2>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-oficina">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-oficina">Uma oficina indicada após um diagnóstico com IA</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-oficina">Caso 1: Uma oficina indicada após um diagnóstico com IA</h3>
 <p class="mt-4">Certa vez, conversando com um amigo que estava lidando com um barulho estranho no carro, perguntei por que ele ainda não tinha levado o veículo a uma oficina. A resposta dele ilustra com precisão essa mudança de hábito:</p>
-<blockquote class="mt-5 rounded-2xl border border-black/10 bg-white p-6 text-base leading-relaxed text-foreground" style="box-shadow:0 9px 0 rgba(115,82,0,.45),0 18px 30px rgba(20,26,25,.18);transform:perspective(900px) rotateX(1deg)"><p>"Eu queria saber se era algo que eu mesmo poderia resolver para economizar. Descrevi o barulho para o Claude, e ela começou a me fazer perguntas de triagem: 'O barulho acontece quando você gira a chave ou quando acelera?', 'Qual é o tipo de som?'. Fui respondendo, e ela identificou a provável causa. Em seguida, perguntou se eu queria indicações de oficinas na minha região e me listou algumas opções com base na minha localização. Já agendei para amanhã."</p></blockquote>
+<blockquote class="comic-brutal-button-container" aria-label="Fala citada">
+<span class="button-shadow" aria-hidden="true"></span><span class="button-frame" aria-hidden="true"></span><span class="halftone-overlay" aria-hidden="true"></span><span class="ink-splatter" aria-hidden="true"></span>
+<div class="comic-brutal-button"><div class="button-inner"><span class="button-text">"Eu queria saber se era algo que eu mesmo poderia resolver para economizar. Descrevi o barulho para o Claude, e ela começou a me fazer perguntas de triagem: 'O barulho acontece quando você gira a chave ou quando acelera?', 'Qual é o tipo de som?'. Fui respondendo, e ela identificou a provável causa. Em seguida, perguntou se eu queria indicações de oficinas na minha região e me listou algumas opções com base na minha localização. Já agendei para amanhã."</span></div></div>
+</blockquote>
 <p class="mt-5">Claude não é um amigo nosso em comum, mas uma IA que ele usa cotidianamente para trabalhar e tirar dúvidas do dia a dia. Ele não pesquisou por "oficina mecânica perto de mim" no Google. Ele narrou um problema pessoal, a IA fez o diagnóstico inicial e direcionou a demanda para estabelecimentos locais otimizados para serem encontrados por essas ferramentas.</p>
 </section>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-pilates">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-pilates">Um estúdio de pilates recomendado pelo Gemini</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-pilates">Caso 2: Um estúdio de pilates recomendado pelo Gemini</h3>
 <p>Eu faço todo o trabalho de estruturação em SEO Local e GEO Local para a minha irmã, que é instrutora de pilates e atende em seu estúdio e a domicílio em São Francisco, na Califórnia.</p>
 <p class="mt-4">Em uma conversa recente sobre a diferença entre ser um excelente profissional e ser um profissional com forte presença digital, ela compartilhou o relato de uma nova aluna. Ao perguntar como a cliente havia chegado até o estúdio, a resposta foi direta: a cliente estava conversando com o Gemini sobre seus problemas pessoais, pois conversa todo dia com ela, e naquele dia a conversa se direcionou a dores nas costas e estresse acumulado na rotina de trabalho. Durante o diálogo, a IA sugeriu a prática de pilates como parte do processo de recuperação e recomendou nominalmente alguns estúdios na cidade — entre eles, o da minha irmã.</p>
 <p class="mt-4">A conversão não nasceu de um anúncio pago, muito menos das postagens recorrentes dela no Instagram, mas de um conselho contextualizado emitido por um ecossistema de inteligência artificial.</p>
 </section>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-bar">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-bar">Um bar escolhido pelo contexto emocional</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-bar">Caso 3: Um bar escolhido pelo contexto emocional</h3>
 <p>Um colega meu disse que precisava conversar para desabafar e que queria marcar um bar. Eu conheço muitos bares aqui em São Paulo, afinal, sou bartender, e quis recomendar um. Mas quando eu ia mencionar isso, ele já me mandou a localização: me encontre lá às 19h. Esse colega passou por uma semana inteira de sobrecarga em um projeto no trabalho e usou o assistente virtual de IA para planejar o final de semana. Ele digitou algo como:</p>
-<blockquote class="mt-5 rounded-2xl border border-black/10 bg-white p-6 text-base leading-relaxed text-foreground" style="box-shadow:0 9px 0 rgba(115,82,0,.45),0 18px 30px rgba(20,26,25,.18);transform:perspective(900px) rotateX(1deg)"><p>"Tive uma semana exaustiva mentalmente e preciso relaxar em um ambiente intimista, com iluminação baixa e drinks autorais sem música alta."</p></blockquote>
+<blockquote class="comic-brutal-button-container" aria-label="Fala citada">
+<span class="button-shadow" aria-hidden="true"></span><span class="button-frame" aria-hidden="true"></span><span class="halftone-overlay" aria-hidden="true"></span><span class="ink-splatter" aria-hidden="true"></span>
+<div class="comic-brutal-button"><div class="button-inner"><span class="button-text">"Tive uma semana exaustiva mentalmente e preciso relaxar em um ambiente intimista, com iluminação baixa e drinks autorais sem música alta."</span></div></div>
+</blockquote>
 <p class="mt-5">Em vez de devolver uma lista genérica de bares da cidade, a IA interpretou o estado emocional e a preferência de ambiente, recomendando dois bares de alta coquetelaria no bairro dele que correspondiam exatamente àquela descrição de atmosfera. Por um lado fiquei muito chateado dele querer escolher o bar sem as minhas indicações. Por outro, fiquei muito contente de que a escolha da IA acabou sendo melhor do que eu iria indicar.</p>
 </section>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-restaurante">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-restaurante">Um restaurante escolhido para uma ocasião especial</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-restaurante">Caso 4: Um restaurante escolhido para uma ocasião especial</h3>
 <p>Uma amiga próxima precisava organizar um jantar de aniversário de namoro de última hora. Em vez de abrir um aplicativo de mapas e filtrar por estrelas, ele desabafou com o ChatGPT:</p>
-<blockquote class="mt-5 rounded-2xl border border-black/10 bg-white p-6 text-base leading-relaxed text-foreground" style="box-shadow:0 9px 0 rgba(115,82,0,.45),0 18px 30px rgba(20,26,25,.18);transform:perspective(900px) rotateX(1deg)"><p>"Preciso levar meu namorado a um restaurante aconchegante hoje à noite. Ele tem restrição severa a glúten e queremos um lugar com boa carta de vinhos, mas sem aquela formalidade excessiva."</p></blockquote>
+<blockquote class="comic-brutal-button-container" aria-label="Fala citada">
+<span class="button-shadow" aria-hidden="true"></span><span class="button-frame" aria-hidden="true"></span><span class="halftone-overlay" aria-hidden="true"></span><span class="ink-splatter" aria-hidden="true"></span>
+<div class="comic-brutal-button"><div class="button-inner"><span class="button-text">"Preciso levar meu namorado a um restaurante aconchegante hoje à noite. Ele tem restrição severa a glúten e queremos um lugar com boa carta de vinhos, mas sem aquela formalidade excessiva."</span></div></div>
+</blockquote>
 <p class="mt-5">A IA processou o contexto restritivo (dieta + ambiente + ocasião) e recomendou um bistrô local que não apenas tinha menu adaptado, mas também contava com avaliações recentes elogiando a atenção da equipe com alérgicos. O resultado? Reserva feita em minutos e uma experiência impecável.</p>
 </section>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-eventos">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-eventos">Assessoria jurídica e fornecedor encontrados à noite</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-eventos">Caso 5: Assessoria jurídica e fornecedor encontrados à noite</h3>
 <p>Um ex-colega de trabalho do setor de eventos estava desesperado após uma quebra de contrato inesperada por parte de um fornecedor às vésperas de uma entrega. Passava das 22h e ele começou a narrar a situação para a IA em busca de um direcionamento inicial:</p>
-<blockquote class="mt-5 rounded-2xl border border-black/10 bg-white p-6 text-base leading-relaxed text-foreground" style="box-shadow:0 9px 0 rgba(115,82,0,.45),0 18px 30px rgba(20,26,25,.18);transform:perspective(900px) rotateX(1deg)"><p>"O fornecedor cancelou o serviço na véspera e quer me cobrar multa. O que a lei diz sobre isso e quem pode me ajudar urgente?"</p></blockquote>
+<blockquote class="comic-brutal-button-container" aria-label="Fala citada">
+<span class="button-shadow" aria-hidden="true"></span><span class="button-frame" aria-hidden="true"></span><span class="halftone-overlay" aria-hidden="true"></span><span class="ink-splatter" aria-hidden="true"></span>
+<div class="comic-brutal-button"><div class="button-inner"><span class="button-text">"O fornecedor cancelou o serviço na véspera e quer me cobrar multa. O que a lei diz sobre isso e quem pode me ajudar urgente?"</span></div></div>
+</blockquote>
 <p class="mt-5">Depois de explicar os direitos básicos para tranquilizá-lo, a IA sugeriu que ele buscasse assessoria especializada em direito contratual e listou escritórios de advocacia da região que mantêm atendimento de plantão ou retorno rápido para demandas corporativas. Não apenas isso, foi além: recomendou ainda alguns fornecedores que estavam abertos naquele horário e que poderiam ser contratados de última hora para suprir a entrega do evento.</p>
 </section>
 
 <section class="rounded-3xl bg-primary p-6 text-primary-foreground shadow-lg sm:p-8" aria-labelledby="caso-pousada">
-<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-pousada">Uma pousada recomendada para descansar</h3>
+<h3 class="text-xl font-extrabold tracking-tight text-foreground" id="caso-pousada">Caso 6: Uma pousada recomendada para descansar</h3>
 <p>Uma amiga estava enfrentando um pico severo de ansiedade e burnout por conta da rotina da cidade grande. No meio da tarde, desabafou com o assistente perguntando como desacelerar e ter um final de semana de descanso real sem precisar ir para muito longe. A IA fez algumas perguntas do tipo "Você prefere um lugar mais voltado para as montanhas ou gosta mais do litoral e curtir uma praia?", e após ir fazendo algumas perguntas, ela recomendou uma pausa na natureza e listou pousadas charmosa com foco em bem-estar e gastronomia local a menos de duas horas de viagem. Ela fechou a reserva no mesmo instante para o fim de semana seguinte.</p>
 </section>
 
